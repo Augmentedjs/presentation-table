@@ -2,9 +2,8 @@ import AutomaticTable from "./autoTable.js";
 
 /**
 * Instance class preconfigured for local storage-based table
-* @class Augmented.Presentation.LocalStorageTable
-* @extends Presentation.Component.AutomaticTable
-* @memberof Presentation.Component
+* @extends AutomaticTable
+* @memberof Component
 */
 class LocalStorageTable extends AutomaticTable {
   constructor(options) {

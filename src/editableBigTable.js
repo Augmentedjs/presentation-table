@@ -2,9 +2,8 @@ import AutomaticTable from "./autoTable.js";
 
 /**
  * Instance class preconfigured for sorting and pagination
- * @class EditableBigDataTable
- * @extends Presentation.Component.AutomaticTable
- * @memberof Presentation.Component
+ * @extends AutomaticTable
+ * @memberof Component
  */
 class EditableBigDataTable extends AutomaticTable {
   constructor(options) {

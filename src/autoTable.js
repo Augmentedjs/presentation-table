@@ -13,10 +13,10 @@ const DEFAULT_THEME = "material";
 /**
  * AutomaticTable<br/>
  * Creates a table automatically via a schema for defintion and a uri/json for data
- * @extends Presentation.DecoratorView
- * @memberof Presentation.Component
+ * @extends DecoratorView
+ * @memberof Component
  * @example
- * const at = new Augmented.Presentation.Component.AutomaticTable({
+ * const at = new AutomaticTable({
  *     schema: schema,
  *     el: "#autoTable",
  *     crossOrigin: false,
@@ -30,10 +30,12 @@ class AutomaticTable extends DecoratorView {
   constructor(options) {
     super(options);
 
+    const style = (this.style) ? this.style + " " : "";
+
     if (options && options.theme) {
-      this.theme = `${this.style} ${options.theme}`;
+      this.theme = `${style}${options.theme}`;
     } else {
-      this.theme = `${this.style} ${DEFAULT_THEME}`;
+      this.theme = `${style}${DEFAULT_THEME}`;
     }
 
     if (options && options.linkable) {
@@ -189,7 +191,7 @@ class AutomaticTable extends DecoratorView {
     }
 
     if (this.uri && this.collection) {
-      this.collection.url = options.uri;
+      this.collection.uri = options.uri;
     }
 
     if (this.data && (Array.isArray(this.data))) {
@@ -202,7 +204,7 @@ class AutomaticTable extends DecoratorView {
     }
 
     if (this.collection && this.uri) {
-      this.collection.url = this.uri;
+      this.collection.uri = this.uri;
     }
     if (this.collection) {
       this.collection.crossOrigin = this.crossOrigin;
@@ -598,6 +600,8 @@ class AutomaticTable extends DecoratorView {
   retrieveSchema(uri) {
     const that = this;
     let schema = null;
+
+    // TODO: make a fetch
     request({
       url: uri,
       contentType: "application/json",
@@ -637,6 +641,13 @@ class AutomaticTable extends DecoratorView {
       view.showProgressBar(false);
       view.showMessage("AutomaticTable fetch failed!");
     };
+
+console.debug(this.uri);
+
+    if (this.uri) {
+
+      this.collection.uri = this.uri;
+    }
 
     this.collection.fetch({
       reset: true,
@@ -910,6 +921,7 @@ class AutomaticTable extends DecoratorView {
   */
   setURI(uri) {
     this.uri = uri;
+    this.collection.uri = uri;
   };
 
  /**
@@ -923,7 +935,7 @@ class AutomaticTable extends DecoratorView {
     this.collection.schema = schema;
 
     if (this.uri) {
-      this.collection.url = this.uri;
+      this.collection.uri = this.uri;
     }
   };
 
@@ -1043,8 +1055,8 @@ class AutomaticTable extends DecoratorView {
     let i = 0;
     for (i = 0; i < l; i++) {
       const model = rows[i];
-      if (!model.url) {
-        model.url = this.uri + "/" + model.id;
+      if (!model.uri) {
+        model.uri = this.uri + "/" + model.id;
       }
       model.destroy();
     }

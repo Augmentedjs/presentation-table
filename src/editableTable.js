@@ -2,9 +2,8 @@ import AutomaticTable from "./autoTable.js";
 
 /**
  * Instance class preconfigured for editing
- * @class EditableTable
- * @extends Presentation.Component.AutomaticTable
- * @memberof Presentation.Component
+ * @extends AutomaticTable
+ * @memberof Component
  */
 class EditableTable extends AutomaticTable {
   constructor(options) {

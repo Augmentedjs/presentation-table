@@ -2,9 +2,8 @@ import AutomaticTable from "./autoTable.js";
 
 /**
 * Instance class preconfigured for editing, sorting, from local storage
-* @class EditableLocalStorageTable
-* @extends Presentation.Component.AutomaticTable
-* @memberof Presentation.Component
+* @extends AutomaticTable
+* @memberof Component
 */
 class EditableLocalStorageTable extends AutomaticTable {
   constructor(options) {
