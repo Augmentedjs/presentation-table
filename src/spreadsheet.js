@@ -1,4 +1,4 @@
-import * as  Augmented from "augmentedjs-next";
+import { isObject } from "next-core-utilities";
 import AutomaticTable from "./autoTable.js";
 import { Collection, LocalStorageCollection } from "presentation-models";
 
@@ -47,14 +47,14 @@ class Spreadsheet extends AutomaticTable {
     if (options) {
       if (options.schema) {
         // check if this is a schema vs a URI to get a schema
-        if (Augmented.isObject(options.schema)) {
+        if (isObject(options.schema)) {
           this.schema = options.schema;
         } else {
           // is a URI?
           let parsedSchema = null;
           try {
             parsedSchema = JSON.parse(options.schema);
-            if (parsedSchema && Augmented.isObject(parsedSchema)) {
+            if (parsedSchema && isObject(parsedSchema)) {
               this.schema = parsedSchema;
             }
           } catch(e) {

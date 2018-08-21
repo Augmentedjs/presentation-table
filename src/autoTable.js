@@ -1,10 +1,10 @@
-import * as Augmented from "augmentedjs-next";
+import { isObject } from "next-core-utilities";
 import { DecoratorView } from "presentation-decorator";
 import { TABLE_DATA_ATTRIBUTES, csvTableCompile, tsvTableCompile, defaultTableCompile, directDOMTableCompile, directDOMTableHeader, directDOMTableBody, directDOMEditableTableBody, directDOMPaginationControl } from "./functions/buildTable.js";
 import formatValidationMessages from "./functions/messages.js";
 import { request } from "presentation-request";
 import Dom from "presentation-dom";
-import { Model, Collection, LocalStorageCollection } from "presentation-models";
+import { PaginationFactory, Model, Collection, LocalStorageCollection } from "presentation-models";
 
 const DEFAULT_KEY = "augmented.localstorage.autotable.key";
 const DEFAULT_SORT_TYPE = "client";
@@ -157,7 +157,7 @@ class AutomaticTable extends DecoratorView {
     }
 
     if (!this.collection && this.paginationAPI) {
-      this.collection = Augmented.PaginationFactory.getPaginatedCollection(this.paginationAPI);
+      this.collection = PaginationFactory.getPaginatedCollection(this.paginationAPI);
       this.paginationAPI = this.collection.paginationAPI;
       this.localStorage = false;
     } else if (!this.collection && this.localStorage) {
@@ -168,14 +168,14 @@ class AutomaticTable extends DecoratorView {
 
     if (options && options.schema) {
       // check if this is a schema vs a URI to get a schema
-      if (Augmented.isObject(options.schema)) {
+      if (isObject(options.schema)) {
         this.schema = options.schema;
       } else {
         // is a URI?
         let parsedSchema = null;
         try {
           parsedSchema = JSON.parse(options.schema);
-          if (parsedSchema && Augmented.isObject(parsedSchema)) {
+          if (parsedSchema && isObject(parsedSchema)) {
             this.schema = parsedSchema;
           }
         } catch(e) {
