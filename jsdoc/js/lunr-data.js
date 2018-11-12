@@ -58,6 +58,70 @@ window.lunrData = {
           "list",
           "list:class"
         ],
+        "Component.BigDataTable.html": [
+          "bigdatat",
+          "class",
+          "component.bigdatat",
+          "instanc",
+          "pagin",
+          "preconfigur",
+          "sort"
+        ],
+        "Component.EditableBigDataTable.html": [
+          "class",
+          "component.editablebigdatat",
+          "editablebigdatat",
+          "instanc",
+          "pagin",
+          "preconfigur",
+          "sort"
+        ],
+        "Component.EditableLocalStorageTable.html": [
+          "class",
+          "component.editablelocalstoraget",
+          "edit",
+          "editablelocalstoraget",
+          "instanc",
+          "local",
+          "preconfigur",
+          "sort",
+          "storag"
+        ],
+        "Component.EditableTable.html": [
+          "class",
+          "component.editablet",
+          "edit",
+          "editablet",
+          "instanc",
+          "preconfigur"
+        ],
+        "Component.LocalStorageTable.html": [
+          "base",
+          "class",
+          "component.localstoraget",
+          "instanc",
+          "local",
+          "localstoraget",
+          "preconfigur",
+          "storag",
+          "tabl"
+        ],
+        "Component.Spreadsheet.html": [
+          "10",
+          "buffer",
+          "class",
+          "component.spreadsheet",
+          "edit",
+          "instanc",
+          "length",
+          "line",
+          "preconfigur",
+          "properi",
+          "specifi",
+          "spreadsheet",
+          "spreadsheet.if",
+          "us"
+        ],
         "Component.AutomaticTable.html": [
           "automat",
           "automatict",
@@ -70,6 +134,14 @@ window.lunrData = {
           "tabl",
           "uri/json",
           "via"
+        ],
+        "Component.AutomaticTable.html#setTheme": [
+          "automatictable#setthem",
+          "component.automatictable#setthem",
+          "function",
+          "setthem",
+          "tabl",
+          "theme"
         ],
         "Component.AutomaticTable.html#rowLink": [
           "automatictable#rowlink",
@@ -327,13 +399,13 @@ window.lunrData = {
           "tabl",
           "valid"
         ],
-        "Component.AutomaticTable.html#setTheme": [
-          "automatictable#setthem",
-          "component.automatictable#setthem",
+        "Component.AutomaticTable.html#isValid": [
+          "automatictable#isvalid",
+          "component.automatictable#isvalid",
           "function",
-          "setthem",
+          "isvalid",
           "tabl",
-          "theme"
+          "valid"
         ],
         "Component.AutomaticTable.html#remove": [
           "automatictable#remov",
@@ -370,78 +442,6 @@ window.lunrData = {
           "remov",
           "removerow",
           "row"
-        ],
-        "Component.AutomaticTable.html#isValid": [
-          "automatictable#isvalid",
-          "component.automatictable#isvalid",
-          "function",
-          "isvalid",
-          "tabl",
-          "valid"
-        ],
-        "Component.BigDataTable.html": [
-          "bigdatat",
-          "class",
-          "component.bigdatat",
-          "instanc",
-          "pagin",
-          "preconfigur",
-          "sort"
-        ],
-        "Component.EditableBigDataTable.html": [
-          "class",
-          "component.editablebigdatat",
-          "editablebigdatat",
-          "instanc",
-          "pagin",
-          "preconfigur",
-          "sort"
-        ],
-        "Component.EditableLocalStorageTable.html": [
-          "class",
-          "component.editablelocalstoraget",
-          "edit",
-          "editablelocalstoraget",
-          "instanc",
-          "local",
-          "preconfigur",
-          "sort",
-          "storag"
-        ],
-        "Component.EditableTable.html": [
-          "class",
-          "component.editablet",
-          "edit",
-          "editablet",
-          "instanc",
-          "preconfigur"
-        ],
-        "Component.LocalStorageTable.html": [
-          "base",
-          "class",
-          "component.localstoraget",
-          "instanc",
-          "local",
-          "localstoraget",
-          "preconfigur",
-          "storag",
-          "tabl"
-        ],
-        "Component.Spreadsheet.html": [
-          "10",
-          "buffer",
-          "class",
-          "component.spreadsheet",
-          "edit",
-          "instanc",
-          "length",
-          "line",
-          "preconfigur",
-          "properi",
-          "specifi",
-          "spreadsheet",
-          "spreadsheet.if",
-          "us"
         ]
       },
       "length": 42
@@ -543,6 +543,170 @@ window.lunrData = {
                                     },
                                     "#": {
                                       "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {
+                                                      "Component.AutomaticTable.html#setTheme": {
+                                                        "ref": "Component.AutomaticTable.html#setTheme",
+                                                        "tf": 100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "u": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "i": {
+                                                  "docs": {
+                                                    "Component.AutomaticTable.html#setURI": {
+                                                      "ref": "Component.AutomaticTable.html#setURI",
+                                                      "tf": 100
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "s": {
+                                              "docs": {},
+                                              "c": {
+                                                "docs": {},
+                                                "h": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {
+                                                          "Component.AutomaticTable.html#setSchema": {
+                                                            "ref": "Component.AutomaticTable.html#setSchema",
+                                                            "tf": 100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "o": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {},
+                                              "b": {
+                                                "docs": {},
+                                                "i": {
+                                                  "docs": {
+                                                    "Component.AutomaticTable.html#sortBy": {
+                                                      "ref": "Component.AutomaticTable.html#sortBy",
+                                                      "tf": 100
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "a": {
+                                          "docs": {},
+                                          "v": {
+                                            "docs": {
+                                              "Component.AutomaticTable.html#save": {
+                                                "ref": "Component.AutomaticTable.html#save",
+                                                "tf": 100
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "h": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "w": {
+                                              "docs": {},
+                                              "p": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "g": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "s": {
+                                                            "docs": {},
+                                                            "s": {
+                                                              "docs": {},
+                                                              "b": {
+                                                                "docs": {},
+                                                                "a": {
+                                                                  "docs": {},
+                                                                  "r": {
+                                                                    "docs": {
+                                                                      "Component.AutomaticTable.html#showProgressBar": {
+                                                                        "ref": "Component.AutomaticTable.html#showProgressBar",
+                                                                        "tf": 100
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "m": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {},
+                                                        "g": {
+                                                          "docs": {
+                                                            "Component.AutomaticTable.html#showMessage": {
+                                                              "ref": "Component.AutomaticTable.html#showMessage",
+                                                              "tf": 100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
                                       "r": {
                                         "docs": {},
                                         "o": {
@@ -664,170 +828,6 @@ window.lunrData = {
                                                           "Component.AutomaticTable.html#removeRows": {
                                                             "ref": "Component.AutomaticTable.html#removeRows",
                                                             "tf": 100
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      },
-                                      "s": {
-                                        "docs": {},
-                                        "o": {
-                                          "docs": {},
-                                          "r": {
-                                            "docs": {},
-                                            "t": {
-                                              "docs": {},
-                                              "b": {
-                                                "docs": {},
-                                                "i": {
-                                                  "docs": {
-                                                    "Component.AutomaticTable.html#sortBy": {
-                                                      "ref": "Component.AutomaticTable.html#sortBy",
-                                                      "tf": 100
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        },
-                                        "a": {
-                                          "docs": {},
-                                          "v": {
-                                            "docs": {
-                                              "Component.AutomaticTable.html#save": {
-                                                "ref": "Component.AutomaticTable.html#save",
-                                                "tf": 100
-                                              }
-                                            }
-                                          }
-                                        },
-                                        "e": {
-                                          "docs": {},
-                                          "t": {
-                                            "docs": {},
-                                            "u": {
-                                              "docs": {},
-                                              "r": {
-                                                "docs": {},
-                                                "i": {
-                                                  "docs": {
-                                                    "Component.AutomaticTable.html#setURI": {
-                                                      "ref": "Component.AutomaticTable.html#setURI",
-                                                      "tf": 100
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            },
-                                            "s": {
-                                              "docs": {},
-                                              "c": {
-                                                "docs": {},
-                                                "h": {
-                                                  "docs": {},
-                                                  "e": {
-                                                    "docs": {},
-                                                    "m": {
-                                                      "docs": {},
-                                                      "a": {
-                                                        "docs": {
-                                                          "Component.AutomaticTable.html#setSchema": {
-                                                            "ref": "Component.AutomaticTable.html#setSchema",
-                                                            "tf": 100
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            },
-                                            "t": {
-                                              "docs": {},
-                                              "h": {
-                                                "docs": {},
-                                                "e": {
-                                                  "docs": {},
-                                                  "m": {
-                                                    "docs": {
-                                                      "Component.AutomaticTable.html#setTheme": {
-                                                        "ref": "Component.AutomaticTable.html#setTheme",
-                                                        "tf": 100
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        },
-                                        "h": {
-                                          "docs": {},
-                                          "o": {
-                                            "docs": {},
-                                            "w": {
-                                              "docs": {},
-                                              "p": {
-                                                "docs": {},
-                                                "r": {
-                                                  "docs": {},
-                                                  "o": {
-                                                    "docs": {},
-                                                    "g": {
-                                                      "docs": {},
-                                                      "r": {
-                                                        "docs": {},
-                                                        "e": {
-                                                          "docs": {},
-                                                          "s": {
-                                                            "docs": {},
-                                                            "s": {
-                                                              "docs": {},
-                                                              "b": {
-                                                                "docs": {},
-                                                                "a": {
-                                                                  "docs": {},
-                                                                  "r": {
-                                                                    "docs": {
-                                                                      "Component.AutomaticTable.html#showProgressBar": {
-                                                                        "ref": "Component.AutomaticTable.html#showProgressBar",
-                                                                        "tf": 100
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              "m": {
-                                                "docs": {},
-                                                "e": {
-                                                  "docs": {},
-                                                  "s": {
-                                                    "docs": {},
-                                                    "s": {
-                                                      "docs": {},
-                                                      "a": {
-                                                        "docs": {},
-                                                        "g": {
-                                                          "docs": {
-                                                            "Component.AutomaticTable.html#showMessage": {
-                                                              "ref": "Component.AutomaticTable.html#showMessage",
-                                                              "tf": 100
-                                                            }
                                                           }
                                                         }
                                                       }
@@ -1669,40 +1669,6 @@ window.lunrData = {
                   }
                 }
               },
-              "v": {
-                "docs": {},
-                "i": {
-                  "docs": {},
-                  "o": {
-                    "docs": {},
-                    "u": {
-                      "docs": {
-                        "Component.AutomaticTable.html#previousPage": {
-                          "ref": "Component.AutomaticTable.html#previousPage",
-                          "tf": 16.666666666666664
-                        }
-                      },
-                      "s": {
-                        "docs": {},
-                        "p": {
-                          "docs": {},
-                          "a": {
-                            "docs": {},
-                            "g": {
-                              "docs": {
-                                "Component.AutomaticTable.html#previousPage": {
-                                  "ref": "Component.AutomaticTable.html#previousPage",
-                                  "tf": 700
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
               "c": {
                 "docs": {},
                 "o": {
@@ -1751,10 +1717,61 @@ window.lunrData = {
                     }
                   }
                 }
+              },
+              "v": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "u": {
+                      "docs": {
+                        "Component.AutomaticTable.html#previousPage": {
+                          "ref": "Component.AutomaticTable.html#previousPage",
+                          "tf": 16.666666666666664
+                        }
+                      },
+                      "s": {
+                        "docs": {},
+                        "p": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "g": {
+                              "docs": {
+                                "Component.AutomaticTable.html#previousPage": {
+                                  "ref": "Component.AutomaticTable.html#previousPage",
+                                  "tf": 700
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             },
             "o": {
               "docs": {},
+              "p": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "i": {
+                      "docs": {
+                        "Component.Spreadsheet.html": {
+                          "ref": "Component.Spreadsheet.html",
+                          "tf": 3.8461538461538463
+                        }
+                      }
+                    }
+                  }
+                }
+              },
               "g": {
                 "docs": {},
                 "r": {
@@ -1774,23 +1791,6 @@ window.lunrData = {
                     }
                   }
                 }
-              },
-              "p": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {},
-                    "i": {
-                      "docs": {
-                        "Component.Spreadsheet.html": {
-                          "ref": "Component.Spreadsheet.html",
-                          "tf": 3.8461538461538463
-                        }
-                      }
-                    }
-                  }
-                }
               }
             }
           },
@@ -1798,6 +1798,21 @@ window.lunrData = {
             "docs": {},
             "g": {
               "docs": {},
+              "i": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "Component.BigDataTable.html": {
+                      "ref": "Component.BigDataTable.html",
+                      "tf": 10
+                    },
+                    "Component.EditableBigDataTable.html": {
+                      "ref": "Component.EditableBigDataTable.html",
+                      "tf": 10
+                    }
+                  }
+                }
+              },
               "e": {
                 "docs": {
                   "Component.AutomaticTable.html#currentPage": {
@@ -1827,21 +1842,6 @@ window.lunrData = {
                   "Component.AutomaticTable.html#lastPage": {
                     "ref": "Component.AutomaticTable.html#lastPage",
                     "tf": 16.666666666666664
-                  }
-                }
-              },
-              "i": {
-                "docs": {},
-                "n": {
-                  "docs": {
-                    "Component.BigDataTable.html": {
-                      "ref": "Component.BigDataTable.html",
-                      "tf": 10
-                    },
-                    "Component.EditableBigDataTable.html": {
-                      "ref": "Component.EditableBigDataTable.html",
-                      "tf": 10
-                    }
                   }
                 }
               }
@@ -2148,145 +2148,12 @@ window.lunrData = {
               }
             }
           },
-          "c": {
-            "docs": {},
-            "h": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "m": {
-                  "docs": {},
-                  "a": {
-                    "docs": {
-                      "Component.AutomaticTable.html": {
-                        "ref": "Component.AutomaticTable.html",
-                        "tf": 6.25
-                      },
-                      "Component.AutomaticTable.html#retrieveSchema": {
-                        "ref": "Component.AutomaticTable.html#retrieveSchema",
-                        "tf": 12.5
-                      },
-                      "Component.AutomaticTable.html#setSchema": {
-                        "ref": "Component.AutomaticTable.html#setSchema",
-                        "tf": 75
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "e": {
-            "docs": {},
-            "n": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "Component.AutomaticTable.html#sortBy": {
-                    "ref": "Component.AutomaticTable.html#sortBy",
-                    "tf": 7.142857142857142
-                  }
-                }
-              }
-            },
-            "t": {
-              "docs": {
-                "Component.AutomaticTable.html#setURI": {
-                  "ref": "Component.AutomaticTable.html#setURI",
-                  "tf": 25
-                },
-                "Component.AutomaticTable.html#setSchema": {
-                  "ref": "Component.AutomaticTable.html#setSchema",
-                  "tf": 25
-                }
-              },
-              "u": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "i": {
-                    "docs": {
-                      "Component.AutomaticTable.html#setURI": {
-                        "ref": "Component.AutomaticTable.html#setURI",
-                        "tf": 650
-                      }
-                    }
-                  }
-                }
-              },
-              "s": {
-                "docs": {},
-                "c": {
-                  "docs": {},
-                  "h": {
-                    "docs": {},
-                    "e": {
-                      "docs": {},
-                      "m": {
-                        "docs": {},
-                        "a": {
-                          "docs": {
-                            "Component.AutomaticTable.html#setSchema": {
-                              "ref": "Component.AutomaticTable.html#setSchema",
-                              "tf": 650
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "t": {
-                "docs": {},
-                "h": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "m": {
-                      "docs": {
-                        "Component.AutomaticTable.html#setTheme": {
-                          "ref": "Component.AutomaticTable.html#setTheme",
-                          "tf": 650
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "l": {
-              "docs": {},
-              "e": {
-                "docs": {},
-                "c": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "Component.AutomaticTable.html#getSelected": {
-                        "ref": "Component.AutomaticTable.html#getSelected",
-                        "tf": 16.666666666666664
-                      },
-                      "Component.AutomaticTable.html#getSelectedIndex": {
-                        "ref": "Component.AutomaticTable.html#getSelectedIndex",
-                        "tf": 12.5
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "o": {
             "docs": {},
             "r": {
               "docs": {},
               "t": {
                 "docs": {
-                  "Component.AutomaticTable.html#sortBy": {
-                    "ref": "Component.AutomaticTable.html#sortBy",
-                    "tf": 7.142857142857142
-                  },
                   "Component.BigDataTable.html": {
                     "ref": "Component.BigDataTable.html",
                     "tf": 10
@@ -2297,6 +2164,10 @@ window.lunrData = {
                   },
                   "Component.EditableLocalStorageTable.html": {
                     "ref": "Component.EditableLocalStorageTable.html",
+                    "tf": 7.142857142857142
+                  },
+                  "Component.AutomaticTable.html#sortBy": {
+                    "ref": "Component.AutomaticTable.html#sortBy",
                     "tf": 7.142857142857142
                   }
                 },
@@ -2353,6 +2224,30 @@ window.lunrData = {
               }
             }
           },
+          "t": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "Component.EditableLocalStorageTable.html": {
+                        "ref": "Component.EditableLocalStorageTable.html",
+                        "tf": 7.142857142857142
+                      },
+                      "Component.LocalStorageTable.html": {
+                        "ref": "Component.LocalStorageTable.html",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "p": {
             "docs": {},
             "e": {
@@ -2370,6 +2265,10 @@ window.lunrData = {
                     },
                     "i": {
                       "docs": {
+                        "Component.Spreadsheet.html": {
+                          "ref": "Component.Spreadsheet.html",
+                          "tf": 3.8461538461538463
+                        },
                         "Component.AutomaticTable.html#editCell": {
                           "ref": "Component.AutomaticTable.html#editCell",
                           "tf": 10
@@ -2377,10 +2276,6 @@ window.lunrData = {
                         "Component.AutomaticTable.html#clearCell": {
                           "ref": "Component.AutomaticTable.html#clearCell",
                           "tf": 10
-                        },
-                        "Component.Spreadsheet.html": {
-                          "ref": "Component.Spreadsheet.html",
-                          "tf": 3.8461538461538463
                         }
                       }
                     }
@@ -2428,6 +2323,135 @@ window.lunrData = {
                             }
                           }
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "c": {
+            "docs": {},
+            "h": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "a": {
+                    "docs": {
+                      "Component.AutomaticTable.html": {
+                        "ref": "Component.AutomaticTable.html",
+                        "tf": 6.25
+                      },
+                      "Component.AutomaticTable.html#retrieveSchema": {
+                        "ref": "Component.AutomaticTable.html#retrieveSchema",
+                        "tf": 12.5
+                      },
+                      "Component.AutomaticTable.html#setSchema": {
+                        "ref": "Component.AutomaticTable.html#setSchema",
+                        "tf": 75
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "t": {
+              "docs": {
+                "Component.AutomaticTable.html#setURI": {
+                  "ref": "Component.AutomaticTable.html#setURI",
+                  "tf": 25
+                },
+                "Component.AutomaticTable.html#setSchema": {
+                  "ref": "Component.AutomaticTable.html#setSchema",
+                  "tf": 25
+                }
+              },
+              "t": {
+                "docs": {},
+                "h": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "m": {
+                      "docs": {
+                        "Component.AutomaticTable.html#setTheme": {
+                          "ref": "Component.AutomaticTable.html#setTheme",
+                          "tf": 650
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "u": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "i": {
+                    "docs": {
+                      "Component.AutomaticTable.html#setURI": {
+                        "ref": "Component.AutomaticTable.html#setURI",
+                        "tf": 650
+                      }
+                    }
+                  }
+                }
+              },
+              "s": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "h": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "m": {
+                        "docs": {},
+                        "a": {
+                          "docs": {
+                            "Component.AutomaticTable.html#setSchema": {
+                              "ref": "Component.AutomaticTable.html#setSchema",
+                              "tf": 650
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "Component.AutomaticTable.html#sortBy": {
+                    "ref": "Component.AutomaticTable.html#sortBy",
+                    "tf": 7.142857142857142
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "Component.AutomaticTable.html#getSelected": {
+                        "ref": "Component.AutomaticTable.html#getSelected",
+                        "tf": 16.666666666666664
+                      },
+                      "Component.AutomaticTable.html#getSelectedIndex": {
+                        "ref": "Component.AutomaticTable.html#getSelectedIndex",
+                        "tf": 12.5
                       }
                     }
                   }
@@ -2532,30 +2556,6 @@ window.lunrData = {
                             }
                           }
                         }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "t": {
-            "docs": {},
-            "o": {
-              "docs": {},
-              "r": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "g": {
-                    "docs": {
-                      "Component.EditableLocalStorageTable.html": {
-                        "ref": "Component.EditableLocalStorageTable.html",
-                        "tf": 7.142857142857142
-                      },
-                      "Component.LocalStorageTable.html": {
-                        "ref": "Component.LocalStorageTable.html",
-                        "tf": 7.142857142857142
                       }
                     }
                   }
@@ -2693,10 +2693,6 @@ window.lunrData = {
                       "ref": "list_class.html",
                       "tf": 635
                     },
-                    "Component.AutomaticTable.html": {
-                      "ref": "Component.AutomaticTable.html",
-                      "tf": 110
-                    },
                     "Component.BigDataTable.html": {
                       "ref": "Component.BigDataTable.html",
                       "tf": 120
@@ -2720,6 +2716,10 @@ window.lunrData = {
                     "Component.Spreadsheet.html": {
                       "ref": "Component.Spreadsheet.html",
                       "tf": 113.84615384615384
+                    },
+                    "Component.AutomaticTable.html": {
+                      "ref": "Component.AutomaticTable.html",
+                      "tf": 110
                     }
                   }
                 }
@@ -2776,6 +2776,222 @@ window.lunrData = {
                           "docs": {},
                           ".": {
                             "docs": {},
+                            "b": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {
+                                              "Component.BigDataTable.html": {
+                                                "ref": "Component.BigDataTable.html",
+                                                "tf": 1150
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "e": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "i": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "b": {
+                                        "docs": {},
+                                        "l": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "b": {
+                                              "docs": {},
+                                              "i": {
+                                                "docs": {},
+                                                "g": {
+                                                  "docs": {},
+                                                  "d": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {},
+                                                      "t": {
+                                                        "docs": {},
+                                                        "a": {
+                                                          "docs": {},
+                                                          "t": {
+                                                            "docs": {
+                                                              "Component.EditableBigDataTable.html": {
+                                                                "ref": "Component.EditableBigDataTable.html",
+                                                                "tf": 1150
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "l": {
+                                              "docs": {},
+                                              "o": {
+                                                "docs": {},
+                                                "c": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {},
+                                                    "l": {
+                                                      "docs": {},
+                                                      "s": {
+                                                        "docs": {},
+                                                        "t": {
+                                                          "docs": {},
+                                                          "o": {
+                                                            "docs": {},
+                                                            "r": {
+                                                              "docs": {},
+                                                              "a": {
+                                                                "docs": {},
+                                                                "g": {
+                                                                  "docs": {},
+                                                                  "e": {
+                                                                    "docs": {},
+                                                                    "t": {
+                                                                      "docs": {
+                                                                        "Component.EditableLocalStorageTable.html": {
+                                                                          "ref": "Component.EditableLocalStorageTable.html",
+                                                                          "tf": 1150
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "t": {
+                                              "docs": {
+                                                "Component.EditableTable.html": {
+                                                  "ref": "Component.EditableTable.html",
+                                                  "tf": 1150
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "l": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "l": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {},
+                                                "g": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {
+                                                        "Component.LocalStorageTable.html": {
+                                                          "ref": "Component.LocalStorageTable.html",
+                                                          "tf": 1150
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "s": {
+                              "docs": {},
+                              "p": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "h": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {
+                                                    "Component.Spreadsheet.html": {
+                                                      "ref": "Component.Spreadsheet.html",
+                                                      "tf": 1150
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
                             "a": {
                               "docs": {},
                               "u": {
@@ -2811,6 +3027,170 @@ window.lunrData = {
                                                         "docs": {},
                                                         "#": {
                                                           "docs": {},
+                                                          "s": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "t": {
+                                                                "docs": {},
+                                                                "t": {
+                                                                  "docs": {},
+                                                                  "h": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "m": {
+                                                                        "docs": {
+                                                                          "Component.AutomaticTable.html#setTheme": {
+                                                                            "ref": "Component.AutomaticTable.html#setTheme",
+                                                                            "tf": 1100
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                },
+                                                                "u": {
+                                                                  "docs": {},
+                                                                  "r": {
+                                                                    "docs": {},
+                                                                    "i": {
+                                                                      "docs": {
+                                                                        "Component.AutomaticTable.html#setURI": {
+                                                                          "ref": "Component.AutomaticTable.html#setURI",
+                                                                          "tf": 1100
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                },
+                                                                "s": {
+                                                                  "docs": {},
+                                                                  "c": {
+                                                                    "docs": {},
+                                                                    "h": {
+                                                                      "docs": {},
+                                                                      "e": {
+                                                                        "docs": {},
+                                                                        "m": {
+                                                                          "docs": {},
+                                                                          "a": {
+                                                                            "docs": {
+                                                                              "Component.AutomaticTable.html#setSchema": {
+                                                                                "ref": "Component.AutomaticTable.html#setSchema",
+                                                                                "tf": 1100
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "o": {
+                                                              "docs": {},
+                                                              "r": {
+                                                                "docs": {},
+                                                                "t": {
+                                                                  "docs": {},
+                                                                  "b": {
+                                                                    "docs": {},
+                                                                    "i": {
+                                                                      "docs": {
+                                                                        "Component.AutomaticTable.html#sortBy": {
+                                                                          "ref": "Component.AutomaticTable.html#sortBy",
+                                                                          "tf": 1100
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "a": {
+                                                              "docs": {},
+                                                              "v": {
+                                                                "docs": {
+                                                                  "Component.AutomaticTable.html#save": {
+                                                                    "ref": "Component.AutomaticTable.html#save",
+                                                                    "tf": 1100
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "h": {
+                                                              "docs": {},
+                                                              "o": {
+                                                                "docs": {},
+                                                                "w": {
+                                                                  "docs": {},
+                                                                  "p": {
+                                                                    "docs": {},
+                                                                    "r": {
+                                                                      "docs": {},
+                                                                      "o": {
+                                                                        "docs": {},
+                                                                        "g": {
+                                                                          "docs": {},
+                                                                          "r": {
+                                                                            "docs": {},
+                                                                            "e": {
+                                                                              "docs": {},
+                                                                              "s": {
+                                                                                "docs": {},
+                                                                                "s": {
+                                                                                  "docs": {},
+                                                                                  "b": {
+                                                                                    "docs": {},
+                                                                                    "a": {
+                                                                                      "docs": {},
+                                                                                      "r": {
+                                                                                        "docs": {
+                                                                                          "Component.AutomaticTable.html#showProgressBar": {
+                                                                                            "ref": "Component.AutomaticTable.html#showProgressBar",
+                                                                                            "tf": 1100
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "m": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "s": {
+                                                                        "docs": {},
+                                                                        "s": {
+                                                                          "docs": {},
+                                                                          "a": {
+                                                                            "docs": {},
+                                                                            "g": {
+                                                                              "docs": {
+                                                                                "Component.AutomaticTable.html#showMessage": {
+                                                                                  "ref": "Component.AutomaticTable.html#showMessage",
+                                                                                  "tf": 1100
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
                                                           "r": {
                                                             "docs": {},
                                                             "o": {
@@ -2932,170 +3312,6 @@ window.lunrData = {
                                                                               "Component.AutomaticTable.html#removeRows": {
                                                                                 "ref": "Component.AutomaticTable.html#removeRows",
                                                                                 "tf": 1100
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          },
-                                                          "s": {
-                                                            "docs": {},
-                                                            "o": {
-                                                              "docs": {},
-                                                              "r": {
-                                                                "docs": {},
-                                                                "t": {
-                                                                  "docs": {},
-                                                                  "b": {
-                                                                    "docs": {},
-                                                                    "i": {
-                                                                      "docs": {
-                                                                        "Component.AutomaticTable.html#sortBy": {
-                                                                          "ref": "Component.AutomaticTable.html#sortBy",
-                                                                          "tf": 1100
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "a": {
-                                                              "docs": {},
-                                                              "v": {
-                                                                "docs": {
-                                                                  "Component.AutomaticTable.html#save": {
-                                                                    "ref": "Component.AutomaticTable.html#save",
-                                                                    "tf": 1100
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "e": {
-                                                              "docs": {},
-                                                              "t": {
-                                                                "docs": {},
-                                                                "u": {
-                                                                  "docs": {},
-                                                                  "r": {
-                                                                    "docs": {},
-                                                                    "i": {
-                                                                      "docs": {
-                                                                        "Component.AutomaticTable.html#setURI": {
-                                                                          "ref": "Component.AutomaticTable.html#setURI",
-                                                                          "tf": 1100
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                },
-                                                                "s": {
-                                                                  "docs": {},
-                                                                  "c": {
-                                                                    "docs": {},
-                                                                    "h": {
-                                                                      "docs": {},
-                                                                      "e": {
-                                                                        "docs": {},
-                                                                        "m": {
-                                                                          "docs": {},
-                                                                          "a": {
-                                                                            "docs": {
-                                                                              "Component.AutomaticTable.html#setSchema": {
-                                                                                "ref": "Component.AutomaticTable.html#setSchema",
-                                                                                "tf": 1100
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                },
-                                                                "t": {
-                                                                  "docs": {},
-                                                                  "h": {
-                                                                    "docs": {},
-                                                                    "e": {
-                                                                      "docs": {},
-                                                                      "m": {
-                                                                        "docs": {
-                                                                          "Component.AutomaticTable.html#setTheme": {
-                                                                            "ref": "Component.AutomaticTable.html#setTheme",
-                                                                            "tf": 1100
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            },
-                                                            "h": {
-                                                              "docs": {},
-                                                              "o": {
-                                                                "docs": {},
-                                                                "w": {
-                                                                  "docs": {},
-                                                                  "p": {
-                                                                    "docs": {},
-                                                                    "r": {
-                                                                      "docs": {},
-                                                                      "o": {
-                                                                        "docs": {},
-                                                                        "g": {
-                                                                          "docs": {},
-                                                                          "r": {
-                                                                            "docs": {},
-                                                                            "e": {
-                                                                              "docs": {},
-                                                                              "s": {
-                                                                                "docs": {},
-                                                                                "s": {
-                                                                                  "docs": {},
-                                                                                  "b": {
-                                                                                    "docs": {},
-                                                                                    "a": {
-                                                                                      "docs": {},
-                                                                                      "r": {
-                                                                                        "docs": {
-                                                                                          "Component.AutomaticTable.html#showProgressBar": {
-                                                                                            "ref": "Component.AutomaticTable.html#showProgressBar",
-                                                                                            "tf": 1100
-                                                                                          }
-                                                                                        }
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  },
-                                                                  "m": {
-                                                                    "docs": {},
-                                                                    "e": {
-                                                                      "docs": {},
-                                                                      "s": {
-                                                                        "docs": {},
-                                                                        "s": {
-                                                                          "docs": {},
-                                                                          "a": {
-                                                                            "docs": {},
-                                                                            "g": {
-                                                                              "docs": {
-                                                                                "Component.AutomaticTable.html#showMessage": {
-                                                                                  "ref": "Component.AutomaticTable.html#showMessage",
-                                                                                  "tf": 1100
-                                                                                }
                                                                               }
                                                                             }
                                                                           }
@@ -3606,222 +3822,6 @@ window.lunrData = {
                                   }
                                 }
                               }
-                            },
-                            "b": {
-                              "docs": {},
-                              "i": {
-                                "docs": {},
-                                "g": {
-                                  "docs": {},
-                                  "d": {
-                                    "docs": {},
-                                    "a": {
-                                      "docs": {},
-                                      "t": {
-                                        "docs": {},
-                                        "a": {
-                                          "docs": {},
-                                          "t": {
-                                            "docs": {
-                                              "Component.BigDataTable.html": {
-                                                "ref": "Component.BigDataTable.html",
-                                                "tf": 1150
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            "e": {
-                              "docs": {},
-                              "d": {
-                                "docs": {},
-                                "i": {
-                                  "docs": {},
-                                  "t": {
-                                    "docs": {},
-                                    "a": {
-                                      "docs": {},
-                                      "b": {
-                                        "docs": {},
-                                        "l": {
-                                          "docs": {},
-                                          "e": {
-                                            "docs": {},
-                                            "b": {
-                                              "docs": {},
-                                              "i": {
-                                                "docs": {},
-                                                "g": {
-                                                  "docs": {},
-                                                  "d": {
-                                                    "docs": {},
-                                                    "a": {
-                                                      "docs": {},
-                                                      "t": {
-                                                        "docs": {},
-                                                        "a": {
-                                                          "docs": {},
-                                                          "t": {
-                                                            "docs": {
-                                                              "Component.EditableBigDataTable.html": {
-                                                                "ref": "Component.EditableBigDataTable.html",
-                                                                "tf": 1150
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            },
-                                            "l": {
-                                              "docs": {},
-                                              "o": {
-                                                "docs": {},
-                                                "c": {
-                                                  "docs": {},
-                                                  "a": {
-                                                    "docs": {},
-                                                    "l": {
-                                                      "docs": {},
-                                                      "s": {
-                                                        "docs": {},
-                                                        "t": {
-                                                          "docs": {},
-                                                          "o": {
-                                                            "docs": {},
-                                                            "r": {
-                                                              "docs": {},
-                                                              "a": {
-                                                                "docs": {},
-                                                                "g": {
-                                                                  "docs": {},
-                                                                  "e": {
-                                                                    "docs": {},
-                                                                    "t": {
-                                                                      "docs": {
-                                                                        "Component.EditableLocalStorageTable.html": {
-                                                                          "ref": "Component.EditableLocalStorageTable.html",
-                                                                          "tf": 1150
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            },
-                                            "t": {
-                                              "docs": {
-                                                "Component.EditableTable.html": {
-                                                  "ref": "Component.EditableTable.html",
-                                                  "tf": 1150
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            "l": {
-                              "docs": {},
-                              "o": {
-                                "docs": {},
-                                "c": {
-                                  "docs": {},
-                                  "a": {
-                                    "docs": {},
-                                    "l": {
-                                      "docs": {},
-                                      "s": {
-                                        "docs": {},
-                                        "t": {
-                                          "docs": {},
-                                          "o": {
-                                            "docs": {},
-                                            "r": {
-                                              "docs": {},
-                                              "a": {
-                                                "docs": {},
-                                                "g": {
-                                                  "docs": {},
-                                                  "e": {
-                                                    "docs": {},
-                                                    "t": {
-                                                      "docs": {
-                                                        "Component.LocalStorageTable.html": {
-                                                          "ref": "Component.LocalStorageTable.html",
-                                                          "tf": 1150
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            "s": {
-                              "docs": {},
-                              "p": {
-                                "docs": {},
-                                "r": {
-                                  "docs": {},
-                                  "e": {
-                                    "docs": {},
-                                    "a": {
-                                      "docs": {},
-                                      "d": {
-                                        "docs": {},
-                                        "s": {
-                                          "docs": {},
-                                          "h": {
-                                            "docs": {},
-                                            "e": {
-                                              "docs": {},
-                                              "e": {
-                                                "docs": {},
-                                                "t": {
-                                                  "docs": {
-                                                    "Component.Spreadsheet.html": {
-                                                      "ref": "Component.Spreadsheet.html",
-                                                      "tf": 1150
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
                             }
                           }
                         }
@@ -4075,14 +4075,6 @@ window.lunrData = {
             },
             "n": {
               "docs": {},
-              "k": {
-                "docs": {
-                  "Component.AutomaticTable.html#rowLink": {
-                    "ref": "Component.AutomaticTable.html#rowLink",
-                    "tf": 6.25
-                  }
-                }
-              },
               "e": {
                 "docs": {
                   "Component.Spreadsheet.html": {
@@ -4090,32 +4082,12 @@ window.lunrData = {
                     "tf": 3.8461538461538463
                   }
                 }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "s": {
-              "docs": {},
-              "t": {
+              },
+              "k": {
                 "docs": {
-                  "Component.AutomaticTable.html#lastPage": {
-                    "ref": "Component.AutomaticTable.html#lastPage",
-                    "tf": 16.666666666666664
-                  }
-                },
-                "p": {
-                  "docs": {},
-                  "a": {
-                    "docs": {},
-                    "g": {
-                      "docs": {
-                        "Component.AutomaticTable.html#lastPage": {
-                          "ref": "Component.AutomaticTable.html#lastPage",
-                          "tf": 700
-                        }
-                      }
-                    }
+                  "Component.AutomaticTable.html#rowLink": {
+                    "ref": "Component.AutomaticTable.html#rowLink",
+                    "tf": 6.25
                   }
                 }
               }
@@ -4190,6 +4162,336 @@ window.lunrData = {
                 }
               }
             }
+          },
+          "a": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "Component.AutomaticTable.html#lastPage": {
+                    "ref": "Component.AutomaticTable.html#lastPage",
+                    "tf": 16.666666666666664
+                  }
+                },
+                "p": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "g": {
+                      "docs": {
+                        "Component.AutomaticTable.html#lastPage": {
+                          "ref": "Component.AutomaticTable.html#lastPage",
+                          "tf": 700
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "b": {
+          "docs": {},
+          "i": {
+            "docs": {},
+            "g": {
+              "docs": {},
+              "d": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "t": {
+                        "docs": {
+                          "Component.BigDataTable.html": {
+                            "ref": "Component.BigDataTable.html",
+                            "tf": 750
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "Component.AutomaticTable.html#remove": {
+                    "ref": "Component.AutomaticTable.html#remove",
+                    "tf": 16.666666666666664
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "Component.LocalStorageTable.html": {
+                    "ref": "Component.LocalStorageTable.html",
+                    "tf": 7.142857142857142
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {
+                "Component.AutomaticTable.html#showProgressBar": {
+                  "ref": "Component.AutomaticTable.html#showProgressBar",
+                  "tf": 16.666666666666664
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "f": {
+              "docs": {},
+              "f": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "Component.Spreadsheet.html": {
+                        "ref": "Component.Spreadsheet.html",
+                        "tf": 3.8461538461538463
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "e": {
+          "docs": {},
+          "d": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "Component.EditableLocalStorageTable.html": {
+                    "ref": "Component.EditableLocalStorageTable.html",
+                    "tf": 7.142857142857142
+                  },
+                  "Component.EditableTable.html": {
+                    "ref": "Component.EditableTable.html",
+                    "tf": 12.5
+                  },
+                  "Component.Spreadsheet.html": {
+                    "ref": "Component.Spreadsheet.html",
+                    "tf": 7.6923076923076925
+                  },
+                  "Component.AutomaticTable.html#editCell": {
+                    "ref": "Component.AutomaticTable.html#editCell",
+                    "tf": 10
+                  },
+                  "Component.AutomaticTable.html#save": {
+                    "ref": "Component.AutomaticTable.html#save",
+                    "tf": 8.333333333333332
+                  }
+                },
+                "a": {
+                  "docs": {},
+                  "b": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "b": {
+                          "docs": {},
+                          "i": {
+                            "docs": {},
+                            "g": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {
+                                          "Component.EditableBigDataTable.html": {
+                                            "ref": "Component.EditableBigDataTable.html",
+                                            "tf": 750
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "l": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "a": {
+                                            "docs": {},
+                                            "g": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {
+                                                    "Component.EditableLocalStorageTable.html": {
+                                                      "ref": "Component.EditableLocalStorageTable.html",
+                                                      "tf": 750
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "t": {
+                          "docs": {
+                            "Component.EditableTable.html": {
+                              "ref": "Component.EditableTable.html",
+                              "tf": 750
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "c": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "l": {
+                      "docs": {
+                        "Component.AutomaticTable.html#editCell": {
+                          "ref": "Component.AutomaticTable.html#editCell",
+                          "tf": 625
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "v": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "Component.AutomaticTable.html#sortBy": {
+                      "ref": "Component.AutomaticTable.html#sortBy",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "x": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "Component.AutomaticTable.html#exportTo": {
+                        "ref": "Component.AutomaticTable.html#exportTo",
+                        "tf": 10
+                      }
+                    },
+                    "t": {
+                      "docs": {},
+                      "o": {
+                        "docs": {
+                          "Component.AutomaticTable.html#exportTo": {
+                            "ref": "Component.AutomaticTable.html#exportTo",
+                            "tf": 650
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "n": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "b": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "/": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "i": {
+                          "docs": {},
+                          "s": {
+                            "docs": {
+                              "Component.AutomaticTable.html#showProgressBar": {
+                                "ref": "Component.AutomaticTable.html#showProgressBar",
+                                "tf": 16.666666666666664
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "t": {
@@ -4200,9 +4502,17 @@ window.lunrData = {
               "docs": {},
               "l": {
                 "docs": {
+                  "Component.LocalStorageTable.html": {
+                    "ref": "Component.LocalStorageTable.html",
+                    "tf": 7.142857142857142
+                  },
                   "Component.AutomaticTable.html": {
                     "ref": "Component.AutomaticTable.html",
                     "tf": 6.25
+                  },
+                  "Component.AutomaticTable.html#setTheme": {
+                    "ref": "Component.AutomaticTable.html#setTheme",
+                    "tf": 25
                   },
                   "Component.AutomaticTable.html#render": {
                     "ref": "Component.AutomaticTable.html#render",
@@ -4236,21 +4546,13 @@ window.lunrData = {
                     "ref": "Component.AutomaticTable.html#validate",
                     "tf": 25
                   },
-                  "Component.AutomaticTable.html#setTheme": {
-                    "ref": "Component.AutomaticTable.html#setTheme",
+                  "Component.AutomaticTable.html#isValid": {
+                    "ref": "Component.AutomaticTable.html#isValid",
                     "tf": 25
                   },
                   "Component.AutomaticTable.html#remove": {
                     "ref": "Component.AutomaticTable.html#remove",
                     "tf": 16.666666666666664
-                  },
-                  "Component.AutomaticTable.html#isValid": {
-                    "ref": "Component.AutomaticTable.html#isValid",
-                    "tf": 25
-                  },
-                  "Component.LocalStorageTable.html": {
-                    "ref": "Component.LocalStorageTable.html",
-                    "tf": 7.142857142857142
                   }
                 }
               },
@@ -4259,6 +4561,23 @@ window.lunrData = {
                   "Component.AutomaticTable.html#sortBy": {
                     "ref": "Component.AutomaticTable.html#sortBy",
                     "tf": 7.142857142857142
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "Component.AutomaticTable.html#setTheme": {
+                      "ref": "Component.AutomaticTable.html#setTheme",
+                      "tf": 75
+                    }
                   }
                 }
               }
@@ -4331,27 +4650,18 @@ window.lunrData = {
                 }
               }
             }
-          },
-          "h": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "m": {
-                "docs": {},
-                "e": {
-                  "docs": {
-                    "Component.AutomaticTable.html#setTheme": {
-                      "ref": "Component.AutomaticTable.html#setTheme",
-                      "tf": 75
-                    }
-                  }
-                }
-              }
-            }
           }
         },
         "u": {
           "docs": {},
+          "s": {
+            "docs": {
+              "Component.Spreadsheet.html": {
+                "ref": "Component.Spreadsheet.html",
+                "tf": 3.8461538461538463
+              }
+            }
+          },
           "r": {
             "docs": {},
             "i": {
@@ -4396,14 +4706,6 @@ window.lunrData = {
               "Component.AutomaticTable.html#sortBy": {
                 "ref": "Component.AutomaticTable.html#sortBy",
                 "tf": 7.142857142857142
-              }
-            }
-          },
-          "s": {
-            "docs": {
-              "Component.Spreadsheet.html": {
-                "ref": "Component.Spreadsheet.html",
-                "tf": 3.8461538461538463
               }
             }
           }
@@ -4457,30 +4759,6 @@ window.lunrData = {
         },
         "f": {
           "docs": {},
-          "o": {
-            "docs": {},
-            "r": {
-              "docs": {},
-              "m": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "Component.AutomaticTable.html#rowLink": {
-                        "ref": "Component.AutomaticTable.html#rowLink",
-                        "tf": 6.25
-                      },
-                      "Component.AutomaticTable.html#exportTo": {
-                        "ref": "Component.AutomaticTable.html#exportTo",
-                        "tf": 10
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "u": {
             "docs": {},
             "n": {
@@ -4495,6 +4773,10 @@ window.lunrData = {
                       "docs": {},
                       "n": {
                         "docs": {
+                          "Component.AutomaticTable.html#setTheme": {
+                            "ref": "Component.AutomaticTable.html#setTheme",
+                            "tf": 110
+                          },
                           "Component.AutomaticTable.html#rowLink": {
                             "ref": "Component.AutomaticTable.html#rowLink",
                             "tf": 116.25
@@ -4599,8 +4881,8 @@ window.lunrData = {
                             "ref": "Component.AutomaticTable.html#validate",
                             "tf": 110
                           },
-                          "Component.AutomaticTable.html#setTheme": {
-                            "ref": "Component.AutomaticTable.html#setTheme",
+                          "Component.AutomaticTable.html#isValid": {
+                            "ref": "Component.AutomaticTable.html#isValid",
                             "tf": 110
                           },
                           "Component.AutomaticTable.html#remove": {
@@ -4618,12 +4900,32 @@ window.lunrData = {
                           "Component.AutomaticTable.html#removeRows": {
                             "ref": "Component.AutomaticTable.html#removeRows",
                             "tf": 110
-                          },
-                          "Component.AutomaticTable.html#isValid": {
-                            "ref": "Component.AutomaticTable.html#isValid",
-                            "tf": 110
                           }
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "Component.AutomaticTable.html#rowLink": {
+                        "ref": "Component.AutomaticTable.html#rowLink",
+                        "tf": 6.25
+                      },
+                      "Component.AutomaticTable.html#exportTo": {
+                        "ref": "Component.AutomaticTable.html#exportTo",
+                        "tf": 10
                       }
                     }
                   }
@@ -4684,226 +4986,6 @@ window.lunrData = {
             }
           }
         },
-        "e": {
-          "docs": {},
-          "v": {
-            "docs": {},
-            "e": {
-              "docs": {},
-              "n": {
-                "docs": {},
-                "t": {
-                  "docs": {
-                    "Component.AutomaticTable.html#sortBy": {
-                      "ref": "Component.AutomaticTable.html#sortBy",
-                      "tf": 7.142857142857142
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "d": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "t": {
-                "docs": {
-                  "Component.AutomaticTable.html#editCell": {
-                    "ref": "Component.AutomaticTable.html#editCell",
-                    "tf": 10
-                  },
-                  "Component.AutomaticTable.html#save": {
-                    "ref": "Component.AutomaticTable.html#save",
-                    "tf": 8.333333333333332
-                  },
-                  "Component.EditableLocalStorageTable.html": {
-                    "ref": "Component.EditableLocalStorageTable.html",
-                    "tf": 7.142857142857142
-                  },
-                  "Component.EditableTable.html": {
-                    "ref": "Component.EditableTable.html",
-                    "tf": 12.5
-                  },
-                  "Component.Spreadsheet.html": {
-                    "ref": "Component.Spreadsheet.html",
-                    "tf": 7.6923076923076925
-                  }
-                },
-                "c": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "l": {
-                      "docs": {
-                        "Component.AutomaticTable.html#editCell": {
-                          "ref": "Component.AutomaticTable.html#editCell",
-                          "tf": 625
-                        }
-                      }
-                    }
-                  }
-                },
-                "a": {
-                  "docs": {},
-                  "b": {
-                    "docs": {},
-                    "l": {
-                      "docs": {},
-                      "e": {
-                        "docs": {},
-                        "b": {
-                          "docs": {},
-                          "i": {
-                            "docs": {},
-                            "g": {
-                              "docs": {},
-                              "d": {
-                                "docs": {},
-                                "a": {
-                                  "docs": {},
-                                  "t": {
-                                    "docs": {},
-                                    "a": {
-                                      "docs": {},
-                                      "t": {
-                                        "docs": {
-                                          "Component.EditableBigDataTable.html": {
-                                            "ref": "Component.EditableBigDataTable.html",
-                                            "tf": 750
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "l": {
-                          "docs": {},
-                          "o": {
-                            "docs": {},
-                            "c": {
-                              "docs": {},
-                              "a": {
-                                "docs": {},
-                                "l": {
-                                  "docs": {},
-                                  "s": {
-                                    "docs": {},
-                                    "t": {
-                                      "docs": {},
-                                      "o": {
-                                        "docs": {},
-                                        "r": {
-                                          "docs": {},
-                                          "a": {
-                                            "docs": {},
-                                            "g": {
-                                              "docs": {},
-                                              "e": {
-                                                "docs": {},
-                                                "t": {
-                                                  "docs": {
-                                                    "Component.EditableLocalStorageTable.html": {
-                                                      "ref": "Component.EditableLocalStorageTable.html",
-                                                      "tf": 750
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "t": {
-                          "docs": {
-                            "Component.EditableTable.html": {
-                              "ref": "Component.EditableTable.html",
-                              "tf": 750
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "x": {
-            "docs": {},
-            "p": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "Component.AutomaticTable.html#exportTo": {
-                        "ref": "Component.AutomaticTable.html#exportTo",
-                        "tf": 10
-                      }
-                    },
-                    "t": {
-                      "docs": {},
-                      "o": {
-                        "docs": {
-                          "Component.AutomaticTable.html#exportTo": {
-                            "ref": "Component.AutomaticTable.html#exportTo",
-                            "tf": 650
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "n": {
-            "docs": {},
-            "a": {
-              "docs": {},
-              "b": {
-                "docs": {},
-                "l": {
-                  "docs": {},
-                  "e": {
-                    "docs": {},
-                    "/": {
-                      "docs": {},
-                      "d": {
-                        "docs": {},
-                        "i": {
-                          "docs": {},
-                          "s": {
-                            "docs": {
-                              "Component.AutomaticTable.html#showProgressBar": {
-                                "ref": "Component.AutomaticTable.html#showProgressBar",
-                                "tf": 16.666666666666664
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "k": {
           "docs": {},
           "e": {
@@ -4940,88 +5022,6 @@ window.lunrData = {
                           "ref": "Component.AutomaticTable.html#compileTemplate",
                           "tf": 16.666666666666664
                         }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "b": {
-          "docs": {},
-          "a": {
-            "docs": {},
-            "r": {
-              "docs": {
-                "Component.AutomaticTable.html#showProgressBar": {
-                  "ref": "Component.AutomaticTable.html#showProgressBar",
-                  "tf": 16.666666666666664
-                }
-              }
-            },
-            "s": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "Component.LocalStorageTable.html": {
-                    "ref": "Component.LocalStorageTable.html",
-                    "tf": 7.142857142857142
-                  }
-                }
-              }
-            }
-          },
-          "i": {
-            "docs": {},
-            "n": {
-              "docs": {},
-              "d": {
-                "docs": {
-                  "Component.AutomaticTable.html#remove": {
-                    "ref": "Component.AutomaticTable.html#remove",
-                    "tf": 16.666666666666664
-                  }
-                }
-              }
-            },
-            "g": {
-              "docs": {},
-              "d": {
-                "docs": {},
-                "a": {
-                  "docs": {},
-                  "t": {
-                    "docs": {},
-                    "a": {
-                      "docs": {},
-                      "t": {
-                        "docs": {
-                          "Component.BigDataTable.html": {
-                            "ref": "Component.BigDataTable.html",
-                            "tf": 750
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "u": {
-            "docs": {},
-            "f": {
-              "docs": {},
-              "f": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "r": {
-                    "docs": {
-                      "Component.Spreadsheet.html": {
-                        "ref": "Component.Spreadsheet.html",
-                        "tf": 3.8461538461538463
                       }
                     }
                   }
@@ -5320,6 +5320,72 @@ window.lunrData = {
       "description": "",
       "body": ""
     },
+    "Component.BigDataTable.html": {
+      "id": "Component.BigDataTable.html",
+      "kind": "class",
+      "title": "BigDataTable",
+      "longname": "Component.BigDataTable",
+      "name": "BigDataTable",
+      "tags": "Component.BigDataTable BigDataTable",
+      "summary": "",
+      "description": "Instance class preconfigured for sorting and pagination",
+      "body": ""
+    },
+    "Component.EditableBigDataTable.html": {
+      "id": "Component.EditableBigDataTable.html",
+      "kind": "class",
+      "title": "EditableBigDataTable",
+      "longname": "Component.EditableBigDataTable",
+      "name": "EditableBigDataTable",
+      "tags": "Component.EditableBigDataTable EditableBigDataTable",
+      "summary": "",
+      "description": "Instance class preconfigured for sorting and pagination",
+      "body": ""
+    },
+    "Component.EditableLocalStorageTable.html": {
+      "id": "Component.EditableLocalStorageTable.html",
+      "kind": "class",
+      "title": "EditableLocalStorageTable",
+      "longname": "Component.EditableLocalStorageTable",
+      "name": "EditableLocalStorageTable",
+      "tags": "Component.EditableLocalStorageTable EditableLocalStorageTable",
+      "summary": "",
+      "description": "Instance class preconfigured for editing, sorting, from local storage",
+      "body": ""
+    },
+    "Component.EditableTable.html": {
+      "id": "Component.EditableTable.html",
+      "kind": "class",
+      "title": "EditableTable",
+      "longname": "Component.EditableTable",
+      "name": "EditableTable",
+      "tags": "Component.EditableTable EditableTable",
+      "summary": "",
+      "description": "Instance class preconfigured for editing",
+      "body": ""
+    },
+    "Component.LocalStorageTable.html": {
+      "id": "Component.LocalStorageTable.html",
+      "kind": "class",
+      "title": "LocalStorageTable",
+      "longname": "Component.LocalStorageTable",
+      "name": "LocalStorageTable",
+      "tags": "Component.LocalStorageTable LocalStorageTable",
+      "summary": "",
+      "description": "Instance class preconfigured for local storage-based table",
+      "body": ""
+    },
+    "Component.Spreadsheet.html": {
+      "id": "Component.Spreadsheet.html",
+      "kind": "class",
+      "title": "Spreadsheet",
+      "longname": "Component.Spreadsheet",
+      "name": "Spreadsheet",
+      "tags": "Component.Spreadsheet Spreadsheet",
+      "summary": "",
+      "description": "Instance class preconfigured for editing for use as a Spreadsheet.If a propery for length is not specified, it will buffer 10 lines for editing.",
+      "body": ""
+    },
     "Component.AutomaticTable.html": {
       "id": "Component.AutomaticTable.html",
       "kind": "class",
@@ -5330,6 +5396,16 @@ window.lunrData = {
       "summary": "",
       "description": "AutomaticTableCreates a table automatically via a schema for defintion and a uri/json for data",
       "body": ""
+    },
+    "Component.AutomaticTable.html#setTheme": {
+      "id": "Component.AutomaticTable.html#setTheme",
+      "kind": "function",
+      "title": "setTheme( theme )",
+      "longname": "Component.AutomaticTable#setTheme",
+      "name": "setTheme",
+      "tags": "Component.AutomaticTable#setTheme AutomaticTable#setTheme setTheme",
+      "summary": "",
+      "description": "The theme of the table"
     },
     "Component.AutomaticTable.html#rowLink": {
       "id": "Component.AutomaticTable.html#rowLink",
@@ -5591,15 +5667,15 @@ window.lunrData = {
       "summary": "",
       "description": "Validate the table"
     },
-    "Component.AutomaticTable.html#setTheme": {
-      "id": "Component.AutomaticTable.html#setTheme",
+    "Component.AutomaticTable.html#isValid": {
+      "id": "Component.AutomaticTable.html#isValid",
       "kind": "function",
-      "title": "setTheme( theme )",
-      "longname": "Component.AutomaticTable#setTheme",
-      "name": "setTheme",
-      "tags": "Component.AutomaticTable#setTheme AutomaticTable#setTheme setTheme",
+      "title": "isValid()",
+      "longname": "Component.AutomaticTable#isValid",
+      "name": "isValid",
+      "tags": "Component.AutomaticTable#isValid AutomaticTable#isValid isValid",
       "summary": "",
-      "description": "The theme of the table"
+      "description": "Is the table valid"
     },
     "Component.AutomaticTable.html#remove": {
       "id": "Component.AutomaticTable.html#remove",
@@ -5640,82 +5716,6 @@ window.lunrData = {
       "tags": "Component.AutomaticTable#removeRows AutomaticTable#removeRows removeRows",
       "summary": "",
       "description": "Removes the models"
-    },
-    "Component.AutomaticTable.html#isValid": {
-      "id": "Component.AutomaticTable.html#isValid",
-      "kind": "function",
-      "title": "isValid()",
-      "longname": "Component.AutomaticTable#isValid",
-      "name": "isValid",
-      "tags": "Component.AutomaticTable#isValid AutomaticTable#isValid isValid",
-      "summary": "",
-      "description": "Is the table valid"
-    },
-    "Component.BigDataTable.html": {
-      "id": "Component.BigDataTable.html",
-      "kind": "class",
-      "title": "BigDataTable",
-      "longname": "Component.BigDataTable",
-      "name": "BigDataTable",
-      "tags": "Component.BigDataTable BigDataTable",
-      "summary": "",
-      "description": "Instance class preconfigured for sorting and pagination",
-      "body": ""
-    },
-    "Component.EditableBigDataTable.html": {
-      "id": "Component.EditableBigDataTable.html",
-      "kind": "class",
-      "title": "EditableBigDataTable",
-      "longname": "Component.EditableBigDataTable",
-      "name": "EditableBigDataTable",
-      "tags": "Component.EditableBigDataTable EditableBigDataTable",
-      "summary": "",
-      "description": "Instance class preconfigured for sorting and pagination",
-      "body": ""
-    },
-    "Component.EditableLocalStorageTable.html": {
-      "id": "Component.EditableLocalStorageTable.html",
-      "kind": "class",
-      "title": "EditableLocalStorageTable",
-      "longname": "Component.EditableLocalStorageTable",
-      "name": "EditableLocalStorageTable",
-      "tags": "Component.EditableLocalStorageTable EditableLocalStorageTable",
-      "summary": "",
-      "description": "Instance class preconfigured for editing, sorting, from local storage",
-      "body": ""
-    },
-    "Component.EditableTable.html": {
-      "id": "Component.EditableTable.html",
-      "kind": "class",
-      "title": "EditableTable",
-      "longname": "Component.EditableTable",
-      "name": "EditableTable",
-      "tags": "Component.EditableTable EditableTable",
-      "summary": "",
-      "description": "Instance class preconfigured for editing",
-      "body": ""
-    },
-    "Component.LocalStorageTable.html": {
-      "id": "Component.LocalStorageTable.html",
-      "kind": "class",
-      "title": "LocalStorageTable",
-      "longname": "Component.LocalStorageTable",
-      "name": "LocalStorageTable",
-      "tags": "Component.LocalStorageTable LocalStorageTable",
-      "summary": "",
-      "description": "Instance class preconfigured for local storage-based table",
-      "body": ""
-    },
-    "Component.Spreadsheet.html": {
-      "id": "Component.Spreadsheet.html",
-      "kind": "class",
-      "title": "Spreadsheet",
-      "longname": "Component.Spreadsheet",
-      "name": "Spreadsheet",
-      "tags": "Component.Spreadsheet Spreadsheet",
-      "summary": "",
-      "description": "Instance class preconfigured for editing for use as a Spreadsheet.If a propery for length is not specified, it will buffer 10 lines for editing.",
-      "body": ""
     }
   }
 };
