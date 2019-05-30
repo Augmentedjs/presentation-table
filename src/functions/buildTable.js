@@ -117,7 +117,7 @@ export const defaultTableBody = (data, columns, lineNumbers, sortKey, display) =
   return html;
 };
 
-export const directDOMTableCompile = (el, name, desc, columns, data, lineNumbers, sortKey, editable, display, selectable, linkable, linksConfig, linkCallback) => {
+export const directDOMTableCompile = (el, name, desc, columns, data, lineNumbers, sortKey, editable, display, selectable, linkable, linksConfig, linkCallback, isMaterial) => {
   const table = document.createElement("table"), thead = document.createElement("thead"), tbody = document.createElement("tbody");
   let n, t;
 
@@ -135,7 +135,7 @@ export const directDOMTableCompile = (el, name, desc, columns, data, lineNumbers
     n.appendChild(t);
     table.appendChild(n);
   }
-  directDOMTableHeader(thead, columns, lineNumbers, sortKey, display, selectable);
+  directDOMTableHeader(thead, columns, lineNumbers, sortKey, display, selectable, isMaterial);
   table.appendChild(thead);
   table.appendChild(tbody);
   if (data) {
@@ -148,15 +148,19 @@ export const directDOMTableCompile = (el, name, desc, columns, data, lineNumbers
   el.appendChild(table);
 };
 
-export const directDOMTableHeader = (el, columns, lineNumbers, sortKey, display, selectable) => {
+export const directDOMTableHeader = (el, columns, lineNumbers, sortKey, display, selectable, isMaterial) => {
   if (columns && el) {
     const tr = document.createElement("tr");
     let n, t, key, obj;
     if (selectable) {
       n = document.createElement("th");
       n.setAttribute(TABLE_DATA_ATTRIBUTES.NAME, "select");
-      t = document.createTextNode("\u274f");
-      n.appendChild(t);
+      if (isMaterial) {
+        n.innerHTML = `<i class="material-icons">check_box_outline_blank</i>`;
+      } else {
+        t = document.createTextNode("\u274f");
+        n.appendChild(t);
+      }
       tr.appendChild(n);
     }
 

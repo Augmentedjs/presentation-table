@@ -556,8 +556,25 @@ class AutomaticTable extends DecoratorView {
           n.appendChild(t);
           e.appendChild(n);
 
+          const isMaterial = (this._style.includes("material"));
+
           // the table
-          directDOMTableCompile(e, this.name, this.description, this._columns, this.collection.toJSON(), this.lineNumbers, this.sortKey, this.editable, this.display, this.selectable, this.linkable, this.links, this[this.links.link]);
+          directDOMTableCompile(
+            e,
+            this.name,
+            this.description,
+            this._columns,
+            this.collection.toJSON(),
+            this.lineNumbers,
+            this.sortKey,
+            this.editable,
+            this.display,
+            this.selectable,
+            this.linkable,
+            this.links,
+            this[this.links.link],
+            isMaterial
+          );
 
           // pagination control
           if (this.renderPaginationControl) {
