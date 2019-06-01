@@ -659,7 +659,7 @@ class AutomaticTable extends DecoratorView {
       view.showMessage("AutomaticTable fetch failed!");
     };
 
-console.debug(this.uri);
+//console.debug(this.uri);
 
     if (this.uri) {
 
@@ -1037,10 +1037,10 @@ console.debug(this.uri);
   * @returns {Array} Returns array of selected rows (models)
   */
   getSelected() {
-    const keys = Object.keys(this.model.attributes), l = keys.length, selected = [];
+    const keys = Object.keys(this.model._attributes), l = keys.length, selected = [];
     let i = 0;
     for (i = 0; i < l; i++) {
-      if (keys[i].includes("row-") && this.model.attributes[keys[i]] === true) {
+      if (keys[i].includes("row-") && this.model._attributes[keys[i]] === true) {
         const n = Number(keys[i].substring(4));
         selected.push(this.collection.at(n));
       }
@@ -1053,10 +1053,10 @@ console.debug(this.uri);
   * @returns {Array} Returns array of selected rows (indexes)
   */
   getSelectedIndex() {
-    const keys = Object.keys(this.model.attributes), l = keys.length, selected = [];
+    const keys = Object.keys(this.model._attributes), l = keys.length, selected = [];
     let i = 0;
     for (i = 0; i < l; i++) {
-      if (keys[i].includes("row-") && this.model.attributes[keys[i]] === true) {
+      if (keys[i].includes("row-") && this.model._attributes[keys[i]] === true) {
         selected.push(Number(keys[i].substring(4)));
       }
     }
