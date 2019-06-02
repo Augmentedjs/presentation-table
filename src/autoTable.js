@@ -1,6 +1,16 @@
 import { isObject } from "next-core-utilities";
 import { DecoratorView } from "presentation-decorator";
-import { TABLE_DATA_ATTRIBUTES, csvTableCompile, tsvTableCompile, defaultTableCompile, directDOMTableCompile, directDOMTableHeader, directDOMTableBody, directDOMEditableTableBody, directDOMPaginationControl } from "./functions/buildTable.js";
+import {
+  TABLE_DATA_ATTRIBUTES,
+  csvTableCompile,
+  tsvTableCompile,
+  defaultTableCompile,
+  directDOMTableCompile,
+  directDOMTableHeader,
+  directDOMTableBody,
+  directDOMEditableTableBody,
+  directDOMPaginationControl
+} from "./functions/buildTable.js";
 import formatValidationMessages from "./functions/messages.js";
 import { request } from "presentation-request";
 import Dom from "presentation-dom";
@@ -659,7 +669,7 @@ class AutomaticTable extends DecoratorView {
       view.showMessage("AutomaticTable fetch failed!");
     };
 
-console.debug(this.uri);
+    // console.debug(this.uri);
 
     if (this.uri) {
 
@@ -937,8 +947,10 @@ console.debug(this.uri);
   * @param {string} uri The URI
   */
   setURI(uri) {
-    this.uri = uri;
-    this.collection.uri = uri;
+    if (uri) {
+      this.uri = uri;
+      this.collection.uri = uri;
+    }
   };
 
  /**
@@ -978,7 +990,7 @@ console.debug(this.uri);
   * @param {string} message Some message to display
   */
   showMessage(message) {
-    if (this.el) {
+    if (this.el && message) {
       let e = (typeof this.el === 'string') ? document.querySelector(this.el) : this.el;
       let p = e.querySelector("p[class=message]");
       if (p) {
@@ -1043,6 +1055,23 @@ console.debug(this.uri);
       if (keys[i].includes("row-") && this.model.attributes[keys[i]] === true) {
         const n = Number(keys[i].substring(4));
         selected.push(this.collection.at(n));
+      }
+    }
+    return selected;
+  };
+
+  /**
+   * Gets the selected models as JSON
+   * @returns {Array} Returns array of selected rows (JSON Objects)
+   */
+  getSelectedAsJSON() {
+    const keys = Object.keys(this.model.attributes), l = keys.length, selected = [];
+    let i = 0;
+    for (i = 0; i < l; i++) {
+      if (keys[i].includes("row-") && this.model.attributes[keys[i]] === true) {
+        const n = Number(keys[i].substring(4));
+        const model = this.collection.at(n);
+        selected.push(model.toJSON());
       }
     }
     return selected;
