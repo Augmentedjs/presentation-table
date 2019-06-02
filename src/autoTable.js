@@ -1092,6 +1092,30 @@ class AutomaticTable extends DecoratorView {
   * @param {Array} rows Models of the rows to remove
   */
   removeRows(rows) {
+    /* TODO: this does not actually remove the rows from the table, when the collection is purged it creats a major issue:
+     * Unhandled promise rejection Error: "A "uri" property or model with "uri" must be specified in the collection or model class!"
+    t presentation-request.js:1
+    _ presentation-request.js:1
+    _invoke presentation-request.js:1
+    e presentation-request.js:1
+    n presentation-request.js:1
+    default presentation-request.js:1
+    j presentation-request.js:1
+    default presentation-request.js:1
+    f presentation-request.js:1
+    i presentation-models.js:1
+    w presentation-models.js:1
+    _invoke presentation-models.js:1
+    e presentation-models.js:1
+    i presentation-models.js:1
+    default presentation-models.js:1
+    L presentation-models.js:1
+    default presentation-models.js:1
+    sync presentation-models.js:1
+    remove core-next-model.js:1
+    removeRows presentation-table.js:1207
+ */
+    //return this.collection.remove(rows);
     const l = rows.length;
     let i = 0;
     for (i = 0; i < l; i++) {
@@ -1099,6 +1123,7 @@ class AutomaticTable extends DecoratorView {
       if (!model.uri) {
         model.uri = this.uri + "/" + model.id;
       }
+      this.collection.remove(n);
       model.destroy();
     }
     return l;
