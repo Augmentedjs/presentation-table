@@ -1045,14 +1045,20 @@ class AutomaticTable extends DecoratorView {
  /**
   * Gets the selected models
   * @returns {Array} Returns array of selected rows (models)
+  * @param {boolean} json convert to array of objects
   */
-  getSelected() {
+  getSelected(json) {
     const keys = Object.keys(this.model._attributes), l = keys.length, selected = [];
     let i = 0;
     for (i = 0; i < l; i++) {
       if (keys[i].includes("row-") && this.model._attributes[keys[i]] === true) {
         const n = Number(keys[i].substring(4));
-        selected.push(this.collection.at(n));
+        const model = this.collection.at(n);
+        if (json) {
+          selected.push(model.toJSON());
+        } else {
+          selected.push(model);
+        }
       }
     }
     return selected;
@@ -1063,16 +1069,7 @@ class AutomaticTable extends DecoratorView {
    * @returns {Array} Returns array of selected rows (JSON Objects)
    */
   getSelectedAsJSON() {
-    const keys = Object.keys(this.model.attributes), l = keys.length, selected = [];
-    let i = 0;
-    for (i = 0; i < l; i++) {
-      if (keys[i].includes("row-") && this.model.attributes[keys[i]] === true) {
-        const n = Number(keys[i].substring(4));
-        const model = this.collection.at(n);
-        selected.push(model.toJSON());
-      }
-    }
-    return selected;
+    return this.getSelected(true);
   };
 
  /**
@@ -1104,7 +1101,16 @@ class AutomaticTable extends DecoratorView {
       }
       model.destroy();
     }
+    return l;
   };
+
+  /**
+   * Removes the selected models
+   */
+  removeSelectedRows() {
+    return this.removeRows(this.getSelected());
+  };
+
 };
 
 export default AutomaticTable;
