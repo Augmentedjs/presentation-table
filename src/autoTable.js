@@ -669,12 +669,6 @@ class AutomaticTable extends DecoratorView {
       view.showMessage("AutomaticTable fetch failed!");
     };
 
-<<<<<<< HEAD
-    // console.debug(this.uri);
-=======
-//console.debug(this.uri);
->>>>>>> f50a945f12e21882b6729a9c707081e84b1e16c0
-
     if (this.uri) {
 
       this.collection.uri = this.uri;
