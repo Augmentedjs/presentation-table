@@ -33,7 +33,15 @@ const DEFAULT_THEME = "material";
  *     sortable: true,
  *     lineNumbers: true,
  *     editable: true,
- *     uri: "/example/data/table.json"
+ *     uri: "/example/data/table.json",
+ *     messagePosition: "top", // or bottom
+ *     theme: "material",
+ *     linkable: true,
+ *     links: {
+ *        wholeRow: true,
+ *        column: "",
+ *        link: "rowLink"
+ *     }
  * });
  */
 class AutomaticTable extends DecoratorView {
@@ -154,6 +162,12 @@ class AutomaticTable extends DecoratorView {
       this.data = [];
     }
 
+    if (options && options.messagePosition) {
+      this.messagePosition = options.messagePosition;
+    } else {
+      this.messagePosition = "bottom";
+    }
+
     this._columns = {};
     this.isInitalized = false;
     this.pageControlBound = false;
@@ -270,6 +284,12 @@ class AutomaticTable extends DecoratorView {
    * @property {string} sortKey sorted key
    * @private
    */
+
+   /**
+    * The messagePosition property
+    * @property {string} messagePosition Sets position of the message top or bottom
+    * @private
+    */
 
   /**
    * The links property - setup linking structure for links in a row
@@ -569,6 +589,13 @@ class AutomaticTable extends DecoratorView {
 
           const isMaterial = (this._style.includes("material"));
 
+          if (this.messagePosition === "top") {
+            // message
+            n = document.createElement("p");
+            n.classList.add("message");
+            e.appendChild(n);
+          }
+
           // the table
           directDOMTableCompile(
             e,
@@ -591,11 +618,12 @@ class AutomaticTable extends DecoratorView {
           if (this.renderPaginationControl) {
             directDOMPaginationControl(e, this.currentPage(), this.totalPages());
           }
-
-          // message
-          n = document.createElement("p");
-          n.classList.add("message");
-          e.appendChild(n);
+          if (this.messagePosition === "bottom") {
+            // message
+            n = document.createElement("p");
+            n.classList.add("message");
+            e.appendChild(n);
+          }
         }
       } else {
         //console.warn("AUGMENTED: AutoTable no element anchor, not rendering.");
