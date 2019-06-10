@@ -111,21 +111,24 @@ Augmented.js Presentation Table View Module
     -   [isValid](#isvalid)
     -   [remove](#remove)
     -   [getSelected](#getselected)
+        -   [Parameters](#parameters-34)
+    -   [getSelectedAsJSON](#getselectedasjson)
     -   [getSelectedIndex](#getselectedindex)
     -   [removeRows](#removerows)
-        -   [Parameters](#parameters-34)
+        -   [Parameters](#parameters-35)
+    -   [removeSelectedRows](#removeselectedrows)
 -   [BigDataTable](#bigdatatable)
-    -   [Parameters](#parameters-35)
--   [EditableBigDataTable](#editablebigdatatable)
     -   [Parameters](#parameters-36)
--   [EditableLocalStorageTable](#editablelocalstoragetable)
+-   [EditableBigDataTable](#editablebigdatatable)
     -   [Parameters](#parameters-37)
--   [EditableTable](#editabletable)
+-   [EditableLocalStorageTable](#editablelocalstoragetable)
     -   [Parameters](#parameters-38)
--   [LocalStorageTable](#localstoragetable)
+-   [EditableTable](#editabletable)
     -   [Parameters](#parameters-39)
--   [Spreadsheet](#spreadsheet)
+-   [LocalStorageTable](#localstoragetable)
     -   [Parameters](#parameters-40)
+-   [Spreadsheet](#spreadsheet)
+    -   [Parameters](#parameters-41)
 -   [\_generate](#_generate)
 -   [\_generate](#_generate-1)
 
@@ -150,7 +153,15 @@ const at = new AutomaticTable({
     sortable: true,
     lineNumbers: true,
     editable: true,
-    uri: "/example/data/table.json"
+    uri: "/example/data/table.json",
+    messagePosition: "top", // or bottom
+    theme: "material",
+    linkable: true,
+    links: {
+       wholeRow: true,
+       column: "",
+       link: "rowLink"
+    }
 });
 ```
 
@@ -591,7 +602,17 @@ Returns **any** Returns the context (this)
 
 Gets the selected models
 
+#### Parameters
+
+-   `json` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** convert to array of objects
+
 Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** Returns array of selected rows (models)
+
+### getSelectedAsJSON
+
+Gets the selected models as JSON
+
+Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** Returns array of selected rows (JSON Objects)
 
 ### getSelectedIndex
 
@@ -606,6 +627,10 @@ Removes the models
 #### Parameters
 
 -   `rows` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** Models of the rows to remove
+
+### removeSelectedRows
+
+Removes the selected models
 
 ## BigDataTable
 

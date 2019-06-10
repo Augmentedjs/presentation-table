@@ -119,15 +119,14 @@ window.lunrData = {
           "properi",
           "specifi",
           "spreadsheet",
-          "spreadsheet.if",
           "us"
         ],
         "Component.AutomaticTable.html": [
           "automat",
           "automatict",
-          "automatictablecr",
           "class",
           "component.automatict",
+          "creat",
           "data",
           "defint",
           "schema",
@@ -306,7 +305,7 @@ window.lunrData = {
           "function",
           "overrid",
           "save",
-          "sourcethi",
+          "sourc",
           "tabl"
         ],
         "Component.AutomaticTable.html#populate": [
@@ -421,6 +420,17 @@ window.lunrData = {
           "function",
           "get",
           "getselect",
+          "json",
+          "model",
+          "select"
+        ],
+        "Component.AutomaticTable.html#getSelectedAsJSON": [
+          "automatictable#getselectedasjson",
+          "component.automatictable#getselectedasjson",
+          "function",
+          "get",
+          "getselectedasjson",
+          "json",
           "model",
           "select"
         ],
@@ -442,9 +452,18 @@ window.lunrData = {
           "remov",
           "removerow",
           "row"
+        ],
+        "Component.AutomaticTable.html#removeSelectedRows": [
+          "automatictable#removeselectedrow",
+          "component.automatictable#removeselectedrow",
+          "function",
+          "model",
+          "remov",
+          "removeselectedrow",
+          "select"
         ]
       },
-      "length": 42
+      "length": 44
     },
     "tokenStore": {
       "root": {
@@ -508,7 +527,7 @@ window.lunrData = {
                       "docs": {
                         "Component.AutomaticTable.html": {
                           "ref": "Component.AutomaticTable.html",
-                          "tf": 6.25
+                          "tf": 5.555555555555555
                         }
                       },
                       "i": {
@@ -519,7 +538,7 @@ window.lunrData = {
                             "docs": {
                               "Component.AutomaticTable.html": {
                                 "ref": "Component.AutomaticTable.html",
-                                "tf": 750
+                                "tf": 755.5555555555555
                               }
                             },
                             "a": {
@@ -530,17 +549,6 @@ window.lunrData = {
                                   "docs": {},
                                   "e": {
                                     "docs": {},
-                                    "c": {
-                                      "docs": {},
-                                      "r": {
-                                        "docs": {
-                                          "Component.AutomaticTable.html": {
-                                            "ref": "Component.AutomaticTable.html",
-                                            "tf": 6.25
-                                          }
-                                        }
-                                      }
-                                    },
                                     "#": {
                                       "docs": {},
                                       "s": {
@@ -828,6 +836,44 @@ window.lunrData = {
                                                           "Component.AutomaticTable.html#removeRows": {
                                                             "ref": "Component.AutomaticTable.html#removeRows",
                                                             "tf": 100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "s": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "l": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "c": {
+                                                            "docs": {},
+                                                            "t": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "d": {
+                                                                  "docs": {},
+                                                                  "r": {
+                                                                    "docs": {},
+                                                                    "o": {
+                                                                      "docs": {},
+                                                                      "w": {
+                                                                        "docs": {
+                                                                          "Component.AutomaticTable.html#removeSelectedRows": {
+                                                                            "ref": "Component.AutomaticTable.html#removeSelectedRows",
+                                                                            "tf": 100
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
                                                           }
                                                         }
                                                       }
@@ -1123,6 +1169,29 @@ window.lunrData = {
                                                           "docs": {},
                                                           "d": {
                                                             "docs": {},
+                                                            "a": {
+                                                              "docs": {},
+                                                              "s": {
+                                                                "docs": {},
+                                                                "j": {
+                                                                  "docs": {},
+                                                                  "s": {
+                                                                    "docs": {},
+                                                                    "o": {
+                                                                      "docs": {},
+                                                                      "n": {
+                                                                        "docs": {
+                                                                          "Component.AutomaticTable.html#getSelectedAsJSON": {
+                                                                            "ref": "Component.AutomaticTable.html#getSelectedAsJSON",
+                                                                            "tf": 100
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
                                                             "i": {
                                                               "docs": {},
                                                               "n": {
@@ -1414,7 +1483,7 @@ window.lunrData = {
                     "docs": {
                       "Component.AutomaticTable.html": {
                         "ref": "Component.AutomaticTable.html",
-                        "tf": 6.25
+                        "tf": 5.555555555555555
                       }
                     }
                   }
@@ -1477,7 +1546,7 @@ window.lunrData = {
                 "docs": {
                   "Component.AutomaticTable.html": {
                     "ref": "Component.AutomaticTable.html",
-                    "tf": 6.25
+                    "tf": 5.555555555555555
                   },
                   "Component.AutomaticTable.html#fetch": {
                     "ref": "Component.AutomaticTable.html#fetch",
@@ -2038,6 +2107,10 @@ window.lunrData = {
                     "Component.AutomaticTable.html#removeRows": {
                       "ref": "Component.AutomaticTable.html#removeRows",
                       "tf": 25
+                    },
+                    "Component.AutomaticTable.html#removeSelectedRows": {
+                      "ref": "Component.AutomaticTable.html#removeSelectedRows",
+                      "tf": 16.666666666666664
                     }
                   },
                   "e": {
@@ -2051,6 +2124,44 @@ window.lunrData = {
                             "Component.AutomaticTable.html#removeRows": {
                               "ref": "Component.AutomaticTable.html#removeRows",
                               "tf": 650
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "s": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "l": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "t": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "w": {
+                                          "docs": {
+                                            "Component.AutomaticTable.html#removeSelectedRows": {
+                                              "ref": "Component.AutomaticTable.html#removeSelectedRows",
+                                              "tf": 700
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             }
                           }
                         }
@@ -2198,26 +2309,13 @@ window.lunrData = {
                       "ref": "Component.AutomaticTable.html#fetch",
                       "tf": 12.5
                     },
+                    "Component.AutomaticTable.html#save": {
+                      "ref": "Component.AutomaticTable.html#save",
+                      "tf": 8.333333333333332
+                    },
                     "Component.AutomaticTable.html#populate": {
                       "ref": "Component.AutomaticTable.html#populate",
                       "tf": 50
-                    }
-                  },
-                  "e": {
-                    "docs": {},
-                    "t": {
-                      "docs": {},
-                      "h": {
-                        "docs": {},
-                        "i": {
-                          "docs": {
-                            "Component.AutomaticTable.html#save": {
-                              "ref": "Component.AutomaticTable.html#save",
-                              "tf": 8.333333333333332
-                            }
-                          }
-                        }
-                      }
                     }
                   }
                 }
@@ -2303,21 +2401,7 @@ window.lunrData = {
                               "docs": {
                                 "Component.Spreadsheet.html": {
                                   "ref": "Component.Spreadsheet.html",
-                                  "tf": 750
-                                }
-                              },
-                              ".": {
-                                "docs": {},
-                                "i": {
-                                  "docs": {},
-                                  "f": {
-                                    "docs": {
-                                      "Component.Spreadsheet.html": {
-                                        "ref": "Component.Spreadsheet.html",
-                                        "tf": 3.8461538461538463
-                                      }
-                                    }
-                                  }
+                                  "tf": 753.8461538461538
                                 }
                               }
                             }
@@ -2342,7 +2426,7 @@ window.lunrData = {
                     "docs": {
                       "Component.AutomaticTable.html": {
                         "ref": "Component.AutomaticTable.html",
-                        "tf": 6.25
+                        "tf": 5.555555555555555
                       },
                       "Component.AutomaticTable.html#retrieveSchema": {
                         "ref": "Component.AutomaticTable.html#retrieveSchema",
@@ -2449,9 +2533,17 @@ window.lunrData = {
                         "ref": "Component.AutomaticTable.html#getSelected",
                         "tf": 16.666666666666664
                       },
+                      "Component.AutomaticTable.html#getSelectedAsJSON": {
+                        "ref": "Component.AutomaticTable.html#getSelectedAsJSON",
+                        "tf": 12.5
+                      },
                       "Component.AutomaticTable.html#getSelectedIndex": {
                         "ref": "Component.AutomaticTable.html#getSelectedIndex",
                         "tf": 12.5
+                      },
+                      "Component.AutomaticTable.html#removeSelectedRows": {
+                        "ref": "Component.AutomaticTable.html#removeSelectedRows",
+                        "tf": 16.666666666666664
                       }
                     }
                   }
@@ -2622,6 +2714,10 @@ window.lunrData = {
                   "ref": "Component.AutomaticTable.html#getSelected",
                   "tf": 16.666666666666664
                 },
+                "Component.AutomaticTable.html#getSelectedAsJSON": {
+                  "ref": "Component.AutomaticTable.html#getSelectedAsJSON",
+                  "tf": 12.5
+                },
                 "Component.AutomaticTable.html#getSelectedIndex": {
                   "ref": "Component.AutomaticTable.html#getSelectedIndex",
                   "tf": 12.5
@@ -2641,13 +2737,36 @@ window.lunrData = {
                           "docs": {
                             "Component.AutomaticTable.html#getSelected": {
                               "ref": "Component.AutomaticTable.html#getSelected",
-                              "tf": 700
+                              "tf": 650
                             }
                           },
                           "e": {
                             "docs": {},
                             "d": {
                               "docs": {},
+                              "a": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "j": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {
+                                            "Component.AutomaticTable.html#getSelectedAsJSON": {
+                                              "ref": "Component.AutomaticTable.html#getSelectedAsJSON",
+                                              "tf": 700
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
                               "i": {
                                 "docs": {},
                                 "n": {
@@ -3316,6 +3435,44 @@ window.lunrData = {
                                                                             }
                                                                           }
                                                                         }
+                                                                      },
+                                                                      "s": {
+                                                                        "docs": {},
+                                                                        "e": {
+                                                                          "docs": {},
+                                                                          "l": {
+                                                                            "docs": {},
+                                                                            "e": {
+                                                                              "docs": {},
+                                                                              "c": {
+                                                                                "docs": {},
+                                                                                "t": {
+                                                                                  "docs": {},
+                                                                                  "e": {
+                                                                                    "docs": {},
+                                                                                    "d": {
+                                                                                      "docs": {},
+                                                                                      "r": {
+                                                                                        "docs": {},
+                                                                                        "o": {
+                                                                                          "docs": {},
+                                                                                          "w": {
+                                                                                            "docs": {
+                                                                                              "Component.AutomaticTable.html#removeSelectedRows": {
+                                                                                                "ref": "Component.AutomaticTable.html#removeSelectedRows",
+                                                                                                "tf": 1100
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
                                                                       }
                                                                     }
                                                                   }
@@ -3607,6 +3764,29 @@ window.lunrData = {
                                                                               "docs": {},
                                                                               "d": {
                                                                                 "docs": {},
+                                                                                "a": {
+                                                                                  "docs": {},
+                                                                                  "s": {
+                                                                                    "docs": {},
+                                                                                    "j": {
+                                                                                      "docs": {},
+                                                                                      "s": {
+                                                                                        "docs": {},
+                                                                                        "o": {
+                                                                                          "docs": {},
+                                                                                          "n": {
+                                                                                            "docs": {
+                                                                                              "Component.AutomaticTable.html#getSelectedAsJSON": {
+                                                                                                "ref": "Component.AutomaticTable.html#getSelectedAsJSON",
+                                                                                                "tf": 1100
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                },
                                                                                 "i": {
                                                                                   "docs": {},
                                                                                   "n": {
@@ -3938,6 +4118,23 @@ window.lunrData = {
                           "tf": 620
                         }
                       }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "Component.AutomaticTable.html": {
+                      "ref": "Component.AutomaticTable.html",
+                      "tf": 5.555555555555555
                     }
                   }
                 }
@@ -4508,7 +4705,7 @@ window.lunrData = {
                   },
                   "Component.AutomaticTable.html": {
                     "ref": "Component.AutomaticTable.html",
-                    "tf": 6.25
+                    "tf": 5.555555555555555
                   },
                   "Component.AutomaticTable.html#setTheme": {
                     "ref": "Component.AutomaticTable.html#setTheme",
@@ -4691,7 +4888,7 @@ window.lunrData = {
                         "docs": {
                           "Component.AutomaticTable.html": {
                             "ref": "Component.AutomaticTable.html",
-                            "tf": 6.25
+                            "tf": 5.555555555555555
                           }
                         }
                       }
@@ -4718,7 +4915,7 @@ window.lunrData = {
               "docs": {
                 "Component.AutomaticTable.html": {
                   "ref": "Component.AutomaticTable.html",
-                  "tf": 6.25
+                  "tf": 5.555555555555555
                 },
                 "Component.AutomaticTable.html#sortBy": {
                   "ref": "Component.AutomaticTable.html#sortBy",
@@ -4893,12 +5090,20 @@ window.lunrData = {
                             "ref": "Component.AutomaticTable.html#getSelected",
                             "tf": 110
                           },
+                          "Component.AutomaticTable.html#getSelectedAsJSON": {
+                            "ref": "Component.AutomaticTable.html#getSelectedAsJSON",
+                            "tf": 110
+                          },
                           "Component.AutomaticTable.html#getSelectedIndex": {
                             "ref": "Component.AutomaticTable.html#getSelectedIndex",
                             "tf": 110
                           },
                           "Component.AutomaticTable.html#removeRows": {
                             "ref": "Component.AutomaticTable.html#removeRows",
+                            "tf": 110
+                          },
+                          "Component.AutomaticTable.html#removeSelectedRows": {
+                            "ref": "Component.AutomaticTable.html#removeSelectedRows",
                             "tf": 110
                           }
                         }
@@ -5064,10 +5269,39 @@ window.lunrData = {
                       "ref": "Component.AutomaticTable.html#getSelected",
                       "tf": 16.666666666666664
                     },
+                    "Component.AutomaticTable.html#getSelectedAsJSON": {
+                      "ref": "Component.AutomaticTable.html#getSelectedAsJSON",
+                      "tf": 12.5
+                    },
                     "Component.AutomaticTable.html#removeRows": {
                       "ref": "Component.AutomaticTable.html#removeRows",
                       "tf": 25
+                    },
+                    "Component.AutomaticTable.html#removeSelectedRows": {
+                      "ref": "Component.AutomaticTable.html#removeSelectedRows",
+                      "tf": 16.666666666666664
                     }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "j": {
+          "docs": {},
+          "s": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "Component.AutomaticTable.html#getSelected": {
+                    "ref": "Component.AutomaticTable.html#getSelected",
+                    "tf": 50
+                  },
+                  "Component.AutomaticTable.html#getSelectedAsJSON": {
+                    "ref": "Component.AutomaticTable.html#getSelectedAsJSON",
+                    "tf": 12.5
                   }
                 }
               }
@@ -5075,7 +5309,7 @@ window.lunrData = {
           }
         }
       },
-      "length": 320
+      "length": 335
     },
     "corpusTokens": [
       "10",
@@ -5094,6 +5328,7 @@ window.lunrData = {
       "automatictable#fetch",
       "automatictable#firstpag",
       "automatictable#getselect",
+      "automatictable#getselectedasjson",
       "automatictable#getselectedindex",
       "automatictable#gotopag",
       "automatictable#isvalid",
@@ -5104,6 +5339,7 @@ window.lunrData = {
       "automatictable#refresh",
       "automatictable#remov",
       "automatictable#removerow",
+      "automatictable#removeselectedrow",
       "automatictable#rend",
       "automatictable#retrieveschema",
       "automatictable#rowlink",
@@ -5116,7 +5352,6 @@ window.lunrData = {
       "automatictable#sortbi",
       "automatictable#totalpag",
       "automatictable#valid",
-      "automatictablecr",
       "bar",
       "base",
       "bigdatat",
@@ -5145,6 +5380,7 @@ window.lunrData = {
       "component.automatictable#fetch",
       "component.automatictable#firstpag",
       "component.automatictable#getselect",
+      "component.automatictable#getselectedasjson",
       "component.automatictable#getselectedindex",
       "component.automatictable#gotopag",
       "component.automatictable#isvalid",
@@ -5155,6 +5391,7 @@ window.lunrData = {
       "component.automatictable#refresh",
       "component.automatictable#remov",
       "component.automatictable#removerow",
+      "component.automatictable#removeselectedrow",
       "component.automatictable#rend",
       "component.automatictable#retrieveschema",
       "component.automatictable#rowlink",
@@ -5175,6 +5412,7 @@ window.lunrData = {
       "component.spreadsheet",
       "copi",
       "copycel",
+      "creat",
       "current",
       "currentpag",
       "data",
@@ -5198,6 +5436,7 @@ window.lunrData = {
       "function",
       "get",
       "getselect",
+      "getselectedasjson",
       "getselectedindex",
       "global",
       "go",
@@ -5205,6 +5444,7 @@ window.lunrData = {
       "index",
       "instanc",
       "isvalid",
+      "json",
       "key",
       "last",
       "lastpag",
@@ -5235,6 +5475,7 @@ window.lunrData = {
       "relat",
       "remov",
       "removerow",
+      "removeselectedrow",
       "render",
       "request",
       "retrieveschema",
@@ -5259,11 +5500,9 @@ window.lunrData = {
       "sort",
       "sortbi",
       "sourc",
-      "sourcethi",
       "specif",
       "specifi",
       "spreadsheet",
-      "spreadsheet.if",
       "storag",
       "tabe",
       "tabl",
@@ -5383,7 +5622,7 @@ window.lunrData = {
       "name": "Spreadsheet",
       "tags": "Component.Spreadsheet Spreadsheet",
       "summary": "",
-      "description": "Instance class preconfigured for editing for use as a Spreadsheet.If a propery for length is not specified, it will buffer 10 lines for editing.",
+      "description": "Instance class preconfigured for editing for use as a Spreadsheet. If a propery for length is not specified, it will buffer 10 lines for editing.",
       "body": ""
     },
     "Component.AutomaticTable.html": {
@@ -5394,7 +5633,7 @@ window.lunrData = {
       "name": "AutomaticTable",
       "tags": "Component.AutomaticTable AutomaticTable",
       "summary": "",
-      "description": "AutomaticTableCreates a table automatically via a schema for defintion and a uri/json for data",
+      "description": "AutomaticTable Creates a table automatically via a schema for defintion and a uri/json for data",
       "body": ""
     },
     "Component.AutomaticTable.html#setTheme": {
@@ -5565,7 +5804,7 @@ window.lunrData = {
       "name": "save",
       "tags": "Component.AutomaticTable#save AutomaticTable#save save",
       "summary": "",
-      "description": "Save the data to the sourceThis only functions if the table is editable"
+      "description": "Save the data to the source This only functions if the table is editable"
     },
     "Component.AutomaticTable.html#populate": {
       "id": "Component.AutomaticTable.html#populate",
@@ -5690,12 +5929,22 @@ window.lunrData = {
     "Component.AutomaticTable.html#getSelected": {
       "id": "Component.AutomaticTable.html#getSelected",
       "kind": "function",
-      "title": "getSelected()",
+      "title": "getSelected( json )",
       "longname": "Component.AutomaticTable#getSelected",
       "name": "getSelected",
       "tags": "Component.AutomaticTable#getSelected AutomaticTable#getSelected getSelected",
       "summary": "",
       "description": "Gets the selected models"
+    },
+    "Component.AutomaticTable.html#getSelectedAsJSON": {
+      "id": "Component.AutomaticTable.html#getSelectedAsJSON",
+      "kind": "function",
+      "title": "getSelectedAsJSON()",
+      "longname": "Component.AutomaticTable#getSelectedAsJSON",
+      "name": "getSelectedAsJSON",
+      "tags": "Component.AutomaticTable#getSelectedAsJSON AutomaticTable#getSelectedAsJSON getSelectedAsJSON",
+      "summary": "",
+      "description": "Gets the selected models as JSON"
     },
     "Component.AutomaticTable.html#getSelectedIndex": {
       "id": "Component.AutomaticTable.html#getSelectedIndex",
@@ -5716,6 +5965,16 @@ window.lunrData = {
       "tags": "Component.AutomaticTable#removeRows AutomaticTable#removeRows removeRows",
       "summary": "",
       "description": "Removes the models"
+    },
+    "Component.AutomaticTable.html#removeSelectedRows": {
+      "id": "Component.AutomaticTable.html#removeSelectedRows",
+      "kind": "function",
+      "title": "removeSelectedRows()",
+      "longname": "Component.AutomaticTable#removeSelectedRows",
+      "name": "removeSelectedRows",
+      "tags": "Component.AutomaticTable#removeSelectedRows AutomaticTable#removeSelectedRows removeSelectedRows",
+      "summary": "",
+      "description": "Removes the selected models"
     }
   }
 };

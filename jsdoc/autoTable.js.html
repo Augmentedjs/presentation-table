@@ -104,7 +104,17 @@
 			<article></article>
 			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">import { isObject } from "next-core-utilities";
 import { DecoratorView } from "presentation-decorator";
-import { TABLE_DATA_ATTRIBUTES, csvTableCompile, tsvTableCompile, defaultTableCompile, directDOMTableCompile, directDOMTableHeader, directDOMTableBody, directDOMEditableTableBody, directDOMPaginationControl } from "./functions/buildTable.js";
+import {
+  TABLE_DATA_ATTRIBUTES,
+  csvTableCompile,
+  tsvTableCompile,
+  defaultTableCompile,
+  directDOMTableCompile,
+  directDOMTableHeader,
+  directDOMTableBody,
+  directDOMEditableTableBody,
+  directDOMPaginationControl
+} from "./functions/buildTable.js";
 import formatValidationMessages from "./functions/messages.js";
 import { request } from "presentation-request";
 import Dom from "presentation-dom";
@@ -127,7 +137,15 @@ const DEFAULT_THEME = "material";
  *     sortable: true,
  *     lineNumbers: true,
  *     editable: true,
- *     uri: "/example/data/table.json"
+ *     uri: "/example/data/table.json",
+ *     messagePosition: "top", // or bottom
+ *     theme: "material",
+ *     linkable: true,
+ *     links: {
+ *        wholeRow: true,
+ *        column: "",
+ *        link: "rowLink"
+ *     }
  * });
  */
 class AutomaticTable extends DecoratorView {
@@ -248,6 +266,12 @@ class AutomaticTable extends DecoratorView {
       this.data = [];
     }
 
+    if (options &amp;&amp; options.messagePosition) {
+      this.messagePosition = options.messagePosition;
+    } else {
+      this.messagePosition = "bottom";
+    }
+
     this._columns = {};
     this.isInitalized = false;
     this.pageControlBound = false;
@@ -364,6 +388,12 @@ class AutomaticTable extends DecoratorView {
    * @property {string} sortKey sorted key
    * @private
    */
+
+   /**
+    * The messagePosition property
+    * @property {string} messagePosition Sets position of the message top or bottom
+    * @private
+    */
 
   /**
    * The links property - setup linking structure for links in a row
@@ -617,7 +647,8 @@ class AutomaticTable extends DecoratorView {
             while (thead.hasChildNodes()) {
               thead.removeChild(thead.lastChild);
             }
-            directDOMTableHeader(thead, this._columns, this.lineNumbers, this.sortKey, this.display, this.selectable);
+            const isMaterial = (this._style.includes("material"));
+            directDOMTableHeader(thead, this._columns, this.lineNumbers, this.sortKey, this.display, this.selectable, isMaterial);
           } else {
       		  if (thead) {
               while (thead.hasChildNodes()) {
@@ -660,18 +691,43 @@ class AutomaticTable extends DecoratorView {
           n.appendChild(t);
           e.appendChild(n);
 
+          const isMaterial = (this._style.includes("material"));
+
+          if (this.messagePosition === "top") {
+            // message
+            n = document.createElement("p");
+            n.classList.add("message");
+            e.appendChild(n);
+          }
+
           // the table
-          directDOMTableCompile(e, this.name, this.description, this._columns, this.collection.toJSON(), this.lineNumbers, this.sortKey, this.editable, this.display, this.selectable, this.linkable, this.links, this[this.links.link]);
+          directDOMTableCompile(
+            e,
+            this.name,
+            this.description,
+            this._columns,
+            this.collection.toJSON(),
+            this.lineNumbers,
+            this.sortKey,
+            this.editable,
+            this.display,
+            this.selectable,
+            this.linkable,
+            this.links,
+            this[this.links.link],
+            isMaterial
+          );
 
           // pagination control
           if (this.renderPaginationControl) {
             directDOMPaginationControl(e, this.currentPage(), this.totalPages());
           }
-
-          // message
-          n = document.createElement("p");
-          n.classList.add("message");
-          e.appendChild(n);
+          if (this.messagePosition === "bottom") {
+            // message
+            n = document.createElement("p");
+            n.classList.add("message");
+            e.appendChild(n);
+          }
         }
       } else {
         //console.warn("AUGMENTED: AutoTable no element anchor, not rendering.");
@@ -745,8 +801,6 @@ class AutomaticTable extends DecoratorView {
       view.showProgressBar(false);
       view.showMessage("AutomaticTable fetch failed!");
     };
-
-console.debug(this.uri);
 
     if (this.uri) {
 
@@ -1024,8 +1078,10 @@ console.debug(this.uri);
   * @param {string} uri The URI
   */
   setURI(uri) {
-    this.uri = uri;
-    this.collection.uri = uri;
+    if (uri) {
+      this.uri = uri;
+      this.collection.uri = uri;
+    }
   };
 
  /**
@@ -1065,7 +1121,7 @@ console.debug(this.uri);
   * @param {string} message Some message to display
   */
   showMessage(message) {
-    if (this.el) {
+    if (this.el &amp;&amp; message) {
       let e = (typeof this.el === 'string') ? document.querySelector(this.el) : this.el;
       let p = e.querySelector("p[class=message]");
       if (p) {
@@ -1122,17 +1178,31 @@ console.debug(this.uri);
  /**
   * Gets the selected models
   * @returns {Array} Returns array of selected rows (models)
+  * @param {boolean} json convert to array of objects
   */
-  getSelected() {
-    const keys = Object.keys(this.model.attributes), l = keys.length, selected = [];
+  getSelected(json) {
+    const keys = Object.keys(this.model._attributes), l = keys.length, selected = [];
     let i = 0;
     for (i = 0; i &lt; l; i++) {
-      if (keys[i].includes("row-") &amp;&amp; this.model.attributes[keys[i]] === true) {
+      if (keys[i].includes("row-") &amp;&amp; this.model._attributes[keys[i]] === true) {
         const n = Number(keys[i].substring(4));
-        selected.push(this.collection.at(n));
+        const model = this.collection.at(n);
+        if (json) {
+          selected.push(model.toJSON());
+        } else {
+          selected.push(model);
+        }
       }
     }
     return selected;
+  };
+
+  /**
+   * Gets the selected models as JSON
+   * @returns {Array} Returns array of selected rows (JSON Objects)
+   */
+  getSelectedAsJSON() {
+    return this.getSelected(true);
   };
 
  /**
@@ -1140,10 +1210,10 @@ console.debug(this.uri);
   * @returns {Array} Returns array of selected rows (indexes)
   */
   getSelectedIndex() {
-    const keys = Object.keys(this.model.attributes), l = keys.length, selected = [];
+    const keys = Object.keys(this.model._attributes), l = keys.length, selected = [];
     let i = 0;
     for (i = 0; i &lt; l; i++) {
-      if (keys[i].includes("row-") &amp;&amp; this.model.attributes[keys[i]] === true) {
+      if (keys[i].includes("row-") &amp;&amp; this.model._attributes[keys[i]] === true) {
         selected.push(Number(keys[i].substring(4)));
       }
     }
@@ -1159,12 +1229,24 @@ console.debug(this.uri);
     let i = 0;
     for (i = 0; i &lt; l; i++) {
       const model = rows[i];
-      if (!model.uri) {
+      //console.debug("Remove this model", model);
+      if (!model.uri &amp;&amp; this.uri) {
         model.uri = this.uri + "/" + model.id;
       }
+      this.collection.remove(model);
       model.destroy();
     }
+    this.refresh();
+    return l;
   };
+
+  /**
+   * Removes the selected models
+   */
+  removeSelectedRows() {
+    return this.removeRows(this.getSelected());
+  };
+
 };
 
 export default AutomaticTable;
@@ -1175,7 +1257,7 @@ export default AutomaticTable;
 	</div>
 	<footer>
 				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Nov 11th 2018 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Mon Jun 10th 2019 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
