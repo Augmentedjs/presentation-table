@@ -518,6 +518,7 @@ class AutomaticTable extends DecoratorView {
   * @returns {object} Returns the view context ('this')
   */
   render() {
+    this.model = new Model();
     //console.log("render");
     if (!this.isInitalized) {
       //console.warn("AUGMENTED: AutoTable Can't render yet, not initialized!");
