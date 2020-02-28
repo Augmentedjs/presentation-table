@@ -96,27 +96,27 @@ Augmented.js Presentation Table View Module
         -   [Parameters](#parameters-28)
     -   [clear](#clear)
     -   [refresh](#refresh)
-    -   [exportTo](#exportto)
-        -   [Parameters](#parameters-29)
     -   [compileTemplate](#compiletemplate)
     -   [setURI](#seturi)
-        -   [Parameters](#parameters-30)
+        -   [Parameters](#parameters-29)
     -   [setSchema](#setschema)
-        -   [Parameters](#parameters-31)
+        -   [Parameters](#parameters-30)
     -   [showProgressBar](#showprogressbar)
-        -   [Parameters](#parameters-32)
+        -   [Parameters](#parameters-31)
     -   [showMessage](#showmessage)
-        -   [Parameters](#parameters-33)
+        -   [Parameters](#parameters-32)
     -   [validate](#validate)
     -   [isValid](#isvalid)
     -   [remove](#remove)
     -   [getSelected](#getselected)
-        -   [Parameters](#parameters-34)
+        -   [Parameters](#parameters-33)
     -   [getSelectedAsJSON](#getselectedasjson)
     -   [getSelectedIndex](#getselectedindex)
     -   [removeRows](#removerows)
-        -   [Parameters](#parameters-35)
+        -   [Parameters](#parameters-34)
     -   [removeSelectedRows](#removeselectedrows)
+    -   [exportTo](#exportto)
+        -   [Parameters](#parameters-35)
 -   [BigDataTable](#bigdatatable)
     -   [Parameters](#parameters-36)
 -   [EditableBigDataTable](#editablebigdatatable)
@@ -161,7 +161,8 @@ const at = new AutomaticTable({
        wholeRow: true,
        column: "",
        link: "rowLink"
-    }
+    },
+    fetchOnStart: false
 });
 ```
 
@@ -243,7 +244,7 @@ The links property - setup linking structure for links in a row
 links: {
 wholeRow: false, // link whole row vs column
 column: "name", // name of column
-link: "rowLink" // callback
+link: "rowLink" // callback or method in class
 }
 ```
 
@@ -532,16 +533,6 @@ Refresh the table (Same as render)
 
 Returns **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Returns the view context ('this')
 
-### exportTo
-
-Export the table data in requested format
-
-#### Parameters
-
--   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The type requested (csv or html-default)
-
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The table data in requested format
-
 ### compileTemplate
 
 An overridable template compile
@@ -631,6 +622,16 @@ Removes the models
 ### removeSelectedRows
 
 Removes the selected models
+
+### exportTo
+
+Export the table data in requested format
+
+#### Parameters
+
+-   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The type requested (csv or html-default)
+
+Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The table data in requested format
 
 ## BigDataTable
 

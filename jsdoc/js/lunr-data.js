@@ -334,18 +334,6 @@ window.lunrData = {
           "same",
           "tabl"
         ],
-        "Component.AutomaticTable.html#exportTo": [
-          "automatictable#exportto",
-          "component.automatictable#exportto",
-          "data",
-          "export",
-          "exportto",
-          "format",
-          "function",
-          "request",
-          "tabl",
-          "type"
-        ],
         "Component.AutomaticTable.html#compileTemplate": [
           "automatictable#compiletempl",
           "compil",
@@ -461,6 +449,18 @@ window.lunrData = {
           "remov",
           "removeselectedrow",
           "select"
+        ],
+        "Component.AutomaticTable.html#exportTo": [
+          "automatictable#exportto",
+          "component.automatictable#exportto",
+          "data",
+          "export",
+          "exportto",
+          "format",
+          "function",
+          "request",
+          "tabl",
+          "type"
         ]
       },
       "length": 44
@@ -2060,26 +2060,6 @@ window.lunrData = {
                 }
               }
             },
-            "q": {
-              "docs": {},
-              "u": {
-                "docs": {},
-                "e": {
-                  "docs": {},
-                  "s": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "Component.AutomaticTable.html#exportTo": {
-                          "ref": "Component.AutomaticTable.html#exportTo",
-                          "tf": 10
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "l": {
               "docs": {},
               "a": {
@@ -2164,6 +2144,26 @@ window.lunrData = {
                               }
                             }
                           }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "q": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "Component.AutomaticTable.html#exportTo": {
+                          "ref": "Component.AutomaticTable.html#exportTo",
+                          "tf": 10
                         }
                       }
                     }
@@ -4627,37 +4627,6 @@ window.lunrData = {
               }
             }
           },
-          "x": {
-            "docs": {},
-            "p": {
-              "docs": {},
-              "o": {
-                "docs": {},
-                "r": {
-                  "docs": {},
-                  "t": {
-                    "docs": {
-                      "Component.AutomaticTable.html#exportTo": {
-                        "ref": "Component.AutomaticTable.html#exportTo",
-                        "tf": 10
-                      }
-                    },
-                    "t": {
-                      "docs": {},
-                      "o": {
-                        "docs": {
-                          "Component.AutomaticTable.html#exportTo": {
-                            "ref": "Component.AutomaticTable.html#exportTo",
-                            "tf": 650
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
           "n": {
             "docs": {},
             "a": {
@@ -4681,6 +4650,37 @@ window.lunrData = {
                                 "tf": 16.666666666666664
                               }
                             }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "x": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "Component.AutomaticTable.html#exportTo": {
+                        "ref": "Component.AutomaticTable.html#exportTo",
+                        "tf": 10
+                      }
+                    },
+                    "t": {
+                      "docs": {},
+                      "o": {
+                        "docs": {
+                          "Component.AutomaticTable.html#exportTo": {
+                            "ref": "Component.AutomaticTable.html#exportTo",
+                            "tf": 650
                           }
                         }
                       }
@@ -4731,10 +4731,6 @@ window.lunrData = {
                     "ref": "Component.AutomaticTable.html#refresh",
                     "tf": 12.5
                   },
-                  "Component.AutomaticTable.html#exportTo": {
-                    "ref": "Component.AutomaticTable.html#exportTo",
-                    "tf": 10
-                  },
                   "Component.AutomaticTable.html#showMessage": {
                     "ref": "Component.AutomaticTable.html#showMessage",
                     "tf": 12.5
@@ -4750,6 +4746,10 @@ window.lunrData = {
                   "Component.AutomaticTable.html#remove": {
                     "ref": "Component.AutomaticTable.html#remove",
                     "tf": 16.666666666666664
+                  },
+                  "Component.AutomaticTable.html#exportTo": {
+                    "ref": "Component.AutomaticTable.html#exportTo",
+                    "tf": 10
                   }
                 }
               },
@@ -4811,20 +4811,6 @@ window.lunrData = {
               }
             }
           },
-          "y": {
-            "docs": {},
-            "p": {
-              "docs": {},
-              "e": {
-                "docs": {
-                  "Component.AutomaticTable.html#exportTo": {
-                    "ref": "Component.AutomaticTable.html#exportTo",
-                    "tf": 50
-                  }
-                }
-              }
-            }
-          },
           "e": {
             "docs": {},
             "m": {
@@ -4843,6 +4829,20 @@ window.lunrData = {
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "y": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "Component.AutomaticTable.html#exportTo": {
+                    "ref": "Component.AutomaticTable.html#exportTo",
+                    "tf": 50
                   }
                 }
               }
@@ -5050,10 +5050,6 @@ window.lunrData = {
                             "ref": "Component.AutomaticTable.html#refresh",
                             "tf": 110
                           },
-                          "Component.AutomaticTable.html#exportTo": {
-                            "ref": "Component.AutomaticTable.html#exportTo",
-                            "tf": 110
-                          },
                           "Component.AutomaticTable.html#compileTemplate": {
                             "ref": "Component.AutomaticTable.html#compileTemplate",
                             "tf": 110
@@ -5104,6 +5100,10 @@ window.lunrData = {
                           },
                           "Component.AutomaticTable.html#removeSelectedRows": {
                             "ref": "Component.AutomaticTable.html#removeSelectedRows",
+                            "tf": 110
+                          },
+                          "Component.AutomaticTable.html#exportTo": {
+                            "ref": "Component.AutomaticTable.html#exportTo",
                             "tf": 110
                           }
                         }
@@ -5836,16 +5836,6 @@ window.lunrData = {
       "summary": "",
       "description": "Refresh the table (Same as render)"
     },
-    "Component.AutomaticTable.html#exportTo": {
-      "id": "Component.AutomaticTable.html#exportTo",
-      "kind": "function",
-      "title": "exportTo( type )",
-      "longname": "Component.AutomaticTable#exportTo",
-      "name": "exportTo",
-      "tags": "Component.AutomaticTable#exportTo AutomaticTable#exportTo exportTo",
-      "summary": "",
-      "description": "Export the table data in requested format"
-    },
     "Component.AutomaticTable.html#compileTemplate": {
       "id": "Component.AutomaticTable.html#compileTemplate",
       "kind": "function",
@@ -5975,6 +5965,16 @@ window.lunrData = {
       "tags": "Component.AutomaticTable#removeSelectedRows AutomaticTable#removeSelectedRows removeSelectedRows",
       "summary": "",
       "description": "Removes the selected models"
+    },
+    "Component.AutomaticTable.html#exportTo": {
+      "id": "Component.AutomaticTable.html#exportTo",
+      "kind": "function",
+      "title": "exportTo( type )",
+      "longname": "Component.AutomaticTable#exportTo",
+      "name": "exportTo",
+      "tags": "Component.AutomaticTable#exportTo AutomaticTable#exportTo exportTo",
+      "summary": "",
+      "description": "Export the table data in requested format"
     }
   }
 };

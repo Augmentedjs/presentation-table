@@ -145,7 +145,8 @@ const DEFAULT_THEME = "material";
  *        wholeRow: true,
  *        column: "",
  *        link: "rowLink"
- *     }
+ *     },
+ *     fetchOnStart: false
  * });
  */
 class AutomaticTable extends DecoratorView {
@@ -356,6 +357,12 @@ class AutomaticTable extends DecoratorView {
     } else {
       this.isInitalized = false;
     }
+
+    if (options.fetchOnStart) {
+      this._fetchOnStart = true;
+    } else {
+      this._fetchOnStart = false;
+    }
   };
 
   /**
@@ -401,7 +408,7 @@ class AutomaticTable extends DecoratorView {
    * @example links: {
    * wholeRow: false, // link whole row vs column
    * column: "name", // name of column
-   *	link: "rowLink" // callback
+   *	link: "rowLink" // callback or method in class
    * }
    */
 
@@ -622,6 +629,7 @@ class AutomaticTable extends DecoratorView {
   * @returns {object} Returns the view context ('this')
   */
   render() {
+    this.model = new Model();
     //console.log("render");
     if (!this.isInitalized) {
       //console.warn("AUGMENTED: AutoTable Can't render yet, not initialized!");
@@ -644,8 +652,10 @@ class AutomaticTable extends DecoratorView {
             this._unbindCellChangeEvents();
           }
           if (this._columns &amp;&amp; (Object.keys(this._columns).length > 0)){
-            while (thead.hasChildNodes()) {
-              thead.removeChild(thead.lastChild);
+            if (thead) {
+              while (thead.hasChildNodes()) {
+                thead.removeChild(thead.lastChild);
+              }
             }
             const isMaterial = (this._style.includes("material"));
             directDOMTableHeader(thead, this._columns, this.lineNumbers, this.sortKey, this.display, this.selectable, isMaterial);
@@ -656,9 +666,11 @@ class AutomaticTable extends DecoratorView {
               }
       		  }
           }
-          if (this.collection &amp;&amp; (this.collection.length > 0) &amp;&amp; tbody){
-            while (tbody.hasChildNodes()) {
-              tbody.removeChild(tbody.lastChild);
+          if (this.collection &amp;&amp; (this.collection.length > 0) &amp;&amp; tbody) {
+            if (tbody) {
+              while (tbody.hasChildNodes()) {
+                tbody.removeChild(tbody.lastChild);
+              }
             }
             if (this.editable) {
               // links not supported
@@ -667,13 +679,15 @@ class AutomaticTable extends DecoratorView {
               directDOMTableBody(tbody, this.collection.toJSON(), this._columns, this.lineNumbers, this.sortKey, this.display, this.selectable, this.name, this.linkable, this.links, this[this.links.link]);
             }
           } else {
-            while (tbody.hasChildNodes()) {
-              tbody.removeChild(tbody.lastChild);
+            if (tbody) {
+              while (tbody.hasChildNodes()) {
+                tbody.removeChild(tbody.lastChild);
+              }
             }
           }
         }
       } else {
-        //console.warn("AUGMENTED: AutoTable no element anchor, not rendering.");
+        console.warn(`AUGMENTED: AutoTable ${this.name} no element anchor, not rendering.`);
       }
     } else {
       //console.debug("no template");
@@ -730,7 +744,7 @@ class AutomaticTable extends DecoratorView {
           }
         }
       } else {
-        //console.warn("AUGMENTED: AutoTable no element anchor, not rendering.");
+        console.warn(`AUGMENTED: AutoTable ${this.name} no element anchor, not rendering.`);
       }
 
       if (this.renderPaginationControl) {
@@ -749,6 +763,12 @@ class AutomaticTable extends DecoratorView {
 
     this.showProgressBar(false);
     this.setTheme(this.theme);
+
+    // fetch if told so
+    if (this._fetchOnStart) {
+      this.fetch();
+      this._fetchOnStart = false;
+    }
 
     return this;
   };
@@ -776,7 +796,7 @@ class AutomaticTable extends DecoratorView {
         that.initialize(options);
       },
       error: (data, status) => {
-        this.showMessage("AutomaticTable Failed to fetch schema!!");
+        this.showMessage(`${this.name} Failed to fetch schema!!  ${status}`);
       }
     });
   };
@@ -803,7 +823,6 @@ class AutomaticTable extends DecoratorView {
     };
 
     if (this.uri) {
-
       this.collection.uri = this.uri;
     }
 
@@ -896,173 +915,6 @@ class AutomaticTable extends DecoratorView {
       value = parseInt(key.value);
     }
     model.set(key.getAttribute(TABLE_DATA_ATTRIBUTES.NAME), value);
-  };
-
- /**
-  * @private
-  */
-  _bindCellChangeEvents() {
-    let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
-    let cells = [].slice.call(document.querySelectorAll(myEl + " table tr td input"));
-    let i=0, l=cells.length;
-    for(i=0; i &lt; l; i++) {
-      cells[i].addEventListener("change", this.saveCell.bind(this), false);
-    }
-    // bind the select boxes as well
-    cells = [].slice.call(document.querySelectorAll(myEl + " table tr td select"));
-    i=0;
-    l=cells.length;
-    for(i=0; i &lt; l; i++) {
-      cells[i].addEventListener("change", this.saveCell.bind(this), false);
-    }
-  };
-
- /**
-  * @private
-  */
-  _unbindCellChangeEvents() {
-    let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
-    let cells = [].slice.call(document.querySelectorAll(myEl + " table tr td input"));
-    let i=0, l=cells.length;
-    for(i=0; i &lt; l; i++) {
-      cells[i].removeEventListener("change", this.saveCell, false);
-    }
-    // unbind the select boxes as well
-    cells = [].slice.call(document.querySelectorAll(myEl + " table tr td select"));
-    i=0;
-    l=cells.length;
-    for(i=0; i &lt; l; i++) {
-      cells[i].removeEventListener("change", this.saveCell, false);
-    }
-  };
-
- /**
-  * Export the table data in requested format
-  * @param {string} type The type requested (csv or html-default)
-  * @returns {string} The table data in requested format
-  */
-  exportTo(type) {
-    let e = "";
-    if (type === "csv") {
-      e = csvTableCompile(this.name, this.description, this._columns, this.collection.toJSON());
-    } else if (type === "tsv") {
-      e = tsvTableCompile(this.name, this.description, this._columns, this.collection.toJSON());
-    } else {
-      // html
-      e = defaultTableCompile(this.name, this.description, this._columns, this.collection.toJSON(), false, null);
-    }
-    return e;
-  };
-
- /**
-  * @private
-  */
-  _unbindPaginationControlEvents() {
-    if (this.pageControlBound) {
-      let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
-      let first = document.querySelector(myEl + " div.paginationControl span.first");
-      let previous = document.querySelector(myEl + " div.paginationControl span.previous");
-      let next = document.querySelector(myEl + " div.paginationControl span.next");
-      let last = document.querySelector(myEl + " div.paginationControl span.last");
-      if (first) {
-        first.removeEventListener("click", this.firstPage, false);
-      }
-      if (previous) {
-        previous.removeEventListener("click", this.previousPage, false);
-      }
-      if (next) {
-        next.removeEventListener("click", this.nextPage, false);
-      }
-      if (last) {
-        last.removeEventListener("click", this.lastPage, false);
-      }
-      this.pageControlBound = false;
-    }
-  };
-
- /**
-  * @private
-  */
-  _bindPaginationControlEvents() {
-    if (!this.pageControlBound) {
-      let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
-      let first = document.querySelector(myEl + " div.paginationControl span.first");
-      let previous = document.querySelector(myEl + " div.paginationControl span.previous");
-      let next = document.querySelector(myEl + " div.paginationControl span.next");
-      let last = document.querySelector(myEl + " div.paginationControl span.last");
-      if (first) {
-        first.addEventListener("click", this.firstPage.bind(this), false);
-      }
-      if (previous) {
-        previous.addEventListener("click", this.previousPage.bind(this), false);
-      }
-      if (next) {
-        next.addEventListener("click", this.nextPage.bind(this), false);
-      }
-      if (last) {
-        last.addEventListener("click", this.lastPage.bind(this), false);
-      }
-      this.pageControlBound = true;
-    }
-  };
-
- /**
-  * @private
-  */
-  _deriveEventTarget(event) {
-    let key = null;
-    if (event) {
-      key = event.target.getAttribute(TABLE_DATA_ATTRIBUTES.NAME);
-    }
-    return key;
-  };
-
- /**
-  * @private
-  */
-  _sortByHeaderEvent(event) {
-    let key = this._deriveEventTarget(event);
-    this.sortBy(key);
-  };
-
- /**
-  * @private
-  */
-  _unbindSortableColumnEvents()  {
-    if (this.el &amp;&amp; this.sortable) {
-      let list;
-      if (typeof this.el === 'string') {
-        list = document.querySelectorAll(this.el + " table tr th");
-      } else {
-        list = document.querySelectorAll(this.el.localName + " table tr th");
-      }
-      let i = 0, l = list.length;
-      for (i = 0; i &lt; l; i++) {
-        list[i].removeEventListener("click", this._sortByHeaderEvent, false);
-      }
-    }
-  };
-
- /**
-  * @private
-  */
-  _bindSortableColumnEvents()  {
-    if (this.el &amp;&amp; this.sortable) {
-      let list;
-      if (typeof this.el === 'string') {
-        list = document.querySelectorAll(this.el + " table tr th");
-      } else {
-        list = document.querySelectorAll(this.el.localName + " table tr th");
-      }
-      let i = 0, l = list.length;
-      for (i = 0; i &lt; l; i++) {
-        if (list[i].getAttribute(TABLE_DATA_ATTRIBUTES.NAME) === "lineNumber") {
-          // Do I need to do something?
-        } else {
-          list[i].addEventListener("click", this._sortByHeaderEvent.bind(this), false);
-        }
-      }
-    }
   };
 
  /**
@@ -1247,6 +1099,174 @@ class AutomaticTable extends DecoratorView {
     return this.removeRows(this.getSelected());
   };
 
+/**
+ * Export the table data in requested format
+ * @param {string} type The type requested (csv or html-default)
+ * @returns {string} The table data in requested format
+ */
+ exportTo(type) {
+   let e = "";
+   if (type === "csv") {
+     e = csvTableCompile(this.name, this.description, this._columns, this.collection.toJSON());
+   } else if (type === "tsv") {
+     e = tsvTableCompile(this.name, this.description, this._columns, this.collection.toJSON());
+   } else {
+     // html
+     e = defaultTableCompile(this.name, this.description, this._columns, this.collection.toJSON(), false, null);
+   }
+   return e;
+ };
+
+ /* Private methods */
+
+ /**
+  * @private
+  */
+  _bindCellChangeEvents() {
+    let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
+    let cells = [].slice.call(document.querySelectorAll(myEl + " table tr td input"));
+    let i=0, l=cells.length;
+    for(i=0; i &lt; l; i++) {
+      cells[i].addEventListener("change", this.saveCell.bind(this), false);
+    }
+    // bind the select boxes as well
+    cells = [].slice.call(document.querySelectorAll(myEl + " table tr td select"));
+    i=0;
+    l=cells.length;
+    for(i=0; i &lt; l; i++) {
+      cells[i].addEventListener("change", this.saveCell.bind(this), false);
+    }
+  };
+
+ /**
+  * @private
+  */
+  _unbindCellChangeEvents() {
+    let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
+    let cells = [].slice.call(document.querySelectorAll(myEl + " table tr td input"));
+    let i=0, l=cells.length;
+    for(i=0; i &lt; l; i++) {
+      cells[i].removeEventListener("change", this.saveCell, false);
+    }
+    // unbind the select boxes as well
+    cells = [].slice.call(document.querySelectorAll(myEl + " table tr td select"));
+    i=0;
+    l=cells.length;
+    for(i=0; i &lt; l; i++) {
+      cells[i].removeEventListener("change", this.saveCell, false);
+    }
+  };
+
+ /**
+  * @private
+  */
+  _unbindPaginationControlEvents() {
+    if (this.pageControlBound) {
+      let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
+      let first = document.querySelector(myEl + " div.paginationControl span.first");
+      let previous = document.querySelector(myEl + " div.paginationControl span.previous");
+      let next = document.querySelector(myEl + " div.paginationControl span.next");
+      let last = document.querySelector(myEl + " div.paginationControl span.last");
+      if (first) {
+        first.removeEventListener("click", this.firstPage, false);
+      }
+      if (previous) {
+        previous.removeEventListener("click", this.previousPage, false);
+      }
+      if (next) {
+        next.removeEventListener("click", this.nextPage, false);
+      }
+      if (last) {
+        last.removeEventListener("click", this.lastPage, false);
+      }
+      this.pageControlBound = false;
+    }
+  };
+
+ /**
+  * @private
+  */
+  _bindPaginationControlEvents() {
+    if (!this.pageControlBound) {
+      let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
+      let first = document.querySelector(myEl + " div.paginationControl span.first");
+      let previous = document.querySelector(myEl + " div.paginationControl span.previous");
+      let next = document.querySelector(myEl + " div.paginationControl span.next");
+      let last = document.querySelector(myEl + " div.paginationControl span.last");
+      if (first) {
+        first.addEventListener("click", this.firstPage.bind(this), false);
+      }
+      if (previous) {
+        previous.addEventListener("click", this.previousPage.bind(this), false);
+      }
+      if (next) {
+        next.addEventListener("click", this.nextPage.bind(this), false);
+      }
+      if (last) {
+        last.addEventListener("click", this.lastPage.bind(this), false);
+      }
+      this.pageControlBound = true;
+    }
+  };
+
+ /**
+  * @private
+  */
+  _deriveEventTarget(event) {
+    let key = null;
+    if (event) {
+      key = event.target.getAttribute(TABLE_DATA_ATTRIBUTES.NAME);
+    }
+    return key;
+  };
+
+ /**
+  * @private
+  */
+  _sortByHeaderEvent(event) {
+    let key = this._deriveEventTarget(event);
+    this.sortBy(key);
+  };
+
+ /**
+  * @private
+  */
+  _unbindSortableColumnEvents()  {
+    if (this.el &amp;&amp; this.sortable) {
+      let list;
+      if (typeof this.el === 'string') {
+        list = document.querySelectorAll(this.el + " table tr th");
+      } else {
+        list = document.querySelectorAll(this.el.localName + " table tr th");
+      }
+      let i = 0, l = list.length;
+      for (i = 0; i &lt; l; i++) {
+        list[i].removeEventListener("click", this._sortByHeaderEvent, false);
+      }
+    }
+  };
+
+ /**
+  * @private
+  */
+  _bindSortableColumnEvents()  {
+    if (this.el &amp;&amp; this.sortable) {
+      let list;
+      if (typeof this.el === 'string') {
+        list = document.querySelectorAll(this.el + " table tr th");
+      } else {
+        list = document.querySelectorAll(this.el.localName + " table tr th");
+      }
+      let i = 0, l = list.length;
+      for (i = 0; i &lt; l; i++) {
+        if (list[i].getAttribute(TABLE_DATA_ATTRIBUTES.NAME) === "lineNumber") {
+          // Do I need to do something?
+        } else {
+          list[i].addEventListener("click", this._sortByHeaderEvent.bind(this), false);
+        }
+      }
+    }
+  };
 };
 
 export default AutomaticTable;
@@ -1257,7 +1277,7 @@ export default AutomaticTable;
 	</div>
 	<footer>
 				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Mon Jun 10th 2019 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Fri Feb 28th 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
