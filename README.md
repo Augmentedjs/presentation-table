@@ -527,7 +527,8 @@ Clear all the data in the table
 
 ### refresh
 
--   **See: AutomaticTable.render**
+-   **See: AutomaticTable.render
+    **
 
 Refresh the table (Same as render)
 
