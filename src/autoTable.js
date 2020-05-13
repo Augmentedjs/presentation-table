@@ -988,16 +988,16 @@ class AutomaticTable extends DecoratorView {
     let i = 0;
     for (i = 0; i < l; i++) {
       const model = rows[i];
-      console.debug("Remove this model", model);
+      // console.debug("Remove this model", model);
       if (!model.uri && this.uri) {
         model.uri = this.uri + "/" + model.id;
       }
 
-      console.debug("collecton before", this.collection);
+      // console.debug("collecton before", this.collection);
 
-      const ret = this.collection.remove(model);
-      console.debug("collecton after", this.collection);
-      console.debug("Return from collection remove", ret);
+      const ret = this.collection.removeModels(model);
+      // console.debug("collecton after", this.collection);
+      // console.debug("Return from collection remove", ret);
       model.destroy();
     }
     this.refresh();
