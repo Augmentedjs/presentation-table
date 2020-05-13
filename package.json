@@ -1,6 +1,6 @@
 {
   "name": "presentation-table",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "The Augmented.js Next - Presentation Table View Module.",
   "main": "dist/presentation-table.js",
   "scripts": {
@@ -51,7 +51,7 @@
     "presentation-decorator": "^3.0.2",
     "presentation-dom": "^2.8.2",
     "presentation-mediator": "^3.0.0",
-    "presentation-models": "^2.6.4",
+    "presentation-models": "^3.0.1",
     "presentation-request": "^2.6.3",
     "presentation-widget": "^2.5.6"
   },

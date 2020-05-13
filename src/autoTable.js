@@ -525,7 +525,10 @@ class AutomaticTable extends DecoratorView {
   * @returns {object} Returns the view context ('this')
   */
   render() {
-    this.model = new Model();
+    if (!this.model) {
+      this.model = new Model();
+    }
+
     //console.log("render");
     if (!this.isInitalized) {
       //console.warn("AUGMENTED: AutoTable Can't render yet, not initialized!");
@@ -662,6 +665,7 @@ class AutomaticTable extends DecoratorView {
 
     // fetch if told so
     if (this._fetchOnStart) {
+      console.debug("fetch");
       this.fetch();
       this._fetchOnStart = false;
     }
@@ -805,12 +809,19 @@ class AutomaticTable extends DecoratorView {
   * @private
   */
   saveCell(event) {
-    const key = event.target, model = this.collection.at(parseInt(key.getAttribute(TABLE_DATA_ATTRIBUTES.INDEX)));
+    const key = event.target,
+          index = parseInt(key.getAttribute(TABLE_DATA_ATTRIBUTES.INDEX)),
+          model = this.collection.at(index);
     let value = key.value;
     if ((key.getAttribute("type")) === "number") {
       value = parseInt(key.value);
     }
-    model.set(key.getAttribute(TABLE_DATA_ATTRIBUTES.NAME), value);
+    if (model) {
+      model.set(key.getAttribute(TABLE_DATA_ATTRIBUTES.NAME), value);
+    } else {
+      console.warn(`Could not find the row ${index} in table "${this.name}"`, key, key.getAttribute(TABLE_DATA_ATTRIBUTES.INDEX));
+    }
+
   };
 
  /**
@@ -977,11 +988,16 @@ class AutomaticTable extends DecoratorView {
     let i = 0;
     for (i = 0; i < l; i++) {
       const model = rows[i];
-      //console.debug("Remove this model", model);
+      console.debug("Remove this model", model);
       if (!model.uri && this.uri) {
         model.uri = this.uri + "/" + model.id;
       }
-      this.collection.remove(model);
+
+      console.debug("collecton before", this.collection);
+
+      const ret = this.collection.remove(model);
+      console.debug("collecton after", this.collection);
+      console.debug("Return from collection remove", ret);
       model.destroy();
     }
     this.refresh();

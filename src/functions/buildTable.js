@@ -215,6 +215,7 @@ export const directDOMTableBody = (el, data, columns, lineNumbers, sortKey, disp
       tn.value = String(i);
       // Binding
       tn.setAttribute("data-" + name, "row-" + i);
+      tn.setAttribute(TABLE_DATA_ATTRIBUTES.INDEX, i);
 
       td.appendChild(tn);
       td.classList.add("label", "select");
@@ -277,6 +278,10 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
       tn.type = "checkbox";
       tn.name = String(i);
       tn.value = String(i);
+      // Binding
+      tn.setAttribute("data-" + name, "row-" + i);
+      tn.setAttribute(TABLE_DATA_ATTRIBUTES.INDEX, i);
+      
       td.appendChild(tn);
       td.classList.add("label", "select");
       tr.appendChild(td);
@@ -389,6 +394,7 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
         }
 
         input.setAttribute(TABLE_DATA_ATTRIBUTES.NAME, dkey);
+        // console.debug("setting index", TABLE_DATA_ATTRIBUTES.INDEX, i);
         input.setAttribute(TABLE_DATA_ATTRIBUTES.INDEX, i);
 
         // Binding
