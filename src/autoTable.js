@@ -46,24 +46,41 @@ const DEFAULT_THEME = "material";
  * });
  */
 class AutomaticTable extends DecoratorView {
-  constructor(options) {
+  constructor(options = {}) {
     super(options);
 
     const style = (this.style) ? this.style + " " : "";
 
     if (options && options.theme) {
+      /**
+       * The theme property - The theme of this table (default is 'material')
+       * @property {string} theme The theme of this table
+       */
       this.theme = `${style}${options.theme}`;
     } else {
       this.theme = `${style}${DEFAULT_THEME}`;
     }
 
     if (options && options.linkable) {
+      /**
+       * The linkable property - enable links in a row (only works in non-editable tables)
+       * @property {boolean} linkable enable/disable linking a row
+       */
       this.linkable = options.linkable;
     } else {
       this.linkable = false;
     }
 
     if (options && options.links) {
+      /**
+       * The links property - setup linking structure for links in a row
+       * @property {boolean} linkable enable/disable linking a row
+       * @example links: {
+       * wholeRow: false, // link whole row vs column
+       * column: "name", // name of column
+       *	link: "rowLink" // callback or method in class
+       * }
+       */
       this.links = options.links;
     } else {
       this.links = {
@@ -74,110 +91,200 @@ class AutomaticTable extends DecoratorView {
     }
 
     if (options && options.selectable) {
+      /**
+       * The selectable property - enable selecting a row in table
+       * @property {boolean} selectable enable/disable selecting a row
+       */
       this.selectable = options.selectable;
     } else {
       this.selectable = false;
     }
 
     if (options && options.sortable) {
+      /**
+       * The sortable property - enable sorting in table
+       * @property {boolean} sortable enable sorting in the table
+       */
       this.sortable = options.sortable;
     } else {
       this.sortable = false;
     }
 
     if (options && options.sortStyle) {
+      /**
+       * The sortStyle property - setup the sort API
+       * @property {string} sortStyle setup the sort API
+       */
       this.sortStyle = options.sortStyle;
     } else {
       this.sortStyle = DEFAULT_SORT_TYPE;
     }
 
     if (options && options.sortKey) {
+      /**
+       * The sortKey property
+       * @property {string} sortKey sorted key
+       * @private
+       */
       this.sortKey = options.sortKey;
     } else {
       this.sortKey = null;
     }
 
     if (options && options.display) {
+      /**
+       * Fields to display - null will display all
+       * @property {array} display Fields to display
+       */
       this.display = options.display;
     } else {
       this.display = null;
     }
 
     if (options && options.pagination) {
+      /**
+       * The renderPaginationControl property - render the pagination control
+       * @property {boolean} renderPaginationControl render the pagination control
+       */
       this.renderPaginationControl = options.pagination;
     } else {
       this.renderPaginationControl = false;
     }
 
     if (options && options.paginationAPI) {
+      /**
+       * The paginationAPI property - setup the paginatin API to use
+       * @property {PaginationFactory.type} paginationAPI the pagination API to use
+       */
       this.paginationAPI = options.paginationAPI;
     } else {
       this.paginationAPI = null;
     }
 
     if (options && options.description) {
+      /**
+       * The description property
+       * @property {string} description The description of the table
+       */
       this.description = options.description;
     } else {
       this.description = "";
     }
 
     if (options && options.localStorage) {
+      /**
+       * The localStorage property - enables localStorage
+       * @property {boolean} localStorage The localStorage property
+       */
       this.localStorage = options.localStorage;
     } else {
       this.localStorage = false;
     }
 
     if (options && options.localStorageKey) {
+      /**
+       * The localStorageKey property - set the key for use in storage
+       * @property {string} localStorageKey The localStorage key property
+       */
       this.localStorageKey = options.localStorageKey;
     } else {
       this.localStorageKey = DEFAULT_KEY;
     }
 
     if (options && options.editable) {
+      /**
+       * The editable property - enables editing of cells
+       * @property {boolean} editable The editable property
+       */
       this.editable = options.editable;
     } else {
       this.editable = false;
     }
 
     if (options && options.crossOrigin) {
+      /**
+       * The crossOrigin property - enables cross origin fetch
+       * @property {boolean} crossOrigin The crossOrigin property
+       */
       this.crossOrigin = options.crossOrigin;
     } else {
       this.crossOrigin = false;
     }
 
     if (options && options.lineNumbers) {
+      /**
+       * The lineNumber property - turns on line numbers
+       * @property {boolean} lineNumbers The lineNumbers property
+       */
       this.lineNumbers = options.lineNumbers;
     } else {
       this.lineNumbers = false;
     }
 
     if (options && options.uri) {
+      /**
+       * The URI property
+       * @property {string} uri The URI property
+       */
       this.uri = options.uri;
     } else {
       this.uri = false;
     }
 
     if (options && options.data) {
+      /**
+       * The data property
+       * @property {array} data The data property
+       * @private
+       */
       this.data = options.data;
     } else {
       this.data = [];
     }
 
     if (options && options.messagePosition) {
+      /**
+       * The messagePosition property
+       * @property {string} messagePosition Sets position of the message top or bottom
+       * @private
+       */
       this.messagePosition = options.messagePosition;
     } else {
       this.messagePosition = "bottom";
     }
 
     if (options.collection) {
+      /**
+       * The collection property
+       * @property {Collection|PaginatedCollection} collection The collection property
+       * @private
+       */
       this.collection = options.collection;
     }
 
+    /**
+     * The columns property
+     * @property {object} columns The columns property
+     * @private
+     */
     this._columns = {};
+    /**
+     * The initialized property
+     * @property {boolean} isInitalized The initialized property
+     */
     this.isInitalized = false;
+
+    /**
+     * The pageControlBound property
+     * @property {boolean} pageControlBound is the pagecontrol bound
+     */
     this.pageControlBound = false;
 
     if (!this.model) {
+      /**
+       * model property used for binding activities
+       * @private
+       */
       this.model = new Model();
     }
 
@@ -198,6 +305,10 @@ class AutomaticTable extends DecoratorView {
     if (options && options.schema) {
       // check if this is a schema vs a URI to get a schema
       if (isObject(options.schema)) {
+        /**
+         * The schema property - the defining schema
+         * @property {object} schema The schema
+         */
         this.schema = options.schema;
       } else {
         // is a URI?
@@ -238,6 +349,10 @@ class AutomaticTable extends DecoratorView {
 
     if (this.schema) {
       if ((!this.name || this.name === "") && this.schema.title) {
+        /**
+         * The name property
+         * @property {string} name The name of the table
+         */
         this.name = this.schema.title;
         this.name.split(" ").join("");
       }
@@ -261,132 +376,6 @@ class AutomaticTable extends DecoratorView {
       this._fetchOnStart = false;
     }
   };
-
-  /**
-   * The theme property - The theme of this table (default is 'material')
-   * @property {string} theme The theme of this table
-   */
-
- /**
-  * The linkable property - enable links in a row (only works in non-editable tables)
-  * @property {boolean} linkable enable/disable linking a row
-  */
-
-  /**
-   * The selectable property - enable selecting a row in table
-   * @property {boolean} selectable enable/disable selecting a row
-   */
-
-  /**
-   * The sortable property - enable sorting in table
-   * @property {boolean} sortable enable sorting in the table
-   */
-
-  /**
-   * The sortStyle property - setup the sort API
-   * @property {string} sortStyle setup the sort API
-   */
-
-  /**
-   * The sortKey property
-   * @property {string} sortKey sorted key
-   * @private
-   */
-
-   /**
-    * The messagePosition property
-    * @property {string} messagePosition Sets position of the message top or bottom
-    * @private
-    */
-
-  /**
-   * The links property - setup linking structure for links in a row
-   * @property {boolean} linkable enable/disable linking a row
-   * @example links: {
-   * wholeRow: false, // link whole row vs column
-   * column: "name", // name of column
-   *	link: "rowLink" // callback or method in class
-   * }
-   */
-
-  /**
-   * The localStorage property - enables localStorage
-   * @property {boolean} localStorage The localStorage property
-   */
-
-  /**
-   * The localStorageKey property - set the key for use in storage
-   * @property {string} localStorageKey The localStorage key property
-   */
-
-  /**
-   * The editable property - enables editing of cells
-   * @property {boolean} editable The editable property
-   */
-
- /**
-  * Fields to display - null will display all
-  * @property {array} display Fields to display
-  */
-
-  // pagination
- /**
-  * The renderPaginationControl property - render the pagination control
-  * @property {boolean} renderPaginationControl render the pagination control
-  */
-
- /**
-  * The paginationAPI property - setup the paginatin API to use
-  * @property {Augmented.PaginationFactory.type} paginationAPI the pagination API to use
-  */
-
- /**
-  * The name property
-  * @property {string} name The name of the table
-  */
-
- /**
-  * The description property
-  * @property {string} description The description of the table
-  */
-
-  /**
-   * The crossOrigin property - enables cross origin fetch
-   * @property {boolean} crossOrigin The crossOrigin property
-   */
-
-  /**
-   * The lineNumber property - turns on line numbers
-   * @property {boolean} lineNumbers The lineNumbers property
-   */
-
-  /**
-   * The columns property
-   * @property {object} columns The columns property
-   * @private
-   */
-
-  /**
-   * The URI property
-   * @property {string} uri The URI property
-   */
-
-  /**
-   * The data property
-   * @property {array} data The data property
-   * @private
-   */
-
-  /**
-   * The collection property
-   * @property {Augmented.PaginatedCollection} collection The collection property
-   * @private
-   */
-
-  /**
-   * The initialized property
-   * @property {boolean} isInitalized The initialized property
-   */
 
   /**
    * The theme of the table

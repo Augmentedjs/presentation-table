@@ -66,13 +66,13 @@
 								<li class="dropdown">
 									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 									<ul class="dropdown-menu">
+											<li><a href="BigDataTable.html">BigDataTable</a></li>
 											<li><a href="Component.AutomaticTable.html">Component.AutomaticTable</a></li>
-											<li><a href="Component.BigDataTable.html">Component.BigDataTable</a></li>
-											<li><a href="Component.EditableBigDataTable.html">Component.EditableBigDataTable</a></li>
-											<li><a href="Component.EditableLocalStorageTable.html">Component.EditableLocalStorageTable</a></li>
-											<li><a href="Component.EditableTable.html">Component.EditableTable</a></li>
-											<li><a href="Component.LocalStorageTable.html">Component.LocalStorageTable</a></li>
-											<li><a href="Component.Spreadsheet.html">Component.Spreadsheet</a></li>
+											<li><a href="EditableBigDataTable.html">EditableBigDataTable</a></li>
+											<li><a href="EditableLocalStorageTable.html">EditableLocalStorageTable</a></li>
+											<li><a href="EditableTable.html">EditableTable</a></li>
+											<li><a href="LocalStorageTable.html">LocalStorageTable</a></li>
+											<li><a href="Spreadsheet.html">Spreadsheet</a></li>
 									</ul>
 								</li>
 				</ul>
@@ -172,6 +172,1176 @@
 </dd>
 							</dl>
 							<article class="secondary">
+									<h3>Members</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="theme" class="member public"><span class="name">theme</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The theme property - The theme of this table (default is 'material')</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>theme</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The theme of this table</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-59">line 59</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="linkable" class="member public"><span class="name">linkable</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The linkable property - enable links in a row (only works in non-editable tables)</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>linkable</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>enable/disable linking a row</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-69">line 69</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="links" class="member public"><span class="name">links</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The links property - setup linking structure for links in a row</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>linkable</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>enable/disable linking a row</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-example"><h5>Examples</h5>		<div class="example-code">
+						<pre class="prettyprint source language-javascript"><code class="language-javascript">links: {
+			wholeRow: false, // link whole row vs column
+			column: &quot;name&quot;, // name of column
+				link: &quot;rowLink&quot; // callback or method in class
+			}</code></pre>
+					</div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-84">line 84</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="selectable" class="member public"><span class="name">selectable</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The selectable property - enable selecting a row in table</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>selectable</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>enable/disable selecting a row</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-98">line 98</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="sortable" class="member public"><span class="name">sortable</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The sortable property - enable sorting in table</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>sortable</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>enable sorting in the table</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-108">line 108</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="sortStyle" class="member public"><span class="name">sortStyle</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The sortStyle property - setup the sort API</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>sortStyle</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>setup the sort API</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-118">line 118</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="display" class="member public"><span class="name">display</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Fields to display - null will display all</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>display</code></td>
+							<td><span class="param-type">array</span></td>
+							<td class="last">
+									<p>Fields to display</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-139">line 139</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="renderPaginationControl" class="member public"><span class="name">renderPaginationControl</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The renderPaginationControl property - render the pagination control</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>renderPaginationControl</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>render the pagination control</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-149">line 149</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="paginationAPI" class="member public"><span class="name">paginationAPI</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The paginationAPI property - setup the paginatin API to use</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>paginationAPI</code></td>
+							<td><span class="param-type">PaginationFactory.type</span></td>
+							<td class="last">
+									<p>the pagination API to use</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-159">line 159</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="description" class="member public"><span class="name">description</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The description property</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>description</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The description of the table</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-169">line 169</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="localStorage" class="member public"><span class="name">localStorage</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The localStorage property - enables localStorage</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>localStorage</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>The localStorage property</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-179">line 179</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="localStorageKey" class="member public"><span class="name">localStorageKey</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The localStorageKey property - set the key for use in storage</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>localStorageKey</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The localStorage key property</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-189">line 189</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="editable" class="member public"><span class="name">editable</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The editable property - enables editing of cells</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>editable</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>The editable property</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-199">line 199</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="crossOrigin" class="member public"><span class="name">crossOrigin</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The crossOrigin property - enables cross origin fetch</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>crossOrigin</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>The crossOrigin property</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-209">line 209</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="lineNumbers" class="member public"><span class="name">lineNumbers</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The lineNumber property - turns on line numbers</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>lineNumbers</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>The lineNumbers property</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-219">line 219</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="uri" class="member public"><span class="name">uri</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The URI property</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>uri</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The URI property</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-229">line 229</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="isInitalized" class="member public"><span class="name">isInitalized</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The initialized property</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>isInitalized</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>The initialized property</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-275">line 275</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="pageControlBound" class="member public"><span class="name">pageControlBound</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The pageControlBound property</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>pageControlBound</code></td>
+							<td><span class="param-type">boolean</span></td>
+							<td class="last">
+									<p>is the pagecontrol bound</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-281">line 281</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="schema" class="member public"><span class="name">schema</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The schema property - the defining schema</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>schema</code></td>
+							<td><span class="param-type">object</span></td>
+							<td class="last">
+									<p>The schema</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-312">line 312</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public">
+			<h4 id="name" class="member public"><span class="name">name</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The name property</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Properties</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>name</code></td>
+							<td><span class="param-type">string</span></td>
+							<td class="last">
+									<p>The name of the table</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-356">line 356</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
 											<hr/>
@@ -222,7 +1392,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-395">line 395</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-384">line 384</a></p>
 								</div>
 							</div>
 			
@@ -288,7 +1458,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-411">line 411</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-400">line 400</a></p>
 								</div>
 							</div>
 			
@@ -346,7 +1516,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-419">line 419</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-408">line 408</a></p>
 								</div>
 							</div>
 			
@@ -391,7 +1561,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-431">line 431</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-420">line 420</a></p>
 								</div>
 							</div>
 			
@@ -436,7 +1606,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-439">line 439</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-428">line 428</a></p>
 								</div>
 							</div>
 			
@@ -473,7 +1643,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-446">line 446</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-435">line 435</a></p>
 								</div>
 							</div>
 			
@@ -510,7 +1680,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-454">line 454</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-443">line 443</a></p>
 								</div>
 							</div>
 			
@@ -568,7 +1738,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-463">line 463</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-452">line 452</a></p>
 								</div>
 							</div>
 			
@@ -605,7 +1775,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-471">line 471</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-460">line 460</a></p>
 								</div>
 							</div>
 			
@@ -642,7 +1812,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-479">line 479</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-468">line 468</a></p>
 								</div>
 							</div>
 			
@@ -714,7 +1884,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-490">line 490</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-479">line 479</a></p>
 								</div>
 							</div>
 			
@@ -793,7 +1963,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-506">line 506</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-495">line 495</a></p>
 								</div>
 							</div>
 			
@@ -858,7 +2028,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-520">line 520</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-509">line 509</a></p>
 								</div>
 							</div>
 			
@@ -903,7 +2073,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-528">line 528</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-517">line 517</a></p>
 								</div>
 							</div>
 			
@@ -961,7 +2131,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-681">line 681</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-670">line 670</a></p>
 								</div>
 							</div>
 			
@@ -998,7 +2168,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-708">line 708</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-697">line 697</a></p>
 								</div>
 							</div>
 			
@@ -1065,7 +2235,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-747">line 747</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-736">line 736</a></p>
 								</div>
 							</div>
 			
@@ -1123,7 +2293,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-782">line 782</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-771">line 771</a></p>
 								</div>
 							</div>
 			
@@ -1160,7 +2330,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-793">line 793</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-782">line 782</a></p>
 								</div>
 							</div>
 			
@@ -1205,7 +2375,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-804">line 804</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-793">line 793</a></p>
 								</div>
 							</div>
 			
@@ -1257,7 +2427,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-832">line 832</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-821">line 821</a></p>
 								</div>
 							</div>
 			
@@ -1315,7 +2485,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-840">line 840</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-829">line 829</a></p>
 								</div>
 							</div>
 			
@@ -1373,7 +2543,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-851">line 851</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-840">line 840</a></p>
 								</div>
 							</div>
 			
@@ -1431,7 +2601,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-866">line 866</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-855">line 855</a></p>
 								</div>
 							</div>
 			
@@ -1489,7 +2659,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-883">line 883</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-872">line 872</a></p>
 								</div>
 							</div>
 			
@@ -1534,7 +2704,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-897">line 897</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-886">line 886</a></p>
 								</div>
 							</div>
 			
@@ -1579,7 +2749,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-911">line 911</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-900">line 900</a></p>
 								</div>
 							</div>
 			
@@ -1624,7 +2794,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-919">line 919</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-908">line 908</a></p>
 								</div>
 							</div>
 			
@@ -1690,7 +2860,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-943">line 943</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-932">line 932</a></p>
 								</div>
 							</div>
 			
@@ -1735,7 +2905,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-966">line 966</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-955">line 955</a></p>
 								</div>
 							</div>
 			
@@ -1780,7 +2950,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-974">line 974</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-963">line 963</a></p>
 								</div>
 							</div>
 			
@@ -1838,7 +3008,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-989">line 989</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-978">line 978</a></p>
 								</div>
 							</div>
 			
@@ -1875,7 +3045,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-1014">line 1014</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-1003">line 1003</a></p>
 								</div>
 							</div>
 			
@@ -1941,7 +3111,7 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label">Source</label>
 								<div class="col-sm-9">
-									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-1023">line 1023</a></p>
+									<p class="form-control-static"><a href="autoTable.js.html">autoTable.js</a>, <a href="autoTable.js.html#line-1012">line 1012</a></p>
 								</div>
 							</div>
 			
@@ -1962,7 +3132,7 @@
 	</div>
 	<footer>
 				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Wed May 13th 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Thu May 14th 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

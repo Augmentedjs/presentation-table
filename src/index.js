@@ -13,4 +13,5 @@ export {
   EditableLocalStorageTable,
   EditableTable,
   LocalStorageTable,
-  Spreadsheet };
+  Spreadsheet
+};

@@ -6,7 +6,6 @@ import { Collection, LocalStorageCollection } from "presentation-models";
  * Instance class preconfigured for editing for use as a Spreadsheet.<br/>
  * If a propery for length is not specified, it will buffer 10 lines for editing.
  * @extends AutomaticTable
- * @memberof Component
  */
 class Spreadsheet extends AutomaticTable {
   constructor(options) {
