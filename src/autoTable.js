@@ -666,7 +666,7 @@ class AutomaticTable extends DecoratorView {
 
     // fetch if told so
     if (this._fetchOnStart) {
-      console.debug("fetch");
+      // console.debug("fetch");
       this.fetch();
       this._fetchOnStart = false;
     }
@@ -947,10 +947,12 @@ class AutomaticTable extends DecoratorView {
       if (keys[i].includes("row-") && this.model._attributes[keys[i]] === true) {
         const n = Number(keys[i].substring(4));
         const model = this.collection.at(n);
-        if (json) {
-          selected.push(model.toJSON());
-        } else {
-          selected.push(model);
+        if (model && model !== undefined) {
+          if (json) {
+            selected.push(model.toJSON());
+          } else {
+            selected.push(model);
+          }
         }
       }
     }
@@ -987,10 +989,11 @@ class AutomaticTable extends DecoratorView {
   removeRows(rows) {
     const l = rows.length;
     let i = 0;
+    // console.debug(rows);
     for (i = 0; i < l; i++) {
       const model = rows[i];
       // console.debug("Remove this model", model);
-      if (!model.uri && this.uri) {
+      if (model && !model.uri && this.uri) {
         model.uri = this.uri + "/" + model.id;
       }
 
