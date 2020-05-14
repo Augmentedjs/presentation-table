@@ -169,6 +169,10 @@ class AutomaticTable extends DecoratorView {
       this.messagePosition = "bottom";
     }
 
+    if (options.collection) {
+      this.collection = options.collection;
+    }
+
     this._columns = {};
     this.isInitalized = false;
     this.pageControlBound = false;
@@ -228,9 +232,6 @@ class AutomaticTable extends DecoratorView {
       this.uri = null;
     }
 
-    if (this.collection && this.uri) {
-      this.collection.uri = this.uri;
-    }
     if (this.collection) {
       this.collection.crossOrigin = this.crossOrigin;
     }
@@ -998,7 +999,7 @@ class AutomaticTable extends DecoratorView {
       const ret = this.collection.removeModels(model);
       // console.debug("collecton after", this.collection);
       // console.debug("Return from collection remove", ret);
-      model.destroy();
+      // model.destroy();
     }
     this.refresh();
     return l;

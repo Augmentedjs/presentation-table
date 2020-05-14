@@ -1,6 +1,6 @@
 {
   "name": "presentation-table",
-  "version": "3.0.2",
+  "version": "3.0.4",
   "description": "The Augmented.js Next - Presentation Table View Module.",
   "main": "dist/presentation-table.js",
   "scripts": {
