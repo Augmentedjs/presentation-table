@@ -468,6 +468,7 @@
           "component.automatictable#retrieveschema",
           "fetch",
           "function",
+          "lt;async&gt",
           "retrieveschema",
           "schema",
           "sourc",
@@ -635,6 +636,17 @@
           "removeselectedrow",
           "select"
         ],
+        "Component.AutomaticTable.html#addRow": [
+          "add",
+          "addrow",
+          "automatictable#addrow",
+          "component.automatictable#addrow",
+          "function",
+          "lt;async&gt",
+          "model",
+          "row",
+          "tabl"
+        ],
         "Component.AutomaticTable.html#exportTo": [
           "automatictable#exportto",
           "component.automatictable#exportto",
@@ -648,7 +660,7 @@
           "type"
         ]
       },
-      "length": 65
+      "length": 66
     },
     "tokenStore": {
       "root": {
@@ -2021,6 +2033,29 @@
                                             }
                                           }
                                         }
+                                      },
+                                      "a": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {},
+                                          "d": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {},
+                                              "o": {
+                                                "docs": {},
+                                                "w": {
+                                                  "docs": {
+                                                    "Component.AutomaticTable.html#addRow": {
+                                                      "ref": "Component.AutomaticTable.html#addRow",
+                                                      "tf": 100
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
                                       }
                                     }
                                   }
@@ -2068,6 +2103,28 @@
                       "Component.AutomaticTable.html#lastPage": {
                         "ref": "Component.AutomaticTable.html#lastPage",
                         "tf": 16.666666666666664
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "d": {
+              "docs": {
+                "Component.AutomaticTable.html#addRow": {
+                  "ref": "Component.AutomaticTable.html#addRow",
+                  "tf": 16.666666666666664
+                }
+              },
+              "r": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "w": {
+                    "docs": {
+                      "Component.AutomaticTable.html#addRow": {
+                        "ref": "Component.AutomaticTable.html#addRow",
+                        "tf": 633.3333333333334
                       }
                     }
                   }
@@ -3020,7 +3077,7 @@
                                     "docs": {
                                       "Component.AutomaticTable.html#retrieveSchema": {
                                         "ref": "Component.AutomaticTable.html#retrieveSchema",
-                                        "tf": 650
+                                        "tf": 633.3333333333334
                                       }
                                     }
                                   }
@@ -3222,6 +3279,10 @@
                 "Component.AutomaticTable.html#removeRows": {
                   "ref": "Component.AutomaticTable.html#removeRows",
                   "tf": 50
+                },
+                "Component.AutomaticTable.html#addRow": {
+                  "ref": "Component.AutomaticTable.html#addRow",
+                  "tf": 16.666666666666664
                 }
               },
               "l": {
@@ -5342,6 +5403,29 @@
                                                                 }
                                                               }
                                                             }
+                                                          },
+                                                          "a": {
+                                                            "docs": {},
+                                                            "d": {
+                                                              "docs": {},
+                                                              "d": {
+                                                                "docs": {},
+                                                                "r": {
+                                                                  "docs": {},
+                                                                  "o": {
+                                                                    "docs": {},
+                                                                    "w": {
+                                                                      "docs": {
+                                                                        "Component.AutomaticTable.html#addRow": {
+                                                                          "ref": "Component.AutomaticTable.html#addRow",
+                                                                          "tf": 1100
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
                                                           }
                                                         }
                                                       }
@@ -5865,6 +5949,45 @@
                 }
               }
             }
+          },
+          "t": {
+            "docs": {},
+            ";": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "y": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "&": {
+                          "docs": {},
+                          "g": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "Component.AutomaticTable.html#retrieveSchema": {
+                                  "ref": "Component.AutomaticTable.html#retrieveSchema",
+                                  "tf": 33.33333333333333
+                                },
+                                "Component.AutomaticTable.html#addRow": {
+                                  "ref": "Component.AutomaticTable.html#addRow",
+                                  "tf": 33.33333333333333
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "b": {
@@ -6274,6 +6397,10 @@
                     "ref": "Component.AutomaticTable.html#remove",
                     "tf": 16.666666666666664
                   },
+                  "Component.AutomaticTable.html#addRow": {
+                    "ref": "Component.AutomaticTable.html#addRow",
+                    "tf": 16.666666666666664
+                  },
                   "Component.AutomaticTable.html#exportTo": {
                     "ref": "Component.AutomaticTable.html#exportTo",
                     "tf": 10
@@ -6422,7 +6549,7 @@
                 },
                 "Component.AutomaticTable.html#retrieveSchema": {
                   "ref": "Component.AutomaticTable.html#retrieveSchema",
-                  "tf": 62.5
+                  "tf": 45.83333333333333
                 },
                 "Component.AutomaticTable.html#fetch": {
                   "ref": "Component.AutomaticTable.html#fetch",
@@ -6637,6 +6764,10 @@
                           },
                           "Component.AutomaticTable.html#removeSelectedRows": {
                             "ref": "Component.AutomaticTable.html#removeSelectedRows",
+                            "tf": 110
+                          },
+                          "Component.AutomaticTable.html#addRow": {
+                            "ref": "Component.AutomaticTable.html#addRow",
                             "tf": 110
                           },
                           "Component.AutomaticTable.html#exportTo": {
@@ -6951,6 +7082,10 @@
                     "Component.AutomaticTable.html#removeSelectedRows": {
                       "ref": "Component.AutomaticTable.html#removeSelectedRows",
                       "tf": 16.666666666666664
+                    },
+                    "Component.AutomaticTable.html#addRow": {
+                      "ref": "Component.AutomaticTable.html#addRow",
+                      "tf": 33.33333333333333
                     }
                   }
                 }
@@ -7065,17 +7200,20 @@
           }
         }
       },
-      "length": 478
+      "length": 488
     },
     "corpusTokens": [
       "10",
       "_gener",
+      "add",
+      "addrow",
       "advanc",
       "anoth",
       "api",
       "augmented.j",
       "automat",
       "automatict",
+      "automatictable#addrow",
       "automatictable#clear",
       "automatictable#clearcel",
       "automatictable#compiletempl",
@@ -7147,6 +7285,7 @@
       "compil",
       "compiletempl",
       "component.automatict",
+      "component.automatictable#addrow",
       "component.automatictable#clear",
       "component.automatictable#clearcel",
       "component.automatictable#compiletempl",
@@ -7259,6 +7398,7 @@
       "localstorag",
       "localstoragekey",
       "localstoraget",
+      "lt;async&gt",
       "materi",
       "member",
       "messag",
@@ -7811,7 +7951,7 @@
     "Component.AutomaticTable.html#retrieveSchema": {
       "id": "Component.AutomaticTable.html#retrieveSchema",
       "kind": "function",
-      "title": "retrieveSchema( uri )",
+      "title": "&lt;async&gt; retrieveSchema( uri )",
       "longname": "Component.AutomaticTable#retrieveSchema",
       "name": "retrieveSchema",
       "tags": "Component.AutomaticTable#retrieveSchema AutomaticTable#retrieveSchema retrieveSchema",
@@ -7997,6 +8137,16 @@
       "tags": "Component.AutomaticTable#removeSelectedRows AutomaticTable#removeSelectedRows removeSelectedRows",
       "summary": "",
       "description": "Removes the selected models"
+    },
+    "Component.AutomaticTable.html#addRow": {
+      "id": "Component.AutomaticTable.html#addRow",
+      "kind": "function",
+      "title": "&lt;async&gt; addRow( model )",
+      "longname": "Component.AutomaticTable#addRow",
+      "name": "addRow",
+      "tags": "Component.AutomaticTable#addRow AutomaticTable#addRow addRow",
+      "summary": "",
+      "description": "adds a row to the table"
     },
     "Component.AutomaticTable.html#exportTo": {
       "id": "Component.AutomaticTable.html#exportTo",

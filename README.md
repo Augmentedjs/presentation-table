@@ -60,8 +60,10 @@ Augmented.js Presentation Table View Module
     -   [removeRows](#removerows)
         -   [Parameters](#parameters-16)
     -   [removeSelectedRows](#removeselectedrows)
-    -   [exportTo](#exportto)
+    -   [addRow](#addrow)
         -   [Parameters](#parameters-17)
+    -   [exportTo](#exportto)
+        -   [Parameters](#parameters-18)
 -   [theme](#theme)
     -   [Properties](#properties)
 -   [linkable](#linkable)
@@ -104,17 +106,17 @@ Augmented.js Presentation Table View Module
 -   [name](#name)
     -   [Properties](#properties-19)
 -   [BigDataTable](#bigdatatable)
-    -   [Parameters](#parameters-18)
--   [EditableBigDataTable](#editablebigdatatable)
     -   [Parameters](#parameters-19)
--   [EditableLocalStorageTable](#editablelocalstoragetable)
+-   [EditableBigDataTable](#editablebigdatatable)
     -   [Parameters](#parameters-20)
--   [EditableTable](#editabletable)
+-   [EditableLocalStorageTable](#editablelocalstoragetable)
     -   [Parameters](#parameters-21)
--   [LocalStorageTable](#localstoragetable)
+-   [EditableTable](#editabletable)
     -   [Parameters](#parameters-22)
--   [Spreadsheet](#spreadsheet)
+-   [LocalStorageTable](#localstoragetable)
     -   [Parameters](#parameters-23)
+-   [Spreadsheet](#spreadsheet)
+    -   [Parameters](#parameters-24)
     -   [\_generate](#_generate)
     -   [\_generate](#_generate-1)
 
@@ -383,6 +385,14 @@ Removes the models
 ### removeSelectedRows
 
 Removes the selected models
+
+### addRow
+
+adds a row to the table
+
+#### Parameters
+
+-   `model` **Model** The model to add
 
 ### exportTo
 

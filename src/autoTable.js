@@ -12,7 +12,6 @@ import {
   directDOMPaginationControl
 } from "./functions/buildTable.js";
 import formatValidationMessages from "./functions/messages.js";
-import { request } from "presentation-request";
 import Dom from "presentation-dom";
 import { PaginationFactory, Model, Collection, LocalStorageCollection } from "presentation-models";
 
@@ -530,7 +529,7 @@ class AutomaticTable extends DecoratorView {
 	    //console.log("set progress.");
       this.showProgressBar(true);
       if (this.el) {
-        e = (typeof this.el === 'string') ? document.querySelector(this.el) : this.el;
+        e = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
         //console.log("my el", e);
         if (e) {
 	        let tbody = e.querySelector("tbody"), thead = e.querySelector("thead");
@@ -585,7 +584,7 @@ class AutomaticTable extends DecoratorView {
 
       if (this.el) {
         //console.debug("no template with el " + this.el);
-        e = (typeof this.el === 'string') ? document.querySelector(this.el) : this.el;
+        e = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
         if (e) {
           e.innerHTML = "";
           // progress bar
@@ -667,28 +666,16 @@ class AutomaticTable extends DecoratorView {
   * Fetch the schema from the source URI
   * @param uri {string} the URI to fetch from
   */
-  retrieveSchema(uri) {
-    const that = this;
-    let schema = null;
-
-    // TODO: make a fetch
-    request({
-      url: uri,
-      contentType: "application/json",
-      dataType: "json",
-      success: (data, status) => {
-        if (typeof data === "string") {
-          schema = JSON.parse(data);
-        } else {
-          schema = data;
-        }
-        const options = { "schema": schema };
-        that.initialize(options);
-      },
-      error: (data, status) => {
-        this.showMessage(`${this.name} Failed to fetch schema!!  ${status}`);
-      }
-    });
+  async retrieveSchema(uri) {
+    try {
+      const response = await fetch(uri);
+      const schema = await response.json();
+      const options = { "schema": schema };
+      return this.initialize(options);
+    } catch (e) {
+      this.showMessage(`${this.name} Failed to fetch schema!! ${e}`);
+      return null;
+    }
   };
 
  /**
@@ -854,7 +841,7 @@ class AutomaticTable extends DecoratorView {
   */
   showProgressBar(show) {
     if (this.el) {
-      let e = (typeof this.el === 'string') ? document.querySelector(this.el) : this.el;
+      let e = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
       if (e) {
         let p = e.querySelector("progress");
         if (p) {
@@ -871,7 +858,7 @@ class AutomaticTable extends DecoratorView {
   */
   showMessage(message) {
     if (this.el && message) {
-      let e = (typeof this.el === 'string') ? document.querySelector(this.el) : this.el;
+      let e = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
       let p = e.querySelector("p[class=message]");
       if (p) {
         p.innerHTML = message;
@@ -1004,6 +991,15 @@ class AutomaticTable extends DecoratorView {
     return this.removeRows(this.getSelected());
   };
 
+  /**
+   * adds a row to the table
+   * @param {Model} model The model to add
+   */
+  async addRow(model) {
+    await this.collection.addModels(model);
+    return await this.refresh();
+  };
+
 /**
  * Export the table data in requested format
  * @param {string} type The type requested (csv or html-default)
@@ -1028,7 +1024,7 @@ class AutomaticTable extends DecoratorView {
   * @private
   */
   _bindCellChangeEvents() {
-    let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
+    let myEl = (typeof this.el === "string") ? this.el : this.el.localName;
     let cells = [].slice.call(document.querySelectorAll(myEl + " table tr td input"));
     let i=0, l=cells.length;
     for(i=0; i < l; i++) {
@@ -1047,7 +1043,7 @@ class AutomaticTable extends DecoratorView {
   * @private
   */
   _unbindCellChangeEvents() {
-    let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
+    let myEl = (typeof this.el === "string") ? this.el : this.el.localName;
     let cells = [].slice.call(document.querySelectorAll(myEl + " table tr td input"));
     let i=0, l=cells.length;
     for(i=0; i < l; i++) {
@@ -1067,7 +1063,7 @@ class AutomaticTable extends DecoratorView {
   */
   _unbindPaginationControlEvents() {
     if (this.pageControlBound) {
-      let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
+      let myEl = (typeof this.el === "string") ? this.el : this.el.localName;
       let first = document.querySelector(myEl + " div.paginationControl span.first");
       let previous = document.querySelector(myEl + " div.paginationControl span.previous");
       let next = document.querySelector(myEl + " div.paginationControl span.next");
@@ -1093,7 +1089,7 @@ class AutomaticTable extends DecoratorView {
   */
   _bindPaginationControlEvents() {
     if (!this.pageControlBound) {
-      let myEl = (typeof this.el === 'string') ? this.el : this.el.localName;
+      let myEl = (typeof this.el === "string") ? this.el : this.el.localName;
       let first = document.querySelector(myEl + " div.paginationControl span.first");
       let previous = document.querySelector(myEl + " div.paginationControl span.previous");
       let next = document.querySelector(myEl + " div.paginationControl span.next");
@@ -1139,7 +1135,7 @@ class AutomaticTable extends DecoratorView {
   _unbindSortableColumnEvents()  {
     if (this.el && this.sortable) {
       let list;
-      if (typeof this.el === 'string') {
+      if (typeof this.el === "string") {
         list = document.querySelectorAll(this.el + " table tr th");
       } else {
         list = document.querySelectorAll(this.el.localName + " table tr th");
@@ -1157,7 +1153,7 @@ class AutomaticTable extends DecoratorView {
   _bindSortableColumnEvents()  {
     if (this.el && this.sortable) {
       let list;
-      if (typeof this.el === 'string') {
+      if (typeof this.el === "string") {
         list = document.querySelectorAll(this.el + " table tr th");
       } else {
         list = document.querySelectorAll(this.el.localName + " table tr th");

@@ -85,7 +85,7 @@ export const defaultTableHeader = (columns, lineNumbers, sortKey, display) => {
         if (sortKey === key) {
           html = html + " class=\"" + TABLE_DATA_ATTRIBUTES.SORT_CLASS + "\"";
         }
-        html = html + ">" + key + "</th>";
+        html = html + ">" + obj.description + "</th>";
       }
     }
     html = html + "</tr>";
@@ -189,7 +189,7 @@ export const directDOMTableHeader = (el, columns, lineNumbers, sortKey, display,
           n.classList.add(TABLE_DATA_ATTRIBUTES.SORT_CLASS);
         }
 
-        t = document.createTextNode(key);
+        t = document.createTextNode(obj.description);
         n.appendChild(t);
         tr.appendChild(n);
       }
@@ -281,7 +281,7 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
       // Binding
       tn.setAttribute("data-" + name, "row-" + i);
       tn.setAttribute(TABLE_DATA_ATTRIBUTES.INDEX, i);
-      
+
       td.appendChild(tn);
       td.classList.add("label", "select");
       tr.appendChild(td);
