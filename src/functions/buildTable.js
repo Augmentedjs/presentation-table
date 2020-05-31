@@ -399,6 +399,7 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
 
         // Binding
         input.setAttribute("data-" + name, name);
+        input.setAttribute("name", name);
 
         td.appendChild(input);
 

@@ -1,6 +1,6 @@
 {
   "name": "presentation-table",
-  "version": "3.2.4",
+  "version": "3.2.5",
   "description": "The Augmented.js Next - Presentation Table View Module.",
   "main": "dist/presentation-table.js",
   "scripts": {
@@ -25,9 +25,9 @@
   "author": "Bob Warren <jedi.master@augmentedjs.com> (http://www.augmentedjs.com)",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "@babel/register": "^7.9.0",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.1",
     "babel-loader": "^8.1.0",
     "babel-plugin-remove-template-literals-whitespace": "^1.0.2",
     "buffer": "^5.6.0",
@@ -38,7 +38,7 @@
     "foodoc": "0.0.9",
     "jsdoc": "^3.6.4",
     "jsdom": "^16.2.2",
-    "mocha": "^7.1.2",
+    "mocha": "^7.2.0",
     "mocha-jsdom": "^2.0.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
