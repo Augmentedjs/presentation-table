@@ -11,6 +11,47 @@ Augmented.js Presentation Table View Module
 -   [AutomaticTable](#automatictable)
     -   [Parameters](#parameters)
     -   [Examples](#examples)
+    -   [theme](#theme)
+        -   [Properties](#properties)
+    -   [linkable](#linkable)
+        -   [Properties](#properties-1)
+    -   [links](#links)
+        -   [Properties](#properties-2)
+        -   [Examples](#examples-1)
+    -   [selectable](#selectable)
+        -   [Properties](#properties-3)
+    -   [sortable](#sortable)
+        -   [Properties](#properties-4)
+    -   [sortStyle](#sortstyle)
+        -   [Properties](#properties-5)
+    -   [display](#display)
+        -   [Properties](#properties-6)
+    -   [renderPaginationControl](#renderpaginationcontrol)
+        -   [Properties](#properties-7)
+    -   [paginationAPI](#paginationapi)
+        -   [Properties](#properties-8)
+    -   [description](#description)
+        -   [Properties](#properties-9)
+    -   [localStorage](#localstorage)
+        -   [Properties](#properties-10)
+    -   [localStorageKey](#localstoragekey)
+        -   [Properties](#properties-11)
+    -   [editable](#editable)
+        -   [Properties](#properties-12)
+    -   [crossOrigin](#crossorigin)
+        -   [Properties](#properties-13)
+    -   [lineNumbers](#linenumbers)
+        -   [Properties](#properties-14)
+    -   [uri](#uri)
+        -   [Properties](#properties-15)
+    -   [isInitalized](#isinitalized)
+        -   [Properties](#properties-16)
+    -   [pageControlBound](#pagecontrolbound)
+        -   [Properties](#properties-17)
+    -   [schema](#schema)
+        -   [Properties](#properties-18)
+    -   [name](#name)
+        -   [Properties](#properties-19)
     -   [setTheme](#settheme)
         -   [Parameters](#parameters-1)
     -   [rowLink](#rowlink)
@@ -64,47 +105,6 @@ Augmented.js Presentation Table View Module
         -   [Parameters](#parameters-17)
     -   [exportTo](#exportto)
         -   [Parameters](#parameters-18)
--   [theme](#theme)
-    -   [Properties](#properties)
--   [linkable](#linkable)
-    -   [Properties](#properties-1)
--   [links](#links)
-    -   [Properties](#properties-2)
-    -   [Examples](#examples-1)
--   [selectable](#selectable)
-    -   [Properties](#properties-3)
--   [sortable](#sortable)
-    -   [Properties](#properties-4)
--   [sortStyle](#sortstyle)
-    -   [Properties](#properties-5)
--   [display](#display)
-    -   [Properties](#properties-6)
--   [renderPaginationControl](#renderpaginationcontrol)
-    -   [Properties](#properties-7)
--   [paginationAPI](#paginationapi)
-    -   [Properties](#properties-8)
--   [description](#description)
-    -   [Properties](#properties-9)
--   [localStorage](#localstorage)
-    -   [Properties](#properties-10)
--   [localStorageKey](#localstoragekey)
-    -   [Properties](#properties-11)
--   [editable](#editable)
-    -   [Properties](#properties-12)
--   [crossOrigin](#crossorigin)
-    -   [Properties](#properties-13)
--   [lineNumbers](#linenumbers)
-    -   [Properties](#properties-14)
--   [uri](#uri)
-    -   [Properties](#properties-15)
--   [isInitalized](#isinitalized)
-    -   [Properties](#properties-16)
--   [pageControlBound](#pagecontrolbound)
-    -   [Properties](#properties-17)
--   [schema](#schema)
-    -   [Properties](#properties-18)
--   [name](#name)
-    -   [Properties](#properties-19)
 -   [BigDataTable](#bigdatatable)
     -   [Parameters](#parameters-19)
 -   [EditableBigDataTable](#editablebigdatatable)
@@ -153,6 +153,176 @@ const at = new AutomaticTable({
     fetchOnStart: false
 });
 ```
+
+### theme
+
+The theme property - The theme of this table (default is 'material')
+
+#### Properties
+
+-   `theme` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The theme of this table
+
+### linkable
+
+The linkable property - enable links in a row (only works in non-editable tables)
+
+#### Properties
+
+-   `linkable` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** enable/disable linking a row
+
+### links
+
+The links property - setup linking structure for links in a row
+
+#### Properties
+
+-   `linkable` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** enable/disable linking a row
+
+#### Examples
+
+```javascript
+links: {
+wholeRow: false, // link whole row vs column
+column: "name", // name of column
+link: "rowLink" // callback or method in class
+}
+```
+
+### selectable
+
+The selectable property - enable selecting a row in table
+
+#### Properties
+
+-   `selectable` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** enable/disable selecting a row
+
+### sortable
+
+The sortable property - enable sorting in table
+
+#### Properties
+
+-   `sortable` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** enable sorting in the table
+
+### sortStyle
+
+The sortStyle property - setup the sort API
+
+#### Properties
+
+-   `sortStyle` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** setup the sort API
+
+### display
+
+Fields to display - null will display all
+
+#### Properties
+
+-   `display` **[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** Fields to display
+
+### renderPaginationControl
+
+The renderPaginationControl property - render the pagination control
+
+#### Properties
+
+-   `renderPaginationControl` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** render the pagination control
+
+### paginationAPI
+
+The paginationAPI property - setup the paginatin API to use
+
+#### Properties
+
+-   `paginationAPI` **PaginationFactory.type** the pagination API to use
+
+### description
+
+The description property
+
+#### Properties
+
+-   `description` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The description of the table
+
+### localStorage
+
+The localStorage property - enables localStorage
+
+#### Properties
+
+-   `localStorage` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** The localStorage property
+
+### localStorageKey
+
+The localStorageKey property - set the key for use in storage
+
+#### Properties
+
+-   `localStorageKey` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The localStorage key property
+
+### editable
+
+The editable property - enables editing of cells
+
+#### Properties
+
+-   `editable` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** The editable property
+
+### crossOrigin
+
+The crossOrigin property - enables cross origin fetch
+
+#### Properties
+
+-   `crossOrigin` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** The crossOrigin property
+
+### lineNumbers
+
+The lineNumber property - turns on line numbers
+
+#### Properties
+
+-   `lineNumbers` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** The lineNumbers property
+
+### uri
+
+The URI property
+
+#### Properties
+
+-   `uri` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The URI property
+
+### isInitalized
+
+The initialized property
+
+#### Properties
+
+-   `isInitalized` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** The initialized property
+
+### pageControlBound
+
+The pageControlBound property
+
+#### Properties
+
+-   `pageControlBound` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** is the pagecontrol bound
+
+### schema
+
+The schema property - the defining schema
+
+#### Properties
+
+-   `schema` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** The schema
+
+### name
+
+The name property
+
+#### Properties
+
+-   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The name of the table
 
 ### setTheme
 
@@ -403,176 +573,6 @@ Export the table data in requested format
 -   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The type requested (csv or html-default)
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The table data in requested format
-
-## theme
-
-The theme property - The theme of this table (default is 'material')
-
-### Properties
-
--   `theme` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The theme of this table
-
-## linkable
-
-The linkable property - enable links in a row (only works in non-editable tables)
-
-### Properties
-
--   `linkable` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** enable/disable linking a row
-
-## links
-
-The links property - setup linking structure for links in a row
-
-### Properties
-
--   `linkable` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** enable/disable linking a row
-
-### Examples
-
-```javascript
-links: {
-wholeRow: false, // link whole row vs column
-column: "name", // name of column
-link: "rowLink" // callback or method in class
-}
-```
-
-## selectable
-
-The selectable property - enable selecting a row in table
-
-### Properties
-
--   `selectable` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** enable/disable selecting a row
-
-## sortable
-
-The sortable property - enable sorting in table
-
-### Properties
-
--   `sortable` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** enable sorting in the table
-
-## sortStyle
-
-The sortStyle property - setup the sort API
-
-### Properties
-
--   `sortStyle` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** setup the sort API
-
-## display
-
-Fields to display - null will display all
-
-### Properties
-
--   `display` **[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** Fields to display
-
-## renderPaginationControl
-
-The renderPaginationControl property - render the pagination control
-
-### Properties
-
--   `renderPaginationControl` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** render the pagination control
-
-## paginationAPI
-
-The paginationAPI property - setup the paginatin API to use
-
-### Properties
-
--   `paginationAPI` **PaginationFactory.type** the pagination API to use
-
-## description
-
-The description property
-
-### Properties
-
--   `description` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The description of the table
-
-## localStorage
-
-The localStorage property - enables localStorage
-
-### Properties
-
--   `localStorage` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** The localStorage property
-
-## localStorageKey
-
-The localStorageKey property - set the key for use in storage
-
-### Properties
-
--   `localStorageKey` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The localStorage key property
-
-## editable
-
-The editable property - enables editing of cells
-
-### Properties
-
--   `editable` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** The editable property
-
-## crossOrigin
-
-The crossOrigin property - enables cross origin fetch
-
-### Properties
-
--   `crossOrigin` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** The crossOrigin property
-
-## lineNumbers
-
-The lineNumber property - turns on line numbers
-
-### Properties
-
--   `lineNumbers` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** The lineNumbers property
-
-## uri
-
-The URI property
-
-### Properties
-
--   `uri` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The URI property
-
-## isInitalized
-
-The initialized property
-
-### Properties
-
--   `isInitalized` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** The initialized property
-
-## pageControlBound
-
-The pageControlBound property
-
-### Properties
-
--   `pageControlBound` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** is the pagecontrol bound
-
-## schema
-
-The schema property - the defining schema
-
-### Properties
-
--   `schema` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** The schema
-
-## name
-
-The name property
-
-### Properties
-
--   `name` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The name of the table
 
 ## BigDataTable
 

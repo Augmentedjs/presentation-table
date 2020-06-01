@@ -1,16 +1,12 @@
 import { isObject } from "next-core-utilities";
 import { DecoratorView } from "presentation-decorator";
-import {
-  TABLE_DATA_ATTRIBUTES,
-  csvTableCompile,
-  tsvTableCompile,
-  defaultTableCompile,
-  directDOMTableCompile,
-  directDOMTableHeader,
-  directDOMTableBody,
-  directDOMEditableTableBody,
-  directDOMPaginationControl
-} from "./functions/buildTable.js";
+import { directDOMTableCompile, directDOMTableHeader, directDOMTableBody } from "./functions/buildTable.js";
+import { TABLE_DATA_ATTRIBUTES } from "./functions/attributes.js";
+import { csvTableCompile, tsvTableCompile } from "./functions/exports.js";
+import { defaultTableCompile } from "./functions/defaultTableCompile.js";
+import { directDOMEditableTableBody } from "./functions/editable.js";
+import { directDOMPaginationControl } from "./functions/pagination.js";
+
 import formatValidationMessages from "./functions/messages.js";
 import Dom from "presentation-dom";
 import { PaginationFactory, Model, Collection, LocalStorageCollection } from "presentation-models";
@@ -23,7 +19,6 @@ const DEFAULT_THEME = "material";
  * AutomaticTable<br/>
  * Creates a table automatically via a schema for defintion and a uri/json for data
  * @extends DecoratorView
- * @memberof Component
  * @example
  * const at = new AutomaticTable({
  *     schema: schema,
