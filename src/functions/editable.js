@@ -31,10 +31,10 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
       tr.appendChild(td);
     }
 
-    for (dkey in d) {
+    for (dkey in columns) {
       let displayCol = true;
       if (display !== null) {
-          displayCol = (display.indexOf(dkey) !== -1);
+        displayCol = (display.indexOf(dkey) !== -1);
       }
 
       if (displayCol && d.hasOwnProperty(dkey)) {

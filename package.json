@@ -1,6 +1,6 @@
 {
   "name": "presentation-table",
-  "version": "3.2.6",
+  "version": "3.3.0",
   "description": "The Augmented.js Next - Presentation Table View Module.",
   "main": "dist/presentation-table.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "chai": "^4.2.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.5.3",
-    "documentation": "^13.0.0",
+    "documentation": "^13.0.1",
     "foodoc": "0.0.9",
     "jsdoc": "^3.6.4",
     "jsdom": "^16.2.2",
