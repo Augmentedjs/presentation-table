@@ -74,10 +74,13 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
             input.setAttribute("checked", "checked");
           }
           input.value = dobj;
-        } else if (t === "number") {
+        } else if (t === "number" || t === "integer") {
           input = document.createElement("input");
           input.setAttribute("type", "number");
           input.value = dobj;
+          if (t === "integer") {
+            input.setAttribute("step", "1.0");
+          }
         } else if (t === "string" && cobj.enum) {
           input = document.createElement("select");
           let iiii = 0, llll = cobj.enum.length, option2, tOption2;
@@ -113,19 +116,19 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
           input.setAttribute("pattern", cobj.pattern);
         }
 
-        if (cobj.minimum) {
+        if (cobj.minimum !== null && cobj.minimum !== undefined) {
           input.setAttribute("min", cobj.minimum);
         }
 
-        if (cobj.maximum) {
+        if (cobj.maximum !== null && cobj.maximum !== undefined) {
           input.setAttribute("max", cobj.maximum);
         }
 
-        if (t === "string" && cobj.minlength) {
+        if (t === "string" && (cobj.minlength !== null && cobj.minlength !== undefined)) {
           input.setAttribute("minlength", cobj.minlength);
         }
 
-        if (t === "string" && cobj.maxlength) {
+        if (t === "string" && (cobj.maxlength !== null && cobj.maxlength !== undefined)) {
           input.setAttribute("maxlength", cobj.maxlength);
         }
 
