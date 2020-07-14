@@ -72,17 +72,17 @@
 			expect(at.data).to.equal(data);
 		});
 
-		it("won\"t populate a string", () => {
+		it("won't populate a string", () => {
 			at.populate("data");
 			expect(at.data).to.deep.equal([]);
 		});
 
-		it("won\"t populate a number", () => {
+		it("won't populate a number", () => {
 			at.populate(123);
 			expect(at.data).to.deep.equal([]);
 		});
 
-		it("won\"t populate an object", () => {
+		it("won't populate an object", () => {
 			at.populate({ 123: 123 });
 			expect(at.data).to.deep.equal([]);
 		});
@@ -121,58 +121,4 @@
 			expect(at.isValid()).to.be.true;
 		});
 	});
-/*
-	describe("Can create subclasses", () => {
-		it("can create a BigDataTable class", () => {
-			let b = new Augmented.Presentation.BigDataTable();
-			expect(Augmented.Presentation.BigDataTable).to.not.be.undefined;
-			expect(b instanceof Augmented.Presentation.BigDataTable).to.be.true;
-			expect(b.paginationAPI).to.not.be.undefined;
-			b.remove();
-			b = null;
-		});
-
-		it("can create a EditableTable class", () => {
-			let b = new Augmented.Presentation.EditableTable();
-			expect(Augmented.Presentation.EditableTable).to.not.be.undefined;
-			expect(b instanceof Augmented.Presentation.EditableTable).to.be.true;
-			expect(b.editable).to.be.true;
-			b.remove();
-			b = null;
-		});
-
-		it("can create a EditableBigDataTable class", () => {
-			let b = new Augmented.Presentation.EditableBigDataTable();
-			expect(Augmented.Presentation.EditableBigDataTable).to.not.be.undefined;
-			expect(b instanceof Augmented.Presentation.EditableBigDataTable).to.be.true;
-			expect(b.editable).to.be.true;
-			expect(b.paginationAPI).to.not.be.undefined;
-			b.remove();
-			b = null;
-		});
-
-		it("can create a LocalStorageTable class", () => {
-			let b = new Augmented.Presentation.LocalStorageTable();
-			expect(Augmented.Presentation.LocalStorageTable).to.not.be.undefined;
-			expect(b instanceof Augmented.Presentation.LocalStorageTable).to.be.true;
-			expect(b.localStorage).to.be.true;
-			expect(b.localStorageKey).to.not.be.undefined;
-			expect(b.uri).to.equal(null);
-			b.remove();
-			b = null;
-		});
-
-		it("can create a EditableLocalStorageTable class", () => {
-			let b = new Augmented.Presentation.EditableLocalStorageTable();
-			expect(Augmented.Presentation.EditableLocalStorageTable).to.not.be.undefined;
-			expect(b instanceof Augmented.Presentation.EditableLocalStorageTable).to.be.true;
-			expect(b.localStorage).to.be.true;
-			expect(b.localStorageKey).to.not.be.undefined;
-			expect(b.editable).to.be.true;
-			expect(b.uri).to.equal(null);
-			b.remove();
-			b = null;
-		});
-	});
-	*/
 });

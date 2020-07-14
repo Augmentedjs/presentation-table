@@ -8,7 +8,7 @@ import { directDOMEditableTableBody } from "./functions/editable.js";
 import { directDOMPaginationControl } from "./functions/pagination.js";
 
 import formatValidationMessages from "./functions/messages.js";
-import Dom from "presentation-dom";
+import { Diff, Dom } from "presentation-dom";
 import { PaginationFactory, Model, Collection, LocalStorageCollection } from "presentation-models";
 
 const DEFAULT_KEY = "augmented.localstorage.autotable.key";
@@ -518,13 +518,17 @@ class AutomaticTable extends DecoratorView {
       //console.warn("AUGMENTED: AutoTable Can't render yet, not initialized!");
       return this;
     }
+
+    // Create a new tree
+    const orgEl = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
     let e;
     if (this.template) {
       // refresh the table body only
 	    //console.log("set progress.");
       this.showProgressBar(true);
-      if (this.el) {
-        e = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
+      if (orgEl) {
+        e = document.createElement(orgEl.tagName);
+
         //console.log("my el", e);
         if (e) {
 	        let tbody = e.querySelector("tbody"), thead = e.querySelector("thead");
@@ -568,12 +572,20 @@ class AutomaticTable extends DecoratorView {
               }
             }
           }
+
+          const templateMap = Diff.createDOMMap(this.template, false);
+          const orgMap = Diff.createDOMMap(orgEl, false);
+
+          // will use virtual dom to render updates to the table
+          Diff.diff(templateMap, orgMap, orgEl);
+        } else {
+          console.warn("Failed to create element");
         }
       } else {
         console.warn(`AUGMENTED: AutoTable ${this.name} no element anchor, not rendering.`);
       }
     } else {
-      //console.debug("no template");
+      // no template (as in first render most likely)
       this.template = "notused";
       this.showProgressBar(true);
 
@@ -653,7 +665,6 @@ class AutomaticTable extends DecoratorView {
       this.fetch();
       this._fetchOnStart = false;
     }
-
     return this;
   };
 

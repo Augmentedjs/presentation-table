@@ -1,6 +1,6 @@
 {
   "name": "presentation-table",
-  "version": "3.3.3",
+  "version": "3.4.0",
   "description": "The Augmented.js Next - Presentation Table View Module.",
   "main": "dist/presentation-table.js",
   "scripts": {
@@ -37,19 +37,19 @@
     "documentation": "^13.0.2",
     "foodoc": "0.0.9",
     "jsdoc": "^3.6.4",
-    "jsdom": "^16.2.2",
+    "jsdom": "^16.3.0",
     "mocha": "^8.0.1",
     "mocha-jsdom": "^2.0.0",
     "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.1",
+    "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "next-core-utilities": "^2.9.0",
-    "presentation-decorator": "^3.1.4",
-    "presentation-dom": "^2.8.2",
+    "presentation-decorator": "^3.1.5",
+    "presentation-dom": "^3.0.0",
     "presentation-mediator": "^3.0.0",
     "presentation-models": "^3.1.5",
     "presentation-widget": "^2.5.6"

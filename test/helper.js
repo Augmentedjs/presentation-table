@@ -8,7 +8,7 @@ global.navigator = {
   userAgent: 'node.js'
 };
 
-global.Table = require("../dist/presentation-table.js");
+global.Table = require("../src/index.js");
 
 const chai = require("chai");
 global.chai = chai;
