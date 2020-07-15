@@ -13,7 +13,7 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
       tn = document.createElement("input");
       tn.type = "checkbox";
       tn.name = String(i);
-      tn.value = String(i);
+      tn.setAttribute("value", String(i));
       // Binding
       tn.setAttribute("data-" + name, "row-" + i);
       tn.setAttribute(TABLE_DATA_ATTRIBUTES.INDEX, i);
@@ -65,7 +65,7 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
             }
           } else {
             input = document.createElement("textarea");
-            input.value = JSON.stringify(dobj);
+            input.setAttribute("value", JSON.stringify(dobj));
           }
         } else if (t === "boolean") {
           input = document.createElement("input");
@@ -73,11 +73,11 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
           if (dobj === true) {
             input.setAttribute("checked", "checked");
           }
-          input.value = dobj;
+          input.setAttribute("value", dobj);
         } else if (t === "number" || t === "integer") {
           input = document.createElement("input");
           input.setAttribute("type", "number");
-          input.value = dobj;
+          input.setAttribute("value", dobj);
           if (t === "integer") {
             input.setAttribute("step", "1.0");
           }
@@ -97,19 +97,19 @@ export const directDOMEditableTableBody = (el, data, columns, lineNumbers, sortK
         } else if (t === "string" && (cobj.format === "email")) {
           input = document.createElement("input");
           input.setAttribute("type", "email");
-          input.value = dobj;
+          input.setAttribute("value", dobj);
         } else if (t === "string" && (cobj.format === "uri")) {
           input = document.createElement("input");
           input.setAttribute("type", "url");
-          input.value = dobj;
+          input.setAttribute("value", dobj);
         } else if (t === "string" && (cobj.format === "date-time")) {
           input = document.createElement("input");
           input.setAttribute("type", "datetime");
-          input.value = dobj;
+          input.setAttribute("value", dobj);
         } else {
           input = document.createElement("input");
           input.setAttribute("type", "text");
-          input.value = dobj;
+          input.setAttribute("value", dobj);
         }
 
         if (t === "string" && cobj.pattern) {

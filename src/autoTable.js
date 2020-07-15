@@ -1,15 +1,14 @@
 import { isObject } from "next-core-utilities";
 import { DecoratorView } from "presentation-decorator";
-import { directDOMTableCompile, directDOMTableHeader, directDOMTableBody } from "./functions/buildTable.js";
-import { TABLE_DATA_ATTRIBUTES } from "./functions/attributes.js";
-import { csvTableCompile, tsvTableCompile } from "./functions/exports.js";
-import { defaultTableCompile } from "./functions/defaultTableCompile.js";
-import { directDOMEditableTableBody } from "./functions/editable.js";
-import { directDOMPaginationControl } from "./functions/pagination.js";
-
-import formatValidationMessages from "./functions/messages.js";
-import { Dom } from "presentation-dom";
+import { Dom, Diff } from "presentation-dom";
 import { PaginationFactory, Model, Collection, LocalStorageCollection } from "presentation-models";
+
+import { directDOMTableCompile } from "./functions/buildTable.js";
+import { TABLE_DATA_ATTRIBUTES } from "./functions/attributes.js";
+import { directDOMPaginationControl } from "./functions/pagination.js";
+import formatValidationMessages from "./functions/messages.js";
+
+import exportTo from "./functions/exportTo.js";
 
 const DEFAULT_KEY = "augmented.localstorage.autotable.key";
 const DEFAULT_SORT_TYPE = "client";
@@ -45,7 +44,7 @@ class AutomaticTable extends DecoratorView {
 
     const style = (this.style) ? this.style + " " : "";
 
-    if (options && options.theme) {
+    if (options.theme) {
       /**
        * The theme property - The theme of this table (default is 'material')
        * @property {string} theme The theme of this table
@@ -55,7 +54,7 @@ class AutomaticTable extends DecoratorView {
       this.theme = `${style}${DEFAULT_THEME}`;
     }
 
-    if (options && options.linkable) {
+    if (options.linkable) {
       /**
        * The linkable property - enable links in a row (only works in non-editable tables)
        * @property {boolean} linkable enable/disable linking a row
@@ -65,7 +64,7 @@ class AutomaticTable extends DecoratorView {
       this.linkable = false;
     }
 
-    if (options && options.links) {
+    if (options.links) {
       /**
        * The links property - setup linking structure for links in a row
        * @property {boolean} linkable enable/disable linking a row
@@ -84,7 +83,7 @@ class AutomaticTable extends DecoratorView {
       };
     }
 
-    if (options && options.selectable) {
+    if (options.selectable) {
       /**
        * The selectable property - enable selecting a row in table
        * @property {boolean} selectable enable/disable selecting a row
@@ -94,7 +93,7 @@ class AutomaticTable extends DecoratorView {
       this.selectable = false;
     }
 
-    if (options && options.sortable) {
+    if (options.sortable) {
       /**
        * The sortable property - enable sorting in table
        * @property {boolean} sortable enable sorting in the table
@@ -104,7 +103,7 @@ class AutomaticTable extends DecoratorView {
       this.sortable = false;
     }
 
-    if (options && options.sortStyle) {
+    if (options.sortStyle) {
       /**
        * The sortStyle property - setup the sort API
        * @property {string} sortStyle setup the sort API
@@ -114,7 +113,7 @@ class AutomaticTable extends DecoratorView {
       this.sortStyle = DEFAULT_SORT_TYPE;
     }
 
-    if (options && options.sortKey) {
+    if (options.sortKey) {
       /**
        * The sortKey property
        * @property {string} sortKey sorted key
@@ -125,7 +124,7 @@ class AutomaticTable extends DecoratorView {
       this.sortKey = null;
     }
 
-    if (options && options.display) {
+    if (options.display) {
       /**
        * Fields to display - null will display all
        * @property {array} display Fields to display
@@ -135,7 +134,7 @@ class AutomaticTable extends DecoratorView {
       this.display = null;
     }
 
-    if (options && options.pagination) {
+    if (options.pagination) {
       /**
        * The renderPaginationControl property - render the pagination control
        * @property {boolean} renderPaginationControl render the pagination control
@@ -145,7 +144,7 @@ class AutomaticTable extends DecoratorView {
       this.renderPaginationControl = false;
     }
 
-    if (options && options.paginationAPI) {
+    if (options.paginationAPI) {
       /**
        * The paginationAPI property - setup the paginatin API to use
        * @property {PaginationFactory.type} paginationAPI the pagination API to use
@@ -155,7 +154,7 @@ class AutomaticTable extends DecoratorView {
       this.paginationAPI = null;
     }
 
-    if (options && options.description) {
+    if (options.description) {
       /**
        * The description property
        * @property {string} description The description of the table
@@ -165,7 +164,7 @@ class AutomaticTable extends DecoratorView {
       this.description = "";
     }
 
-    if (options && options.localStorage) {
+    if (options.localStorage) {
       /**
        * The localStorage property - enables localStorage
        * @property {boolean} localStorage The localStorage property
@@ -175,7 +174,7 @@ class AutomaticTable extends DecoratorView {
       this.localStorage = false;
     }
 
-    if (options && options.localStorageKey) {
+    if (options.localStorageKey) {
       /**
        * The localStorageKey property - set the key for use in storage
        * @property {string} localStorageKey The localStorage key property
@@ -185,7 +184,7 @@ class AutomaticTable extends DecoratorView {
       this.localStorageKey = DEFAULT_KEY;
     }
 
-    if (options && options.editable) {
+    if (options.editable) {
       /**
        * The editable property - enables editing of cells
        * @property {boolean} editable The editable property
@@ -195,7 +194,7 @@ class AutomaticTable extends DecoratorView {
       this.editable = false;
     }
 
-    if (options && options.crossOrigin) {
+    if (options.crossOrigin) {
       /**
        * The crossOrigin property - enables cross origin fetch
        * @property {boolean} crossOrigin The crossOrigin property
@@ -205,7 +204,7 @@ class AutomaticTable extends DecoratorView {
       this.crossOrigin = false;
     }
 
-    if (options && options.lineNumbers) {
+    if (options.lineNumbers) {
       /**
        * The lineNumber property - turns on line numbers
        * @property {boolean} lineNumbers The lineNumbers property
@@ -215,7 +214,7 @@ class AutomaticTable extends DecoratorView {
       this.lineNumbers = false;
     }
 
-    if (options && options.uri) {
+    if (options.uri) {
       /**
        * The URI property
        * @property {string} uri The URI property
@@ -225,7 +224,7 @@ class AutomaticTable extends DecoratorView {
       this.uri = false;
     }
 
-    if (options && options.data) {
+    if (options.data) {
       /**
        * The data property
        * @property {array} data The data property
@@ -236,7 +235,7 @@ class AutomaticTable extends DecoratorView {
       this.data = [];
     }
 
-    if (options && options.messagePosition) {
+    if (options.messagePosition) {
       /**
        * The messagePosition property
        * @property {string} messagePosition Sets position of the message top or bottom
@@ -296,7 +295,7 @@ class AutomaticTable extends DecoratorView {
       this.collection = new Collection();
     }
 
-    if (options && options.schema) {
+    if (options.schema) {
       // check if this is a schema vs a URI to get a schema
       if (isObject(options.schema)) {
         /**
@@ -332,7 +331,7 @@ class AutomaticTable extends DecoratorView {
       this.populate(this.data);
     }
 
-    if (options && options.localStorageKey && !options.uri) {
+    if (options.localStorageKey && !options.uri) {
       this.localStorageKey = options.localStorageKey;
       this.uri = null;
     }
@@ -376,7 +375,7 @@ class AutomaticTable extends DecoratorView {
    * @param {string} theme name of the theme
    */
    setTheme(theme) {
-     const el = Dom.selector(this.el);//((typeof this.el === 'string') ? document.querySelector(this.el) : this.el),
+     const el = Dom.selector(this.el);
      if (el) {
        let e = el.querySelector("table");
        if (e) {
@@ -396,7 +395,7 @@ class AutomaticTable extends DecoratorView {
    };
 
   /**
-   * Sort the tabe by a key (sent via a UI Event)
+   * Sort the table by a key (sent via a UI Event)
    * @param {string} key The key to sort by
    */
    sortBy(key) {
@@ -495,6 +494,7 @@ class AutomaticTable extends DecoratorView {
       }
     }
   };
+
  /**
   * Clear a cell at the row and column specified
   * @param {number} row The row
@@ -518,122 +518,84 @@ class AutomaticTable extends DecoratorView {
       //console.warn("AUGMENTED: AutoTable Can't render yet, not initialized!");
       return this;
     }
-    let e;
-    if (this.template) {
-      // refresh the table body only
-	    //console.log("set progress.");
-      this.showProgressBar(true);
-      if (this.el) {
-        e = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
-        //console.log("my el", e);
-        if (e) {
-	        let tbody = e.querySelector("tbody"), thead = e.querySelector("thead");
-          if (this.sortable) {
-            this._unbindSortableColumnEvents();
-          }
-          if (this.editable) {
-            this._unbindCellChangeEvents();
-          }
-          if (this._columns && (Object.keys(this._columns).length > 0)){
-            if (thead) {
-              while (thead.hasChildNodes()) {
-                thead.removeChild(thead.lastChild);
-              }
-            }
-            const isMaterial = (this._style.includes("material"));
-            directDOMTableHeader(thead, this._columns, this.lineNumbers, this.sortKey, this.display, this.selectable, isMaterial);
-          } else {
-      		  if (thead) {
-              while (thead.hasChildNodes()) {
-                thead.removeChild(thead.lastChild);
-              }
-      		  }
-          }
-          if (this.collection && (this.collection.length > 0) && tbody) {
-            if (tbody) {
-              while (tbody.hasChildNodes()) {
-                tbody.removeChild(tbody.lastChild);
-              }
-            }
-            if (this.editable) {
-              // links not supported
-              directDOMEditableTableBody(tbody, this.collection.toJSON(), this._columns, this.lineNumbers, this.sortKey, this.display, this.selectable, this.name);
-            } else {
-              directDOMTableBody(tbody, this.collection.toJSON(), this._columns, this.lineNumbers, this.sortKey, this.display, this.selectable, this.name, this.linkable, this.links, this[this.links.link]);
-            }
-          } else {
-            if (tbody) {
-              while (tbody.hasChildNodes()) {
-                tbody.removeChild(tbody.lastChild);
-              }
-            }
-          }
+
+    if (this.sortable) {
+      this._unbindSortableColumnEvents();
+    }
+    if (this.editable) {
+      this._unbindCellChangeEvents();
+    }
+
+    this.template = "notused";
+    this.showProgressBar(true);
+
+    if (this.el) {
+      const orgEl = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
+      let e = document.createElement(orgEl.tagName);
+
+      if (e) {
+        // progress bar
+        let n = document.createElement("progress"),
+        t = document.createTextNode("Please wait.");
+        n.appendChild(t);
+        e.appendChild(n);
+
+        const isMaterial = (this._style.includes("material"));
+
+        if (this.messagePosition === "top") {
+          // message
+          n = document.createElement("p");
+          n.classList.add("message");
+          e.appendChild(n);
         }
-      } else {
-        console.warn(`AUGMENTED: AutoTable ${this.name} no element anchor, not rendering.`);
+
+        // the table
+        directDOMTableCompile(
+          e,
+          this.name,
+          this.description,
+          this._columns,
+          this.collection.toJSON(),
+          this.lineNumbers,
+          this.sortKey,
+          this.editable,
+          this.display,
+          this.selectable,
+          this.linkable,
+          this.links,
+          this[this.links.link],
+          isMaterial
+        );
+
+        // pagination control
+        if (this.renderPaginationControl) {
+          directDOMPaginationControl(e, this.currentPage(), this.totalPages());
+        }
+        if (this.messagePosition === "bottom") {
+          // message
+          n = document.createElement("p");
+          n.classList.add("message");
+          e.appendChild(n);
+        }
+
+        // console.debug("rendered", e.outerHTML);
+
+        const templateMap = Diff.createDOMMap(e, false);
+        const orgMap = Diff.createDOMMap(orgEl, false);
+
+        // console.debug("orgEl", orgEl);
+
+        // will use virtual dom to render updates to the table
+        Diff.diff(templateMap, orgMap, orgEl);
       }
     } else {
-      //console.debug("no template");
-      this.template = "notused";
-      this.showProgressBar(true);
-
-      if (this.el) {
-        //console.debug("no template with el " + this.el);
-        e = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
-        if (e) {
-          e.innerHTML = "";
-          // progress bar
-          let n = document.createElement("progress"),
-          t = document.createTextNode("Please wait.");
-          n.appendChild(t);
-          e.appendChild(n);
-
-          const isMaterial = (this._style.includes("material"));
-
-          if (this.messagePosition === "top") {
-            // message
-            n = document.createElement("p");
-            n.classList.add("message");
-            e.appendChild(n);
-          }
-
-          // the table
-          directDOMTableCompile(
-            e,
-            this.name,
-            this.description,
-            this._columns,
-            this.collection.toJSON(),
-            this.lineNumbers,
-            this.sortKey,
-            this.editable,
-            this.display,
-            this.selectable,
-            this.linkable,
-            this.links,
-            this[this.links.link],
-            isMaterial
-          );
-
-          // pagination control
-          if (this.renderPaginationControl) {
-            directDOMPaginationControl(e, this.currentPage(), this.totalPages());
-          }
-          if (this.messagePosition === "bottom") {
-            // message
-            n = document.createElement("p");
-            n.classList.add("message");
-            e.appendChild(n);
-          }
-        }
-      } else {
-        console.warn(`AUGMENTED: AutoTable ${this.name} no element anchor, not rendering.`);
-      }
-
-      if (this.renderPaginationControl) {
-        this._bindPaginationControlEvents();
-      }
+      console.warn(`AUGMENTED: AutoTable ${this.name} no element anchor, not rendering.`);
     }
+
+    if (this.renderPaginationControl) {
+      this._bindPaginationControlEvents();
+    }
+    //}
     this.delegateEvents();
 
     if (this.sortable) {
@@ -653,7 +615,6 @@ class AutomaticTable extends DecoratorView {
       this.fetch();
       this._fetchOnStart = false;
     }
-
     return this;
   };
 
@@ -793,7 +754,6 @@ class AutomaticTable extends DecoratorView {
     } else {
       console.warn(`Could not find the row ${index} in table "${this.name}"`, key, key.getAttribute(TABLE_DATA_ATTRIBUTES.INDEX));
     }
-
   };
 
  /**
@@ -836,7 +796,7 @@ class AutomaticTable extends DecoratorView {
   */
   showProgressBar(show) {
     if (this.el) {
-      let e = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
+      const e = Dom.selector(this.el);
       if (e) {
         let p = e.querySelector("progress");
         if (p) {
@@ -853,15 +813,15 @@ class AutomaticTable extends DecoratorView {
   */
   showMessage(message) {
     if (this.el && message) {
-      let e = (typeof this.el === "string") ? document.querySelector(this.el) : this.el;
+      const e = Dom.selector(this.el);
       let p = e.querySelector("p[class=message]");
       if (p) {
         p.innerHTML = message;
       }
     }
   };
- /**
 
+ /**
   * Validate the table
   * @returns {boolean} Returns true on success of validation
   */
@@ -903,9 +863,9 @@ class AutomaticTable extends DecoratorView {
       //console.debug("no el to remove");
     }
     Dom.empty(this.el);
-
     return this;
   };
+
  /**
   * Gets the selected models
   * @returns {Array} Returns array of selected rows (models)
@@ -997,20 +957,11 @@ class AutomaticTable extends DecoratorView {
 
 /**
  * Export the table data in requested format
- * @param {string} type The type requested (csv or html-default)
+ * @param {string} type The type requested (csv, tsv, json, or html) html is default
  * @returns {string} The table data in requested format
  */
- exportTo(type) {
-   let e = "";
-   if (type === "csv") {
-     e = csvTableCompile(this.name, this.description, this._columns, this.collection.toJSON());
-   } else if (type === "tsv") {
-     e = tsvTableCompile(this.name, this.description, this._columns, this.collection.toJSON());
-   } else {
-     // html
-     e = defaultTableCompile(this.name, this.description, this._columns, this.collection.toJSON(), false, null);
-   }
-   return e;
+ async exportTo(type) {
+   return await exportTo(type, this.name, this.description, this._columns, await this.collection.toJSON());
  };
 
  /* Private methods */

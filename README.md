@@ -344,7 +344,7 @@ Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 ### sortBy
 
-Sort the tabe by a key (sent via a UI Event)
+Sort the table by a key (sent via a UI Event)
 
 #### Parameters
 
@@ -570,7 +570,7 @@ Export the table data in requested format
 
 #### Parameters
 
--   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The type requested (csv or html-default)
+-   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The type requested (csv, tsv, json, or html) html is default
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** The table data in requested format
 

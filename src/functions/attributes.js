@@ -4,7 +4,7 @@ const TABLE_DATA_ATTRIBUTES = {
   "DESCRIPTION":    "data-description",
   "INDEX":          "data-index",
   "LABEL":          "data-label",
-  "SORT_CLASS":      "sorted"
+  "SORT_CLASS":     "sorted"
 };
 
 export { TABLE_DATA_ATTRIBUTES };

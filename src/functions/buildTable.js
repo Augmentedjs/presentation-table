@@ -54,7 +54,7 @@ export const directDOMTableHeader = (el, columns, lineNumbers, sortKey, display,
 
 export const directDOMTableBody = (el, data, columns, lineNumbers, sortKey, display, selectable, name, linkable, linksConfig, linkCallback) => {
   const l = data.length;
-  let i, d, dkey, dobj, t, td, tn, tr, cobj;
+  let i, d, dkey, dobj, t, td, tn, tr;
 
   for (i = 0; i < l; i++) {
     d = data[i];
@@ -66,7 +66,7 @@ export const directDOMTableBody = (el, data, columns, lineNumbers, sortKey, disp
       tn = document.createElement("input");
       tn.type = "checkbox";
       tn.name = String(i);
-      tn.value = String(i);
+      tn.setAttribute("value", String(i));
       // Binding
       tn.setAttribute("data-" + name, "row-" + i);
       tn.setAttribute(TABLE_DATA_ATTRIBUTES.INDEX, i);

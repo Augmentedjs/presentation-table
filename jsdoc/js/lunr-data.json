@@ -258,7 +258,7 @@
           "sent",
           "sort",
           "sortbi",
-          "tabe",
+          "tabl",
           "ui",
           "via"
         ],
@@ -533,6 +533,7 @@
           "exportto",
           "format",
           "function",
+          "lt;async&gt",
           "request",
           "tabl",
           "type"
@@ -737,7 +738,7 @@
           "sent",
           "sort",
           "sortbi",
-          "tabe",
+          "tabl",
           "ui",
           "via"
         ],
@@ -1012,6 +1013,7 @@
           "exportto",
           "format",
           "function",
+          "lt;async&gt",
           "request",
           "tabl",
           "type"
@@ -1218,7 +1220,7 @@
           "sent",
           "sort",
           "sortbi",
-          "tabe",
+          "tabl",
           "ui",
           "via"
         ],
@@ -1493,6 +1495,7 @@
           "exportto",
           "format",
           "function",
+          "lt;async&gt",
           "request",
           "tabl",
           "type"
@@ -1696,7 +1699,7 @@
           "sent",
           "sort",
           "sortbi",
-          "tabe",
+          "tabl",
           "ui",
           "via"
         ],
@@ -1971,6 +1974,7 @@
           "exportto",
           "format",
           "function",
+          "lt;async&gt",
           "request",
           "tabl",
           "type"
@@ -2177,7 +2181,7 @@
           "sent",
           "sort",
           "sortbi",
-          "tabe",
+          "tabl",
           "ui",
           "via"
         ],
@@ -2452,6 +2456,7 @@
           "format",
           "function",
           "localstoragetable#exportto",
+          "lt;async&gt",
           "request",
           "tabl",
           "type"
@@ -2667,7 +2672,7 @@
           "sort",
           "sortbi",
           "spreadsheet#sortbi",
-          "tabe",
+          "tabl",
           "ui",
           "via"
         ],
@@ -2941,6 +2946,7 @@
           "exportto",
           "format",
           "function",
+          "lt;async&gt",
           "request",
           "spreadsheet#exportto",
           "tabl",
@@ -3150,7 +3156,7 @@
           "sent",
           "sort",
           "sortbi",
-          "tabe",
+          "tabl",
           "ui",
           "via"
         ],
@@ -3425,6 +3431,7 @@
           "exportto",
           "format",
           "function",
+          "lt;async&gt",
           "request",
           "tabl",
           "type"
@@ -14160,12 +14167,20 @@
                                   "ref": "BigDataTable.html#addRow",
                                   "tf": 33.33333333333333
                                 },
+                                "BigDataTable.html#exportTo": {
+                                  "ref": "BigDataTable.html#exportTo",
+                                  "tf": 33.33333333333333
+                                },
                                 "EditableBigDataTable.html#retrieveSchema": {
                                   "ref": "EditableBigDataTable.html#retrieveSchema",
                                   "tf": 33.33333333333333
                                 },
                                 "EditableBigDataTable.html#addRow": {
                                   "ref": "EditableBigDataTable.html#addRow",
+                                  "tf": 33.33333333333333
+                                },
+                                "EditableBigDataTable.html#exportTo": {
+                                  "ref": "EditableBigDataTable.html#exportTo",
                                   "tf": 33.33333333333333
                                 },
                                 "EditableLocalStorageTable.html#retrieveSchema": {
@@ -14176,12 +14191,20 @@
                                   "ref": "EditableLocalStorageTable.html#addRow",
                                   "tf": 33.33333333333333
                                 },
+                                "EditableLocalStorageTable.html#exportTo": {
+                                  "ref": "EditableLocalStorageTable.html#exportTo",
+                                  "tf": 33.33333333333333
+                                },
                                 "EditableTable.html#retrieveSchema": {
                                   "ref": "EditableTable.html#retrieveSchema",
                                   "tf": 33.33333333333333
                                 },
                                 "EditableTable.html#addRow": {
                                   "ref": "EditableTable.html#addRow",
+                                  "tf": 33.33333333333333
+                                },
+                                "EditableTable.html#exportTo": {
+                                  "ref": "EditableTable.html#exportTo",
                                   "tf": 33.33333333333333
                                 },
                                 "LocalStorageTable.html#retrieveSchema": {
@@ -14192,6 +14215,10 @@
                                   "ref": "LocalStorageTable.html#addRow",
                                   "tf": 33.33333333333333
                                 },
+                                "LocalStorageTable.html#exportTo": {
+                                  "ref": "LocalStorageTable.html#exportTo",
+                                  "tf": 33.33333333333333
+                                },
                                 "Spreadsheet.html#retrieveSchema": {
                                   "ref": "Spreadsheet.html#retrieveSchema",
                                   "tf": 33.33333333333333
@@ -14200,12 +14227,20 @@
                                   "ref": "Spreadsheet.html#addRow",
                                   "tf": 33.33333333333333
                                 },
+                                "Spreadsheet.html#exportTo": {
+                                  "ref": "Spreadsheet.html#exportTo",
+                                  "tf": 33.33333333333333
+                                },
                                 "AutomaticTable.html#retrieveSchema": {
                                   "ref": "AutomaticTable.html#retrieveSchema",
                                   "tf": 33.33333333333333
                                 },
                                 "AutomaticTable.html#addRow": {
                                   "ref": "AutomaticTable.html#addRow",
+                                  "tf": 33.33333333333333
+                                },
+                                "AutomaticTable.html#exportTo": {
+                                  "ref": "AutomaticTable.html#exportTo",
                                   "tf": 33.33333333333333
                                 }
                               }
@@ -16539,6 +16574,10 @@
                     "ref": "BigDataTable.html#setTheme",
                     "tf": 25
                   },
+                  "BigDataTable.html#sortBy": {
+                    "ref": "BigDataTable.html#sortBy",
+                    "tf": 7.142857142857142
+                  },
                   "BigDataTable.html#render": {
                     "ref": "BigDataTable.html#render",
                     "tf": 25
@@ -16602,6 +16641,10 @@
                   "EditableBigDataTable.html#setTheme": {
                     "ref": "EditableBigDataTable.html#setTheme",
                     "tf": 25
+                  },
+                  "EditableBigDataTable.html#sortBy": {
+                    "ref": "EditableBigDataTable.html#sortBy",
+                    "tf": 7.142857142857142
                   },
                   "EditableBigDataTable.html#render": {
                     "ref": "EditableBigDataTable.html#render",
@@ -16667,6 +16710,10 @@
                     "ref": "EditableLocalStorageTable.html#setTheme",
                     "tf": 25
                   },
+                  "EditableLocalStorageTable.html#sortBy": {
+                    "ref": "EditableLocalStorageTable.html#sortBy",
+                    "tf": 7.142857142857142
+                  },
                   "EditableLocalStorageTable.html#render": {
                     "ref": "EditableLocalStorageTable.html#render",
                     "tf": 25
@@ -16730,6 +16777,10 @@
                   "EditableTable.html#setTheme": {
                     "ref": "EditableTable.html#setTheme",
                     "tf": 25
+                  },
+                  "EditableTable.html#sortBy": {
+                    "ref": "EditableTable.html#sortBy",
+                    "tf": 7.142857142857142
                   },
                   "EditableTable.html#render": {
                     "ref": "EditableTable.html#render",
@@ -16799,6 +16850,10 @@
                     "ref": "LocalStorageTable.html#setTheme",
                     "tf": 25
                   },
+                  "LocalStorageTable.html#sortBy": {
+                    "ref": "LocalStorageTable.html#sortBy",
+                    "tf": 7.142857142857142
+                  },
                   "LocalStorageTable.html#render": {
                     "ref": "LocalStorageTable.html#render",
                     "tf": 25
@@ -16862,6 +16917,10 @@
                   "Spreadsheet.html#setTheme": {
                     "ref": "Spreadsheet.html#setTheme",
                     "tf": 25
+                  },
+                  "Spreadsheet.html#sortBy": {
+                    "ref": "Spreadsheet.html#sortBy",
+                    "tf": 7.142857142857142
                   },
                   "Spreadsheet.html#render": {
                     "ref": "Spreadsheet.html#render",
@@ -16931,6 +16990,10 @@
                     "ref": "AutomaticTable.html#setTheme",
                     "tf": 25
                   },
+                  "AutomaticTable.html#sortBy": {
+                    "ref": "AutomaticTable.html#sortBy",
+                    "tf": 7.142857142857142
+                  },
                   "AutomaticTable.html#render": {
                     "ref": "AutomaticTable.html#render",
                     "tf": 25
@@ -16974,38 +17037,6 @@
                   "AutomaticTable.html#exportTo": {
                     "ref": "AutomaticTable.html#exportTo",
                     "tf": 10
-                  }
-                }
-              },
-              "e": {
-                "docs": {
-                  "BigDataTable.html#sortBy": {
-                    "ref": "BigDataTable.html#sortBy",
-                    "tf": 7.142857142857142
-                  },
-                  "EditableBigDataTable.html#sortBy": {
-                    "ref": "EditableBigDataTable.html#sortBy",
-                    "tf": 7.142857142857142
-                  },
-                  "EditableLocalStorageTable.html#sortBy": {
-                    "ref": "EditableLocalStorageTable.html#sortBy",
-                    "tf": 7.142857142857142
-                  },
-                  "EditableTable.html#sortBy": {
-                    "ref": "EditableTable.html#sortBy",
-                    "tf": 7.142857142857142
-                  },
-                  "LocalStorageTable.html#sortBy": {
-                    "ref": "LocalStorageTable.html#sortBy",
-                    "tf": 7.142857142857142
-                  },
-                  "Spreadsheet.html#sortBy": {
-                    "ref": "Spreadsheet.html#sortBy",
-                    "tf": 7.142857142857142
-                  },
-                  "AutomaticTable.html#sortBy": {
-                    "ref": "AutomaticTable.html#sortBy",
-                    "tf": 7.142857142857142
                   }
                 }
               }
@@ -17252,31 +17283,31 @@
                 "docs": {
                   "BigDataTable.html#exportTo": {
                     "ref": "BigDataTable.html#exportTo",
-                    "tf": 50
+                    "tf": 33.33333333333333
                   },
                   "EditableBigDataTable.html#exportTo": {
                     "ref": "EditableBigDataTable.html#exportTo",
-                    "tf": 50
+                    "tf": 33.33333333333333
                   },
                   "EditableLocalStorageTable.html#exportTo": {
                     "ref": "EditableLocalStorageTable.html#exportTo",
-                    "tf": 50
+                    "tf": 33.33333333333333
                   },
                   "EditableTable.html#exportTo": {
                     "ref": "EditableTable.html#exportTo",
-                    "tf": 50
+                    "tf": 33.33333333333333
                   },
                   "LocalStorageTable.html#exportTo": {
                     "ref": "LocalStorageTable.html#exportTo",
-                    "tf": 50
+                    "tf": 33.33333333333333
                   },
                   "Spreadsheet.html#exportTo": {
                     "ref": "Spreadsheet.html#exportTo",
-                    "tf": 50
+                    "tf": 33.33333333333333
                   },
                   "AutomaticTable.html#exportTo": {
                     "ref": "AutomaticTable.html#exportTo",
-                    "tf": 50
+                    "tf": 33.33333333333333
                   }
                 }
               }
@@ -21833,31 +21864,31 @@
                         "docs": {
                           "BigDataTable.html#exportTo": {
                             "ref": "BigDataTable.html#exportTo",
-                            "tf": 700
+                            "tf": 683.3333333333334
                           },
                           "EditableBigDataTable.html#exportTo": {
                             "ref": "EditableBigDataTable.html#exportTo",
-                            "tf": 700
+                            "tf": 683.3333333333334
                           },
                           "EditableLocalStorageTable.html#exportTo": {
                             "ref": "EditableLocalStorageTable.html#exportTo",
-                            "tf": 700
+                            "tf": 683.3333333333334
                           },
                           "EditableTable.html#exportTo": {
                             "ref": "EditableTable.html#exportTo",
-                            "tf": 700
+                            "tf": 683.3333333333334
                           },
                           "LocalStorageTable.html#exportTo": {
                             "ref": "LocalStorageTable.html#exportTo",
-                            "tf": 700
+                            "tf": 683.3333333333334
                           },
                           "Spreadsheet.html#exportTo": {
                             "ref": "Spreadsheet.html#exportTo",
-                            "tf": 700
+                            "tf": 683.3333333333334
                           },
                           "AutomaticTable.html#exportTo": {
                             "ref": "AutomaticTable.html#exportTo",
-                            "tf": 700
+                            "tf": 683.3333333333334
                           }
                         }
                       }
@@ -23866,7 +23897,7 @@
           }
         }
       },
-      "length": 2598
+      "length": 2605
     },
     "corpusTokens": [
       "10",
@@ -24399,7 +24430,6 @@
       "spreadsheet#valid",
       "storag",
       "structur",
-      "tabe",
       "tabl",
       "templat",
       "theme",
@@ -24695,7 +24725,7 @@
       "name": "sortBy",
       "tags": "BigDataTable#sortBy sortBy",
       "summary": "",
-      "description": "Sort the tabe by a key (sent via a UI Event)"
+      "description": "Sort the table by a key (sent via a UI Event)"
     },
     "BigDataTable.html#currentPage": {
       "id": "BigDataTable.html#currentPage",
@@ -25010,7 +25040,7 @@
     "BigDataTable.html#exportTo": {
       "id": "BigDataTable.html#exportTo",
       "kind": "function",
-      "title": "exportTo( type )",
+      "title": "&lt;async&gt; exportTo( type )",
       "longname": "BigDataTable#exportTo",
       "name": "exportTo",
       "tags": "BigDataTable#exportTo exportTo",
@@ -25256,7 +25286,7 @@
       "name": "sortBy",
       "tags": "EditableBigDataTable#sortBy sortBy",
       "summary": "",
-      "description": "Sort the tabe by a key (sent via a UI Event)"
+      "description": "Sort the table by a key (sent via a UI Event)"
     },
     "EditableBigDataTable.html#currentPage": {
       "id": "EditableBigDataTable.html#currentPage",
@@ -25571,7 +25601,7 @@
     "EditableBigDataTable.html#exportTo": {
       "id": "EditableBigDataTable.html#exportTo",
       "kind": "function",
-      "title": "exportTo( type )",
+      "title": "&lt;async&gt; exportTo( type )",
       "longname": "EditableBigDataTable#exportTo",
       "name": "exportTo",
       "tags": "EditableBigDataTable#exportTo exportTo",
@@ -25817,7 +25847,7 @@
       "name": "sortBy",
       "tags": "EditableLocalStorageTable#sortBy sortBy",
       "summary": "",
-      "description": "Sort the tabe by a key (sent via a UI Event)"
+      "description": "Sort the table by a key (sent via a UI Event)"
     },
     "EditableLocalStorageTable.html#currentPage": {
       "id": "EditableLocalStorageTable.html#currentPage",
@@ -26132,7 +26162,7 @@
     "EditableLocalStorageTable.html#exportTo": {
       "id": "EditableLocalStorageTable.html#exportTo",
       "kind": "function",
-      "title": "exportTo( type )",
+      "title": "&lt;async&gt; exportTo( type )",
       "longname": "EditableLocalStorageTable#exportTo",
       "name": "exportTo",
       "tags": "EditableLocalStorageTable#exportTo exportTo",
@@ -26378,7 +26408,7 @@
       "name": "sortBy",
       "tags": "EditableTable#sortBy sortBy",
       "summary": "",
-      "description": "Sort the tabe by a key (sent via a UI Event)"
+      "description": "Sort the table by a key (sent via a UI Event)"
     },
     "EditableTable.html#currentPage": {
       "id": "EditableTable.html#currentPage",
@@ -26693,7 +26723,7 @@
     "EditableTable.html#exportTo": {
       "id": "EditableTable.html#exportTo",
       "kind": "function",
-      "title": "exportTo( type )",
+      "title": "&lt;async&gt; exportTo( type )",
       "longname": "EditableTable#exportTo",
       "name": "exportTo",
       "tags": "EditableTable#exportTo exportTo",
@@ -26939,7 +26969,7 @@
       "name": "sortBy",
       "tags": "LocalStorageTable#sortBy sortBy",
       "summary": "",
-      "description": "Sort the tabe by a key (sent via a UI Event)"
+      "description": "Sort the table by a key (sent via a UI Event)"
     },
     "LocalStorageTable.html#currentPage": {
       "id": "LocalStorageTable.html#currentPage",
@@ -27254,7 +27284,7 @@
     "LocalStorageTable.html#exportTo": {
       "id": "LocalStorageTable.html#exportTo",
       "kind": "function",
-      "title": "exportTo( type )",
+      "title": "&lt;async&gt; exportTo( type )",
       "longname": "LocalStorageTable#exportTo",
       "name": "exportTo",
       "tags": "LocalStorageTable#exportTo exportTo",
@@ -27510,7 +27540,7 @@
       "name": "sortBy",
       "tags": "Spreadsheet#sortBy sortBy",
       "summary": "",
-      "description": "Sort the tabe by a key (sent via a UI Event)"
+      "description": "Sort the table by a key (sent via a UI Event)"
     },
     "Spreadsheet.html#currentPage": {
       "id": "Spreadsheet.html#currentPage",
@@ -27825,7 +27855,7 @@
     "Spreadsheet.html#exportTo": {
       "id": "Spreadsheet.html#exportTo",
       "kind": "function",
-      "title": "exportTo( type )",
+      "title": "&lt;async&gt; exportTo( type )",
       "longname": "Spreadsheet#exportTo",
       "name": "exportTo",
       "tags": "Spreadsheet#exportTo exportTo",
@@ -28071,7 +28101,7 @@
       "name": "sortBy",
       "tags": "AutomaticTable#sortBy sortBy",
       "summary": "",
-      "description": "Sort the tabe by a key (sent via a UI Event)"
+      "description": "Sort the table by a key (sent via a UI Event)"
     },
     "AutomaticTable.html#currentPage": {
       "id": "AutomaticTable.html#currentPage",
@@ -28386,7 +28416,7 @@
     "AutomaticTable.html#exportTo": {
       "id": "AutomaticTable.html#exportTo",
       "kind": "function",
-      "title": "exportTo( type )",
+      "title": "&lt;async&gt; exportTo( type )",
       "longname": "AutomaticTable#exportTo",
       "name": "exportTo",
       "tags": "AutomaticTable#exportTo exportTo",
