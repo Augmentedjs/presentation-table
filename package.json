@@ -48,9 +48,9 @@
   },
   "dependencies": {
     "next-core-utilities": "^2.9.0",
-    "presentation-decorator": "^3.2.1",
+    "presentation-decorator": "^3.2.2",
     "presentation-dom": "^3.0.3",
-    "presentation-mediator": "^3.0.0",
+    "presentation-mediator": "^3.0.1",
     "presentation-models": "^3.1.6",
     "presentation-widget": "^2.5.6"
   },
